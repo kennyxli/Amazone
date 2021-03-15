@@ -3,9 +3,15 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session';
 import Navbar from './navbar';
 
-const mSTP = ({ session, entities: { users } }) => {
+const mSTP = (state) => {
+    
+    let user = null;
+    if (state.session.currentUser){
+        user = state.entities.users[Object.keys(state.session.currentUser)]
+    }
     return {
-        currentUser: users[session.id]
+
+        currentUser: user
     };
 };
 

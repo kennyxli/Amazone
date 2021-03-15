@@ -8,12 +8,14 @@ const Greeting = (props) => {
             <Link to="/signup">Sign up!</Link>
         </nav>
     );
-    const welcome = () => (
+    const welcome = () => {
+        return (
         <header className="nav-group">
-            <h2 className="nav-name">Hello, {props.currentUser.name}!</h2>
+                <h2 className="nav-name">Hello, {props.currentUser[Object.keys(props.currentUser)].name}!</h2>
             <button className="header-button" onClick={props.logout}>Log Out</button>
         </header>
-    );
+        )
+    };
 
     return props.currentUser ? welcome() : signin();
 };

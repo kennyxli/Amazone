@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session';
+import session from '../../reducers/session';
 import Navbar from './navbar';
 
 const mSTP = (state) => {
     
-    let user = null;
-    if (state.session.currentUser){
-        user = state.entities.users[Object.keys(state.session.currentUser)]
-    }
+    // let user = null;
+    // if (state.session.currentUser){
+    //     user = state.entities.users[Object.keys(state.session.currentUser)]
+    // }
+    
     return {
-
-        currentUser: user
+        currentUser: state.session.currentUser
     };
 };
 

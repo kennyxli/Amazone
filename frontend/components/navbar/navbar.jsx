@@ -7,7 +7,6 @@ export default class NavBar extends React.Component{
         super(props)
     }
     render(){
-        debugger
         return (
             <nav>
                 <Greeting currentUser={this.props.currentUser} logout={this.props.logout}/>

@@ -10,6 +10,7 @@ class Login extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRedirect = this.handleRedirect.bind(this);
+        this.handleLogo = this.handleLogo.bind(this);
     }
 
     handleInput(type) {
@@ -27,14 +28,20 @@ class Login extends React.Component {
         e.preventDefault()
         this.props.history.push('/signup')
     }
+    handleLogo(e) {
+        e.preventDefault()
+        this.props.history.push('/')
+    }
 
     render() {
         return (
-            <div className="session-form">
-                <h2 className="createacc">Sign-In</h2>
+            <div>
+            <a href=""><img src={window.brentURL} className="logo" onClick={this.handleLogo}></img></a>
+            <div className="signin-form">
+                <h2 className="signacc">Sign-In</h2>
                 <form>
-                    <div className="signup-cont">
-                    <label className="signup-param">Email:
+                    <div className="login-cont">
+                    <label className="login-param">Email:  <br/>
                         <input
                             className="signupinput"
                             type="text"
@@ -43,19 +50,21 @@ class Login extends React.Component {
                         />
                     </label>
 
-                    <label className="signup-param">Password:
+                    <label className="login-param">Password:
                         <input
                             className="signupinput"
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                        <button onClick={this.handleSubmit}>Log In!</button>
-                        <button onClick={this.handleRedirect}>Create your Amazone account</button>
+                        <button id="signbutton"  onClick={this.handleSubmit}>Log In!</button>
                     </label>
+                        <p className="signcond">By continuing, you agree to Amazone's Conditions of <br /> Use and Privacy Notice.</p>
                     </div>
                 </form>
-
+            </div>
+            <p id="new">--------------------------- New to Amazone? --------------------------</p>
+            <button id="redirect-button" onClick={this.handleRedirect}>Create your Amazone account</button>
             </div>
         );
     }

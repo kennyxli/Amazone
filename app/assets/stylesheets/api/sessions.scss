@@ -105,3 +105,75 @@
     margin-bottom: 0px;
     margin-top: -40px;
 }
+
+.signacc {
+    font-size: 30px;
+    position: relative;
+    bottom: 10px;
+    right: 32%;
+    font-weight:normal;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    width: 345px;
+    margin-left:40%;
+    height: 300px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.login-param {
+    position: relative;
+    bottom: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    left: 15px
+}
+
+#signbutton {
+    width: 310px;
+    height: 30px;
+    position: relative;
+    top:5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #fad577;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.signcond {
+    position: relative;
+     bottom: 15px;
+     left: 18px;
+     font-size: 13px;
+     font-family: 'PT Sans', sans-serif;
+}
+
+#redirect-button {
+    width: 350px;
+    height: 30px;
+    position: relative;
+    left:40%;
+    
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#new{
+     position: relative;
+    left:40%;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: 'PT Sans', sans-serif;
+    color:gray;
+}

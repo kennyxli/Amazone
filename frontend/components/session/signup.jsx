@@ -11,6 +11,7 @@ export default class Signup extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleRedirect = this.handleRedirect.bind(this)
+        this.handleLogo = this.handleLogo.bind(this);
     }
 
     handleInput(key) {
@@ -26,13 +27,17 @@ export default class Signup extends React.Component {
         e.preventDefault()
         this.props.history.push('/login')
     }
+    handleLogo(e) {
+        e.preventDefault()
+        this.props.history.push('/')
+    }
 
     render () {
         
         return (
             <div>
                 
-            <img src={window.brentURL} className="logo"></img>
+            <a href=""><img src={window.brentURL} className="logo" onClick={this.handleLogo}></img></a>
             <div className="session-form">
                 <h2 className="createacc">Create account</h2>
                 <form onSubmit={this.handleSubmit}>

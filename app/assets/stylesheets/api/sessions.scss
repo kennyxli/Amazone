@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.outer-cont {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .session-form {
     display: flex;
     flex-direction: column;
@@ -10,8 +15,9 @@
     align-items: center;
     border: 1px solid lightgray;
     width: 330px;
-    margin-left:41%;
-    height: 500px;
+    margin-left:auto;
+    margin-right: auto;
+    height: 534px;
     margin-top: 5px;
     border-radius: 5px;
 }
@@ -25,11 +31,11 @@
     align-items: center;
 }
 .createacc{
-    font-size: 30px;
+    font-size: 29px;
     position: relative;
     bottom: 45px;
     right: 18%;
-    font-weight:normal;
+    font-weight:initial;
     font-family: 'PT Sans', sans-serif;
 
     
@@ -45,35 +51,56 @@
 .signupinput {
     width: 300px;
     height: 26px;
+    margin-top: 2px;
     margin-bottom: 15px;
     font-family: 'PT Sans', sans-serif; 
+    border: 1px solid gray;
+    border-radius: 3px;
    
 }
 
 
 .signupbutton{
     width: 310px;
-    height: 30px;
+    height: 33px;
     position: relative;
-    bottom: 45px;
+    bottom: 55px;
     border: 1px solid black;
     border-radius: 3px;
-    background: #fad577;
+    background: #f5d175;
     border-color: #a88734 #9c7e31 #846a29;
     font-family: 'PT Sans', sans-serif;
 }
 
 .logo{
-   position: relative;
-   left: 47%;
+//    position: relatiabve;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
    bottom: 10px;
-    width:180px;
-    height:45px;
+    width:125px;
+    height:42px;
+}
+
+#clause{
+    font-weight: normal;
+    font-size: 13px;
+    position: relative;
+    bottom: 21px;
+    font-family: 'PT Sans', sans-serif;
+}
+#i{
+    font-weight: normal;
+    display: inline-flex;
+    font-size: 16px;
+    color: blue;
+    font-style: italic;
+    font-family: 'Niconne';
 }
 
 .cond{
      position: relative;
-     bottom: 40px;
+     bottom: 38px;
      right: 23px;
      font-size: 13px;
      font-family: 'PT Sans', sans-serif;
@@ -83,7 +110,7 @@
     position: relative;
     right: 48px;
     padding-bottom: 65px;
-    top: 50px;
+    top: 48px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
 
@@ -101,9 +128,9 @@
       background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(255, 254, 254, 0) 100%);
     display: block;
     position: relative;
-    top:45px;
+    top:40px;
     margin-bottom: 0px;
-    margin-top: -40px;
+    margin-top: -43px;
 }
 
 .signacc {
@@ -123,8 +150,9 @@
     align-items: center;
     border: 1px solid lightgray;
     width: 340px;
-    margin-left:40%;
-    height: 300px;
+     margin-left:auto;
+    margin-right: auto;
+    height: 340px;
     margin-top: 5px;
     border-radius: 5px;
 }
@@ -140,7 +168,8 @@
 
 #signbutton {
     width: 310px;
-    height: 30px;
+    height: 32px;
+    font-size: 14px;
     position: relative;
     top:5px;
     border: 1px solid black;
@@ -148,6 +177,7 @@
     background: #fad577;
     border-color: #a88734 #9c7e31 #846a29;
     font-family: 'PT Sans', sans-serif;
+    margin-bottom: 8px;
 }
 
 .signcond {
@@ -161,17 +191,21 @@
 #redirect-button {
     width: 340px;
     height: 30px;
-    position: relative;
-    left:40%;
-    
-    border: 1px solid black;
+    display:flex;
+     margin-left:auto;
+    margin-right: auto;
+     justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
     border-radius: 3px;
     font-family: 'PT Sans', sans-serif;
 }
 
 #new{
-     position: relative;
-    left:40%;
+      display:flex;
+     margin-left:auto;
+    margin-right: auto;
+    width:345px;
     font-size: 13px;
     font-weight: lighter;
     font-family: 'PT Sans', sans-serif;

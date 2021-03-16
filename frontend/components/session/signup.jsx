@@ -58,6 +58,7 @@ export default class Signup extends React.Component {
                         <label className="signup-param">Password
                         <br />
                             <input className="signupinput" type="password" value={this.state.password} onChange={this.handleInput('password')}/>
+                            <div id ='clause'><p id="i"> i </p>  Passwords must be at least 6 characters. </div>
                     </label>
                     </div>
                     <button className="signupbutton">Create your Amazone account</button>

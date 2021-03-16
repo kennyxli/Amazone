@@ -11,7 +11,8 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRedirect = this.handleRedirect.bind(this);
         this.handleLogo = this.handleLogo.bind(this);
-        this.handleLink = this.handleLink.bind(this)
+        this.handleLink = this.handleLink.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(type) {
@@ -23,6 +24,11 @@ class Login extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state)
+            .then(() => this.props.history.push('/'));
+    }
+    handleDemo(e){
+        e.preventDefault();
+        this.props.login({email: 'guest@guest.com', password: 'password'})
             .then(() => this.props.history.push('/'));
     }
     handleRedirect(e){
@@ -40,7 +46,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='outer-cont'>
             <a href=""><img src={window.brentURL} className="logo" onClick={this.handleLogo}></img></a>
             <div className="signin-form">
                 <h2 className="signacc">Sign-In</h2>
@@ -62,7 +68,8 @@ class Login extends React.Component {
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                        <button id="signbutton"  onClick={this.handleSubmit}>Log In!</button>
+                        <button id="signbutton"  onClick={this.handleSubmit}>Sign In</button>
+                        <button id="signbutton"  onClick={this.handleDemo}>Demo Sign In</button>
                     </label>
                             <p className="signcond">By continuing, you agree to Amazone's <a href="" onClick={this.handleLink}>Conditions of <br /> Use</a> and <a href="" onClick={this.handleLink}>Privacy Notice.</a></p>
                     </div>

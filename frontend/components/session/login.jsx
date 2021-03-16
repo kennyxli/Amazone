@@ -63,7 +63,7 @@ class Login extends React.Component {
                     </div>
                 </form>
             </div>
-            <p id="new">--------------------------- New to Amazone? --------------------------</p>
+            <p id="new">-------------------------- New to Amazone? -------------------------</p>
             <button id="redirect-button" onClick={this.handleRedirect}>Create your Amazone account</button>
             </div>
         );

@@ -14,6 +14,9 @@ class Login extends React.Component {
         this.handleLink = this.handleLink.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
     }
+    componentDidMount(){
+        this.props.reset()
+    }
 
     handleInput(type) {
         return (e) => {
@@ -43,11 +46,28 @@ class Login extends React.Component {
         e.preventDefault()
         this.props.history.push('/login')
     }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    <div key={idx} className='errors'>
+                        <img id='ex' src={window.exURL}></img>
+                        <p className="innerError" id='problem'>There was a problem</p>
+                        <p className="innerError" key={idx}>
+                        {error}
+                        </p>
+                    </div>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
+        
         return (
             <div className='outer-cont'>
             <a href=""><img src={window.brentURL} className="logo" onClick={this.handleLogo}></img></a>
+            <div>{this.renderErrors()}</div>
             <div className="signin-form">
                 <h2 className="signacc">Sign-In</h2>
                 <form>
@@ -68,8 +88,8 @@ class Login extends React.Component {
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                        <button id="signbutton"  onClick={this.handleSubmit}>Sign In</button>
-                        <button id="signbutton"  onClick={this.handleDemo}>Demo Sign In</button>
+                        <button className="signbutton"  onClick={this.handleSubmit}>Sign In</button>
+                        <button className="signbutton"  onClick={this.handleDemo}>Demo Sign In</button>
                     </label>
                             <p className="signcond">By continuing, you agree to Amazone's <a href="" onClick={this.handleLink}>Conditions of <br /> Use</a> and <a href="" onClick={this.handleLink}>Privacy Notice.</a></p>
                     </div>

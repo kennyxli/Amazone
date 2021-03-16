@@ -14,6 +14,9 @@ export default class Signup extends React.Component {
         this.handleLogo = this.handleLogo.bind(this);
         this.handleLink = this.handleLink.bind(this)
     }
+    componentDidMount() {
+        this.props.reset()
+    }
 
     handleInput(key) {
         return e => this.setState({ [key]: e.target.value })
@@ -26,6 +29,7 @@ export default class Signup extends React.Component {
     }
     handleRedirect(e) {
         e.preventDefault()
+        
         this.props.history.push('/login')
     }
     handleLogo(e) {
@@ -36,13 +40,29 @@ export default class Signup extends React.Component {
         e.preventDefault()
         this.props.history.push('/signup')
     }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    
+                    <div key={idx} className='errors'>
+                        <img id='ex' src={window.exURL}></img>
+                        <p className="innerError" id='problem'>There was a problem</p>
+                        <p className="innerError" >
+                            {error}
+                        </p>
+                    </div>
+                ))}
+            </ul>
+        );
+    }
 
     render () {
         
         return (
-            <div>
-                
+            <div className='outer-cont'> 
             <a href=""><img src={window.brentURL} className="logo" onClick={this.handleLogo}></img></a>
+            <div>{this.renderErrors()}</div>
             <div className="session-form">
                 <h2 className="createacc">Create account</h2>
                 <form onSubmit={this.handleSubmit}>

@@ -5,6 +5,11 @@
 .outer-cont {
     margin-left: auto;
     margin-right: auto;
+     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .session-form {
@@ -136,9 +141,10 @@
 .signacc {
     font-size: 30px;
     position: relative;
-    bottom: 10px;
+    bottom: 12px;
     right: 32%;
     font-weight:normal;
+    margin-bottom: 0px;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -159,14 +165,14 @@
 
 .login-param {
     position: relative;
-    bottom: 30px;
+    bottom: 10px;
     font-weight: bold;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
     left: 15px
 }
 
-#signbutton {
+.signbutton {
     width: 310px;
     height: 32px;
     font-size: 14px;
@@ -211,3 +217,35 @@
     font-family: 'PT Sans', sans-serif;
     color:gray;
 }
+
+.errors {
+   position: relative;
+    height:92px;
+    width: 340px;
+    border: 1px solid rgb(177, 0, 0);
+    border-radius: 5px;
+    right:20px
+}
+
+.innerError {
+    position: absolute;
+    left: 55px;
+    bottom: -2px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#problem {
+    color: rgb(177, 0, 0);
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+}
+
+#ex {
+   height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+}
+

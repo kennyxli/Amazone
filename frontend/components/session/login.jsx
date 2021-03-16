@@ -9,6 +9,7 @@ class Login extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRedirect = this.handleRedirect.bind(this);
     }
 
     handleInput(type) {
@@ -22,29 +23,39 @@ class Login extends React.Component {
         this.props.login(this.state)
             .then(() => this.props.history.push('/'));
     }
+    handleRedirect(e){
+        e.preventDefault()
+        this.props.history.push('/signup')
+    }
 
     render() {
         return (
             <div className="session-form">
-                <h2>Sign-In</h2>
+                <h2 className="createacc">Sign-In</h2>
                 <form>
-                    <label>Email:
+                    <div className="signup-cont">
+                    <label className="signup-param">Email:
                         <input
+                            className="signupinput"
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
                         />
                     </label>
 
-                    <label>Password:
+                    <label className="signup-param">Password:
                         <input
+                            className="signupinput"
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
                         <button onClick={this.handleSubmit}>Log In!</button>
+                        <button onClick={this.handleRedirect}>Create your Amazone account</button>
                     </label>
+                    </div>
                 </form>
+
             </div>
         );
     }

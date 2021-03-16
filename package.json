@@ -1,6 +1,4 @@
 {
-  "name": "amazone",
-  "private": true,
   "dependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-env": "^7.13.9",
@@ -17,21 +15,19 @@
     "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0"
   },
+  "name": "amazone",
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
-  "engines": {
-    "node": "15.5.0",
-    "npm": "7.3.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development",
-    "postinstall": "webpack"
+    "postinstall": "webpack --mode=development"
   },
   "repository": {
     "type": "git",

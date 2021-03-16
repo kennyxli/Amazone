@@ -12,6 +12,7 @@ export default class Signup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleRedirect = this.handleRedirect.bind(this)
         this.handleLogo = this.handleLogo.bind(this);
+        this.handleLink = this.handleLink.bind(this)
     }
 
     handleInput(key) {
@@ -30,6 +31,10 @@ export default class Signup extends React.Component {
     handleLogo(e) {
         e.preventDefault()
         this.props.history.push('/')
+    }
+    handleLink(e){
+        e.preventDefault()
+        this.props.history.push('/signup')
     }
 
     render () {
@@ -57,7 +62,7 @@ export default class Signup extends React.Component {
                     </div>
                     <button className="signupbutton">Create your Amazone account</button>
                 </form>
-                    <p className="cond">By creating an account, you agree to Amazone's<br/> Conditions of Use and Privacy Notice.</p>
+                    <p className="cond">By creating an account, you agree to Amazone's<br /> <a href="#" onClick={this.handleLink}>Conditions of Use</a> and <a onClick={this.handleLink} href="#">Privacy Notice.</a></p>
                     <div id="cont"><p className="already">Already have an account? <a href="" onClick={this.handleRedirect}>Sign-In</a></p></div>
             </div>
             </div>

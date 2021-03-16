@@ -11,6 +11,7 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRedirect = this.handleRedirect.bind(this);
         this.handleLogo = this.handleLogo.bind(this);
+        this.handleLink = this.handleLink.bind(this)
     }
 
     handleInput(type) {
@@ -31,6 +32,10 @@ class Login extends React.Component {
     handleLogo(e) {
         e.preventDefault()
         this.props.history.push('/')
+    }
+    handleLink(e) {
+        e.preventDefault()
+        this.props.history.push('/login')
     }
 
     render() {
@@ -59,7 +64,7 @@ class Login extends React.Component {
                         />
                         <button id="signbutton"  onClick={this.handleSubmit}>Log In!</button>
                     </label>
-                        <p className="signcond">By continuing, you agree to Amazone's Conditions of <br /> Use and Privacy Notice.</p>
+                            <p className="signcond">By continuing, you agree to Amazone's <a href="" onClick={this.handleLink}>Conditions of <br /> Use</a> and <a href="" onClick={this.handleLink}>Privacy Notice.</a></p>
                     </div>
                 </form>
             </div>

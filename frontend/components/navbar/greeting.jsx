@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Greeting = (props) => {
+    
     const signin = () => (
         <nav className="login">
             <Link to="/login">Login</Link>
@@ -11,7 +12,7 @@ const Greeting = (props) => {
     const welcome = () => {
         return (
         <header className="nav-group">
-                <h2 className="nav-name">Hello, {props.currentUser[Object.keys(props.currentUser)].name}!</h2>
+                <h2 className="nav-name">Hello, {props.currentUser.name}!</h2>
             <button className="header-button" onClick={props.logout}>Log Out</button>
         </header>
         )

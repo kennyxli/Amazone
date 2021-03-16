@@ -5,14 +5,14 @@ import session from '../../reducers/session';
 import Navbar from './navbar';
 
 const mSTP = (state) => {
-    
     // let user = null;
     // if (state.session.currentUser){
-    //     user = state.entities.users[Object.keys(state.session.currentUser)]
-    // }
-    
+        //     user = state.entities.users[Object.keys(state.session.currentUser)]
+        // }
+        
+        
     return {
-        currentUser: state.session.currentUser
+        currentUser: state.entities.users[state.session.currentUser]
     };
 };
 

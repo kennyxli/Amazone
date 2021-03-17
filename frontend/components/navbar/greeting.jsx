@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 const Greeting = (props) => {
     
     const signin = () => (
-        <nav className="login">
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign up!</Link>
+        <nav className="outergreet">
+            <button id="topbutton"><div id='topgreet'>Hello, Sign in</div>
+                <div id='bottomgreet'>Account & Lists<img src={window.arrowURL}></img></div></button>
+            <div className="greet">
+                <Link to="/login">Login</Link>
+                <Link to="/signup">Sign up!</Link>
+            </div>
         </nav>
     );
     const welcome = () => {

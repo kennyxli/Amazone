@@ -1,0 +1,27 @@
+.lowernavbar{
+    display: inline-flex;
+    border: 1px solid black;
+    margin-top: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #232F3E;
+    
+}
+
+.lowerlist{
+   position: relative;
+    float: left;
+    left: 15px;
+    padding: 10px;
+    color:white;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif; 
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+.lowerlist:hover{
+    border: 1px solid white;
+    border-radius: 3px;
+}

@@ -9,8 +9,9 @@ export default class NavBar extends React.Component{
     render(){
         
         return (
-            <nav>
-                <Greeting currentUser={this.props.currentUser} logout={this.props.logout}/>
+            <nav className="nav">
+                <a href=""><img src={window.logoURL} id="navlogo"></img></a>
+                <Greeting id='greet' currentUser={this.props.currentUser} logout={this.props.logout}/>
             </nav>
         )
     }

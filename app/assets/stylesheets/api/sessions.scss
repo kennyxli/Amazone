@@ -22,9 +22,10 @@
     width: 330px;
     margin-left:auto;
     margin-right: auto;
-    height: 534px;
+    height: 480px;
     margin-top: 5px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 
@@ -38,7 +39,7 @@
 .createacc{
     font-size: 29px;
     position: relative;
-    bottom: 45px;
+    bottom: 38px;
     right: 18%;
     font-weight:initial;
     font-family: 'PT Sans', sans-serif;
@@ -48,15 +49,15 @@
 
 .signup-param {
     position: relative;
-    bottom: 50px;
+    bottom: 25px;
     font-weight: bold;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
 }
 .signupinput {
     width: 300px;
-    height: 26px;
-    margin-top: 2px;
+    height: 30px;
+    margin-top: 4px;
     margin-bottom: 15px;
     font-family: 'PT Sans', sans-serif; 
     border: 1px solid gray;
@@ -66,14 +67,14 @@
 
 
 .signupbutton{
-    width: 310px;
-    height: 33px;
+    width: 299px;
+    height:29px;
     position: relative;
-    bottom: 55px;
+    bottom: 45px;
     border: 1px solid black;
     border-radius: 3px;
-    background: #f5d175;
-    border-color: #a88734 #9c7e31 #846a29;
+    background: #f8d16e;
+    border-color: #5e4a1a #5f4b1a #6b551c;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -82,16 +83,18 @@
     display: flex;
     margin-right: auto;
     margin-left: auto;
+    margin-top:10px;
    bottom: 10px;
     width:125px;
-    height:42px;
+    height:45px;
+    
 }
 
 #clause{
     font-weight: normal;
     font-size: 13px;
     position: relative;
-    bottom: 21px;
+    bottom: 26px;
     font-family: 'PT Sans', sans-serif;
 }
 #i{
@@ -105,17 +108,22 @@
 
 .cond{
      position: relative;
-     bottom: 38px;
-     right: 23px;
-     font-size: 13px;
-     font-family: 'PT Sans', sans-serif;
+     bottom: 36px;
+     right: 15px;
+     font-size: 12.5px;
+     font-family: 'Lato', sans-serif;
+}
+
+#break{
+    margin-top:5px;
+    list-style-type: none;
 }
 
 .already{
     position: relative;
     right: 48px;
     padding-bottom: 65px;
-    top: 48px;
+    top: 53px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
 
@@ -133,9 +141,9 @@
       background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(255, 254, 254, 0) 100%);
     display: block;
     position: relative;
-    top:40px;
+    top:50px;
     margin-bottom: 0px;
-    margin-top: -43px;
+    margin-top: -39px;
 }
 
 .signacc {

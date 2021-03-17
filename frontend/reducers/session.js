@@ -9,7 +9,7 @@ export default (state = _nullSession, action) => {
     
     switch(action.type){
         case RECEIVE_CURRENT_USER:
-            return {currentUser: Object.keys(action.user)}
+            return {currentUser: parseInt(Object.keys(action.user)[0])}
         case LOGOUT_CURRENT_USER:
             return _nullSession
         default:

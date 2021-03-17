@@ -121,6 +121,7 @@
     color:white;
     position: relative;
     font-family: 'PT Sans', sans-serif; 
+    text-decoration: none;
 }
 
 #topgreet, #topreturn{ 
@@ -134,9 +135,28 @@
     font-family: 'PT Sans', sans-serif; 
 }
 
-#topbutton, #returnbutton{
+#greeting, #logingreet{
+    color:white;
+    position: relative;
+    font-family: 'PT Sans', sans-serif; 
+    text-decoration: none;
+}
+
+#greeting {
+    font-size: 13px;
+    font-family: 'PT Sans', sans-serif; 
+}
+
+#logingreet{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif; 
+}
+
+#topbutton, #returnbutton, .header-button{
     border: 0px;
     background: none;
+    outline: none;
     display: flex;
     flex-direction: column;
     margin-top: 3px;
@@ -147,7 +167,7 @@
 #returnbutton{
     width: 90px;
 }
-#topbutton:hover, #returnbutton:hover, #flagarrow:hover{
+#topbutton:hover, #returnbutton:hover, #flagarrow:hover, .header-button:hover{
     border: 1px solid white;
     border-radius: 3px;
 }

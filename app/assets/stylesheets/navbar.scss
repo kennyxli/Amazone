@@ -1,30 +1,32 @@
 .nav{
     display: flex;
-    border: 1px solid black;
     margin-top: 0px;
     width: 100%;
     height: 60px;
     background-color: #131A22
-    
+
 }
 
 #navlogo{
     position: relative;
     float: left;
     line-height: 0;
-    top: 5px;
+    top: 9px;
     left: 6px;
-    height: 77%;
-    
+    height: 70%;
     width: 130px;
     padding: 0px 10px 0px 9px;
     background-color: #131A22;
     border-radius: 3px;
 }
 
+
 #navlogo:hover{
     border: 1px solid white;
-    
+    padding: 0px 9px 0px 8px;
+    cursor: pointer;
+     height: 75%;
+     top:7px;
 }
 
 .outerSearch{
@@ -106,9 +108,19 @@
     
 }
 #flagarrow{
+    position: relative;
     width: 60px;
-    right: 20px;
+    right:4px;
     padding: 0px 20px 5px 12px;
+    top:1px;
+}
+
+#flagarrow:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0px 19px 5px 11px; 
+    top:0px;
 }
 .greet {
     display: none;
@@ -126,13 +138,13 @@
 }
 
 #topgreet, #topreturn{ 
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'PT Sans', sans-serif; 
 }
 
 #bottomgreet, #bottomreturn{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'PT Sans', sans-serif; 
 }
 
@@ -169,17 +181,32 @@
 #returnbutton{
     width: 90px;
 }
-#topbutton:hover, #returnbutton:hover, #flagarrow:hover, .header-button:hover{
+
+
+#topbutton:hover, #returnbutton:hover, .header-button:hover{
+    cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;
+    padding: 6px 9px 7px 8px;
 }
 
 #returnbutton{
     color:white;
     position: relative;
     font-family: 'PT Sans', sans-serif;
+    z-index:1
 }
 
+#cart-number{
+    color: rgb(206, 140, 19);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 19px;
+    font-weight:bolder;
+    position: relative;
+    top:-58px;
+    left: 20px;
+    z-index: 2;
+}
 
 .loc-button{
       border: 0px;
@@ -193,8 +220,11 @@
     height:90%;
 }
 .loc-button:hover{
+    cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;
+    padding: 0px 0px 0px 7px;
+    margin-top: 2px;
 }
 
 .top-address{

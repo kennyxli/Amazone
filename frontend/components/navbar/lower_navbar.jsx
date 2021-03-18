@@ -9,8 +9,8 @@ export default class NavBar extends React.Component {
 
         return (
             <nav className="lowernavbar">
-                <a href="https://github.com/kennyxli" className="lowerlist">GitHub</a>
-                <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="lowerlist">LinkedIn</a>
+                <a href="https://github.com/kennyxli" className="lowerlist"><img id="nav-github" src={window.githubURL} ></img></a>
+                <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="lowerlist"><img id="nav-github" src={window.linkedinURL} ></img></a>
                 <a href="" className="lowerlist">Best Seller</a>
                 <a href="" className="lowerlist">New Release</a>
                 <a href="" className="lowerlist">Today's Choice</a>

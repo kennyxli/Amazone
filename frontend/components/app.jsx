@@ -8,7 +8,7 @@ import {AuthRoute} from "../util/route_utils"
 import Body from "./body/body"
 
 export default () => (
-    <div>
+    <div id='app-cont'>
         <Route exact path="/" component={NavBarContainer}/>
         <Route exact path="/" component={LowerNavBar} />
         <Route exact path="/" component={Body}/>

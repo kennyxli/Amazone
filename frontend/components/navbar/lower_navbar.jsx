@@ -16,6 +16,7 @@ export default class NavBar extends React.Component {
                 <a href="" className="lowerlist">Today's Choice</a>
                 <a href="" className="lowerlist">Our Favorite</a>
                 <a href="" className="lowerlist">Workout</a>
+                <a href="" className="lowerlist">Higest Rated</a>
             </nav>
         )
     }

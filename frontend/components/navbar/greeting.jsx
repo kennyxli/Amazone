@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class Greeting extends React.Component{
     constructor(props){
         super(props)
@@ -28,7 +29,7 @@ class Greeting extends React.Component{
             
             <header className="nav-group">
                 <button className="header-button" onClick={this.props.logout}>
-                    <h2 id="greeting">Hello, {this.props.currentUser.name}!</h2>
+                    <h2 id="greeting">Hello, {this.props.currentUser.name}</h2>
                     <div id='logingreet'>Account & Lists<img src={window.arrowURL}></img></div>
                 </button>
             </header>

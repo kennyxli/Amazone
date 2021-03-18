@@ -1,0 +1,66 @@
+#outer-footer{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scroll-button{
+    color: white;
+    font-family: 'PT Sans', sans-serif; 
+    
+    width:100%;
+    height:50px;
+    border:0px;
+    background-color:  #37475A;
+    outline: none;
+}
+
+#scroll-button:hover{
+    cursor: pointer;
+    background-color:  #556272;
+}
+
+#middle-footer{
+    height: 200px;
+    width: 100%;
+    background-color: #232F3E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.footer-link{
+    color: white;
+    text-decoration: none;
+}
+
+#bottom-footer{ 
+    height: 100px;
+    width: 100%;
+    background-color: #131A22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+#footer-logo{
+    padding-top: 15px;
+    width: 130px;
+    height: 60px;
+}
+
+#footer-github{
+    position: relative;
+    top: 5px;
+    width: 27px;
+    height: 27px;
+}

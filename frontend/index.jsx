@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {login, signup, logout} from "./util/session_api_util"
+import {login, signup, logout} from "./actions/session"
 import Root from './components/root'
 import configureStore from './store/store'
 
 window.signup = signup
 window.login = login
 window.logout = logout
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     let preloadedState = undefined;

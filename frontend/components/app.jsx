@@ -6,7 +6,7 @@ import NavBarContainer from "./navbar/navbar_container"
 import LowerNavBar from "./navbar/lower_navbar"
 import {AuthRoute} from "../util/route_utils"
 import Body from "./body/body"
-
+import Footer from "./footer/footer"
 export default () => (
     <div >
         <div id='app-cont'>
@@ -16,5 +16,6 @@ export default () => (
         </div>
         <AuthRoute path="/signup" component={SignupContainer}/>
         <AuthRoute path="/login" component={LogInContainer}/>
+        <Route path="/" component={Footer}/>
     </div>
 )

@@ -11,7 +11,7 @@
 
 #product-list {
    
-    height: 412px;
+    height: 444px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -21,14 +21,17 @@
 }
 
 .title{
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 21px;
+    line-height: 27.3px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .product-list-item{
     border: 1px solid rgb(231, 231, 231);
     height: 95%;
-    width: 23%;
+    width: 23.5%;
     font-weight: bold;
     font-size: 25px;
     font-family: 'PT Sans', sans-serif; 
@@ -42,7 +45,7 @@
 
 .product-list-image{
     width:93%;
-    height:72%;
+    height:74%;
 }
 
 .product-list-image:hover{
@@ -51,14 +54,18 @@
 
 .product-link{
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: lighter;
     font-family: 'PT Sans', sans-serif; 
     right: 20px;
     text-decoration: none;
+    color:#006274;
 }
 
 .product-link:hover{
     text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F
 }
 
 #lower-product-list {

@@ -41,22 +41,21 @@
     display:flexbox;
     flex-grow: 1;
     position: relative;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
     border:0px;
-    bottom: 5px;
+    bottom: 4px;
     height: 38px;
     width: 88%;
     left: auto;
     right: 40px;
     outline: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;;
 }
 
 
 #sbutton {
     position: relative;
-    right: 41px;
+    right: 80px;
     padding: 0px 0px 0px 0px;
     height: 38px;
     width: 40px;
@@ -71,8 +70,8 @@
 
 #searchb {
     position: relative;
-    height: 23px;
-    width: 23px;
+    height: 21px;
+    width: 21px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -80,10 +79,15 @@
 
 
 
-#search:active, #search:focus{
+
+
+#search:active, #search:focus {
     
-    border: 2px solid orange
+  box-shadow: 0 0 0 3px rgb(240, 156, 0);
+  
+    
 }
+
 
 #sbutton:hover {
     background-color: orange;
@@ -97,35 +101,41 @@
 
 #navflag{
     position: relative;
-    right:5px;
-    top: 22px;
-    width: 25px;
-    height: 17px;
+    
+    top: 24px;
+    width: 21px;
+    height: 16px;
+    right: 0px;
 }
 #arrow{
-   position: absolute;
-   top: 30px;
+   position: relative;
+    left: 25px;
+    top: 10px;
+   
     
 }
 #flagarrow{
     position: relative;
     width: 60px;
-    right:4px;
-    padding: 0px 20px 5px 12px;
+    right:44px;
+    padding: 0px 24px 5px 14px;
     top:1px;
 }
 
-#flagarrow:hover{
+#flagarrow:hover {
     cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;
-    padding: 0px 19px 5px 11px; 
+    padding: 0px 23px 5px 13px; 
     top:0px;
+}
+#flagarrow:hover + #arrow{
+    right: 15px;
 }
 .greet {
     display: none;
     position: relative;
-    
+    right: 100px;
 
     
 }
@@ -140,6 +150,7 @@
 #topgreet, #topreturn{ 
     font-size: 12px;
     font-family: 'PT Sans', sans-serif; 
+    font-weight: bold;
 }
 
 #bottomgreet, #bottomreturn{
@@ -156,18 +167,20 @@
 }
 
 #greeting {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'PT Sans', sans-serif; 
 }
 
 #logingreet{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'PT Sans', sans-serif; 
 }
 
 #topbutton, #returnbutton, .header-button{
+    top:5px;
     border: 0px;
+    left: -25px;
     background: none;
     outline: none;
     display: flex;
@@ -176,11 +189,28 @@
     padding: 7px 10px 8px 9px;
     width: 155px;
     height:90%;
+    position: relative;
+    right: 30px;
 }
 
-#returnbutton{
-    width: 90px;
+.header-button{
+    border: 0px;
+    left: -25px;
+    background: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    padding: 7px 10px 8px 9px;
+    width: 155px;
+    height:90%;
+    position: relative;
+    right: 30px;
 }
+
+
+
+
 
 
 #topbutton:hover, #returnbutton:hover, .header-button:hover{
@@ -194,7 +224,13 @@
     color:white;
     position: relative;
     font-family: 'PT Sans', sans-serif;
-    z-index:1
+    z-index:1;
+    width: 90px;
+    
+}
+#cart-icon{
+    position: relative;
+    bottom: 5px;
 }
 
 #cart-number{
@@ -203,7 +239,7 @@
     font-size: 19px;
     font-weight:bolder;
     position: relative;
-    top:-58px;
+    top:-63px;
     left: 20px;
     z-index: 2;
 }

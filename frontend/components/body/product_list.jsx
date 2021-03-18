@@ -17,7 +17,7 @@ export default class ProductList extends React.Component{
                     <img className='product-list-image' src={window.theraURL} ></img><br />
                     <a href="" className="product-link">Check it out</a>
                 </li>
-                <li className="product-list-item"><p className='title'>Workout at home</p>
+                <li className="product-list-item"><p className='title'>Workout at Home</p>
                     <img className='product-list-image' src={window.fitURL} ></img><br/>
                     <a href="" className="product-link">Take a look</a>
                 </li>

@@ -8,10 +8,12 @@ import {AuthRoute} from "../util/route_utils"
 import Body from "./body/body"
 
 export default () => (
-    <div id='app-cont'>
-        <Route exact path="/" component={NavBarContainer}/>
-        <Route exact path="/" component={LowerNavBar} />
-        <Route exact path="/" component={Body}/>
+    <div >
+        <div id='app-cont'>
+            <Route exact path="/" component={NavBarContainer}/>
+            <Route exact path="/" component={LowerNavBar} />
+            <Route exact path="/" component={Body}/>
+        </div>
         <AuthRoute path="/signup" component={SignupContainer}/>
         <AuthRoute path="/login" component={LogInContainer}/>
     </div>

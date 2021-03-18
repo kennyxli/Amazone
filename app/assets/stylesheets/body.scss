@@ -10,7 +10,7 @@
 
 
 #product-list {
-   border: 3px solid black;
+   
     height: 425px;
     display: flex;
     flex-direction: row;
@@ -40,8 +40,8 @@
 }
 
 .product-list-image{
-    width:92%;
-    height:85%;
+    width:93%;
+    height:70%;
 }
 
 .product-list-image:hover{
@@ -53,4 +53,19 @@
     font-size: 15px;
     font-family: 'PT Sans', sans-serif; 
     right: 20px;
+    text-decoration: none;
+}
+
+.product-link:hover{
+    text-decoration: underline;
+}
+
+#lower-product-list {
+   
+    height: 425px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 4;
+    margin-top: 18px;
 }

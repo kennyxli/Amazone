@@ -75,7 +75,7 @@
     padding-left: 5px;
 }
 
-.signupinput:active, .signupinput:focus {
+ .signupinput:focus {
     outline: none;
     box-shadow: 0px 0px 3px 1px rgb(197, 132, 11);
     border: 1px solid darkorange;
@@ -83,8 +83,19 @@
     
 }
 
-.signupbutton:hover {
+.signupbutton:active, .signbutton:active{
+    box-shadow: 0px 0px 3px 1px rgb(197, 132, 11);
+    border: 1px solid darkorange;
+}
+.signupbutton:active, .signupbutton:focus{
+    outline:none;
+    
+}
+
+.signupbutton:hover, .signbutton:hover {
     cursor: pointer;
+    
+    background: linear-gradient(#e7c56e, #eec868, #f3c247);
 }
 
 
@@ -95,10 +106,10 @@
     bottom: 38px;
     border: 1px solid black;
     border-radius: 3px;
-    background: linear-gradient(#ffe39d, #ffd66e, #ffc531);
+    background: linear-gradient(#f7e2af, #f1d07a, #f3c247);
     border-color: #a88734 #9c7e31 #846a29;
-    
-    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
 }
 
     
@@ -198,6 +209,7 @@
     height: 340px;
     margin-top: 16px;
     border-radius: 5px;
+    margin-bottom: 6px;
 }
 
 .login-param {
@@ -217,10 +229,16 @@
     top:8px;
     border: 1px solid black;
     border-radius: 3px;
-    background: linear-gradient(#ffe39d, #ffd66e, #ffc531);
+    background: linear-gradient(#f7e2af, #f1d07a, #f3c247);
     border-color: #a88734 #9c7e31 #846a29;
+    font-size: 13px;
     font-family: 'Lato', sans-serif;
     margin-bottom: 12px;
+}
+
+.signbutton:active, .signbutton:focus{
+    outline:none;
+    
 }
 
 .signcond {

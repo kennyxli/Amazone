@@ -83,8 +83,8 @@ export default class Signup extends React.Component {
                     </div>
                     <button className="signupbutton">Create your Amazone account</button>
                 </form>
-                    <p className="cond">By creating an account, you agree to Amazone's<br /><li id='break'> <a href="#" onClick={this.handleLink}>Conditions of Use</a> and <a onClick={this.handleLink} href="#">Privacy Notice.</a></li></p>
-                    <div id="cont"><p className="already">Already have an account? <a href="" onClick={this.handleRedirect}>Sign-In</a></p></div>
+                    <p className="cond">By creating an account, you agree to Amazone's<br /><li id='break'> <a href="#" onClick={this.handleLink} className="form-hyperlink">Conditions of Use</a> and <a className="form-hyperlink" onClick={this.handleLink} href="#">Privacy Notice.</a></li></p>
+                    <div id="cont"><p className="already">Already have an account? <a href="" onClick={this.handleRedirect} className="form-hyperlink">Sign-In</a></p></div>
             </div>
             </div>
         )

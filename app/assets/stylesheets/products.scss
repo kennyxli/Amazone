@@ -1,0 +1,23 @@
+.product-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-left:5%;
+    margin-right:5%;
+    max-width: 1300px;
+}
+
+.product-image{
+    width: 250px;
+    height:240px;
+}
+
+.product-title{
+    font-size: 17px;
+    width: 225px;
+    font-family: 'Lato', sans-serif;
+}
+.inner-container{
+    margin: 25px;
+}

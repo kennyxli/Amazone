@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import {login, signup, logout} from "./actions/session"
 import Root from './components/root'
 import configureStore from './store/store'
+import {getProduct, getProducts} from "./actions/product_action"
 
 window.signup = signup
 window.login = login
 window.logout = logout
+window.getProduct = getProduct
+window.getProducts = getProducts
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -265,6 +265,7 @@
 
 #new{
       display:flex;
+      flex-direction: row;
      margin-left:auto;
     margin-right: auto;
     width:345px;
@@ -272,6 +273,18 @@
     font-weight: lighter;
     font-family: 'PT Sans', sans-serif;
     color:gray;
+}
+#new:before, #new:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+#new:before {
+  margin-right: 10px
+}
+#new:after {
+  margin-left: 10px
 }
 
 .errors {

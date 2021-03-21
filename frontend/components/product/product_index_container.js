@@ -3,9 +3,10 @@ import ProductIndex from './product_index';
 import {getProducts} from '../../actions/product_action'
 
 const mSTP = (state, ownProps) => {
-    debugger
+    
     return {
-        products: Object.values(state.entities.products)
+        products: Object.values(state.entities.products),
+        search: state.search
     }
 }
 

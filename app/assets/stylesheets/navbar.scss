@@ -81,7 +81,6 @@
 
 
 
-
 #search:active, #search:focus {
     
   box-shadow: 0 0 0 3px rgb(240, 156, 0);
@@ -132,13 +131,26 @@
 #flagarrow:hover + #arrow{
     right: 15px;
 }
-.greet {
-    display: none;
-    position: relative;
-    right: 100px;
 
-    
+.greet {
+	position: absolute;
+	display: none;
+	top: 30px;
+	right: 0;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 10px;
+	width: 225px;
+	z-index: 1;
+	color: darkgray;
+	font-family: 'PT-sans',sans-serif;
+	text-align: left;
+	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    font-weight: initial;
 }
+
+
 
 #topgreet, #bottomgreet{
     color:white;

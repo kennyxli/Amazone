@@ -18,7 +18,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 24)
+>>>>>>> searchbar
 Product.create!(
 id: 2,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -26,7 +31,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 12)
+>>>>>>> searchbar
 Product.create!(
 id: 3,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -34,7 +44,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 36)
+>>>>>>> searchbar
 Product.create!(
 id: 4,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -42,7 +57,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 18)
+>>>>>>> searchbar
 Product.create!(
 id: 5,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -50,7 +70,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 29)
+>>>>>>> searchbar
 Product.create!(
 id: 6,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -58,7 +83,12 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
+<<<<<<< HEAD
 image_url: "thera1.jpg")
+=======
+image_url: "thera1.jpg",
+quantity: 48)
+>>>>>>> searchbar
 Product.create!(
 id: 7,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -66,7 +96,8 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
-image_url: "thera1.jpg")
+image_url: "thera1.jpg",
+quantity: 33)
 Product.create!(
 id: 8,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
@@ -74,7 +105,8 @@ description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 
-image_url: "thera1.jpg")
+image_url: "thera1.jpg",
+quantity: 7)
 Product.create!(
 id: 9,
 title:"Magic Bullet Blender, Small, Silver, 11 Piece Set", 
@@ -82,7 +114,8 @@ description:"11 piece blender set: Includes blender, additional blender cups, bl
 category:"blender", 
 price: 6999, 
 user_id: 1, 
-image_url: "blender1.jpg")
+image_url: "blender1.jpg",
+quantity: 21)
 Product.create!(
 id: 10,
 title:"Magic Bullet Blender, Small, Silver, 11 Piece Set", 
@@ -90,7 +123,8 @@ description:"11 piece blender set: Includes blender, additional blender cups, bl
 category:"blender", 
 price: 6999, 
 user_id: 1, 
-image_url: "blender1.jpg")
+image_url: "blender1.jpg",
+quantity: 37)
 Product.create!(
 id: 11,
 title:"Magic Bullet Blender, Small, Silver, 11 Piece Set", 
@@ -98,7 +132,8 @@ description:"11 piece blender set: Includes blender, additional blender cups, bl
 category:"blender", 
 price: 6999, 
 user_id: 1, 
-image_url: "blender1.jpg")
+image_url: "blender1.jpg",
+quantity: 51)
 Product.create!(
 id: 12,
 title:"Magic Bullet Blender, Small, Silver, 11 Piece Set", 
@@ -106,4 +141,5 @@ description:"11 piece blender set: Includes blender, additional blender cups, bl
 category:"blender", 
 price: 6999, 
 user_id: 1, 
-image_url: "blender1.jpg")
+image_url: "blender1.jpg",
+quantity: 32)

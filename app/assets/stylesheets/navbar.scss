@@ -1,0 +1,316 @@
+.nav{
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #131A22
+
+}
+
+#navlogo{
+    position: relative;
+    float: left;
+    line-height: 0;
+    top: 9px;
+    left: 6px;
+    height: 70%;
+    width: 130px;
+    padding: 0px 10px 0px 9px;
+    background-color: #131A22;
+    border-radius: 3px;
+}
+
+
+#navlogo:hover{
+    border: 1px solid white;
+    padding: 0px 9px 0px 8px;
+    cursor: pointer;
+     height: 75%;
+     top:7px;
+}
+
+.outerSearch{
+    position: relative;
+    top:8px;
+    left: 55px;
+    height: 35px;
+    width:97%;
+}
+
+#search {
+    display:flexbox;
+    flex-grow: 1;
+    position: relative;
+    padding: 0px 0px 0px 10px;
+    border:0px;
+    bottom: 0px;
+    height: 38px;
+    width: 88%;
+    left: auto;
+    right: 25px;
+    outline: none;
+    border-radius: 5px;;
+}
+
+
+#sbutton {
+    position: relative;
+    right: 65px;
+    top:4px;
+    padding: 0px 0px 0px 0px;
+    height: 38px;
+    width: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    font-size: 20px;
+    border: 0px;
+    background-color: rgb(255, 193, 77);
+    outline: none;
+}
+
+#searchb {
+    position: relative;
+    height: 21px;
+    width: 21px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+#sbutton:active{
+    box-shadow: 0 0 0 3px rgb(240, 156, 0);
+}
+
+
+#search:active, #search:focus {
+    
+  box-shadow: 0 0 0 3px rgb(240, 156, 0);
+  
+    
+}
+
+
+#sbutton:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#sbutton:active{
+    border: 5px solid orange;
+    
+}
+
+#navflag{
+    position: relative;
+    
+    top: 24px;
+    width: 21px;
+    height: 16px;
+    right: 0px;
+}
+#arrow{
+   position: relative;
+    left: 25px;
+    top: 10px;
+   
+    
+}
+#flagarrow{
+    position: relative;
+    width: 60px;
+    right:20px;
+    padding: 0px 24px 5px 14px;
+    top:1px;
+}
+
+#flagarrow:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0px 23px 5px 13px; 
+    top:0px;
+}
+#flagarrow:hover + #arrow{
+    right: 15px;
+}
+
+.greet {
+	position: absolute;
+	display: none;
+	top: 30px;
+	right: 0;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 10px;
+	width: 225px;
+	z-index: 1;
+	color: darkgray;
+	font-family: 'PT-sans',sans-serif;
+	text-align: left;
+	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    font-weight: initial;
+}
+
+
+
+#topgreet, #bottomgreet{
+    color:white;
+    position: relative;
+    font-family: 'PT Sans', sans-serif; 
+    text-decoration: none;
+}
+
+#topgreet, #topreturn{ 
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif; 
+    font-weight:bolder;
+}
+
+#bottomgreet, #bottomreturn{
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif; 
+}
+
+#greeting, #logingreet{
+    color:white;
+    position: relative;
+    font-family: 'PT Sans', sans-serif; 
+    text-decoration: none;
+}
+
+#greeting {
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif; 
+}
+
+#logingreet{
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif; 
+}
+
+#topbutton, #returnbutton, .header-button{
+    top:5px;
+    border: 0px;
+    left: -2px;
+    background: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    padding: 7px 10px 8px 9px;
+    width: 155px;
+    height:90%;
+    position: relative;
+    right: 20px;
+}
+
+.header-button{
+    border: 0px;
+    left: -2px;
+    background: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    padding: 7px 10px 8px 9px;
+    width: 155px;
+    height:90%;
+    position: relative;
+    right: 20px;
+}
+
+
+
+
+
+
+#topbutton:hover, #returnbutton:hover, .header-button:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px 9px 7px 8px;
+}
+
+#returnbutton{
+    color:white;
+    position: relative;
+    font-family: 'PT Sans', sans-serif;
+    z-index:1;
+    width: 90px;
+    
+}
+#cart-icon{
+    position: relative;
+    bottom: 5px;
+}
+
+#cart-number{
+    color: rgb(206, 140, 19);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 19px;
+    font-weight:bolder;
+    position: relative;
+    top:-63px;
+    left: 20px;
+    z-index: 2;
+}
+
+.loc-button{
+      border: 0px;
+    background: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    padding: 0px 0px 0px 8px;
+    width: 155px;
+    height:90%;
+    margin-left: 7px;
+    min-width: 175px;
+}
+.loc-button:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0px 0px 0px 7px;
+    margin-top: 2px;
+}
+
+.top-address{
+    color:white;
+    position: relative;
+    font-family: 'PT Sans', sans-serif; 
+    text-decoration: none;
+    font-size: 13px;
+    left: 14px;
+    bottom: -9px;
+}
+
+
+
+.address{
+    color:white;
+    font-size: 15px;
+    font-weight:bolder;
+    font-family: 'PT Sans', sans-serif;
+    position: relative;
+    left:-4px;
+    
+}
+.outer-location{
+    position: relative;
+    right:-10px
+}
+.loc{
+    position: relative;
+    height:20px;
+    width:18px;
+    top:2px;
+    right:2px;
+    
+}

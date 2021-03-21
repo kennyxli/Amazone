@@ -1,0 +1,107 @@
+#search-result{
+    border: 1px solid lightgray;
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 2px 7px lightgray;
+}
+
+#search-result p {
+    margin-left: 5px;
+    color: #c45500!important;
+    font-weight: bold;
+}
+.product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    margin-left: 20%;
+    margin-top: 13px;
+    max-width: 1300px;
+}
+
+.product-image{
+    width: 220px;
+    height:210px;
+}
+
+.inner-container{
+    margin: 25px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    border-bottom: 2px solid lightgray;
+}
+
+.description{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 35px;
+}
+.product-title{
+    font-size: 18px;
+    font-weight:500;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.product-title:hover{
+    cursor: pointer;
+    color: #C7511F
+}
+
+.review-image{
+    position: relative;
+    top: -6px;
+}
+
+.product-price {
+    position: relative;
+    font-weight:500;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.product-delivery{
+    font-size: 13px;
+    font-family: 'PT-sans', sans-serif;
+}
+.product-prime{
+    position: relative;
+    top: 6px;
+}
+
+.more-buying{
+    position: relative;
+    top: 3px;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+}
+.price-offer{
+    position: relative;
+    top: 2px;
+    font-size: 14px;
+    font-family:"PT-sans", sans-serif;
+    
+}
+.offer-link{
+    margin-left: 9px;
+    text-decoration: none;
+    color: #007185;
+}
+.offer-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F;
+}

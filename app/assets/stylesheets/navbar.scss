@@ -101,7 +101,7 @@
 #navflag{
     position: relative;
     
-    top: 24px;
+    top: 26px;
     width: 21px;
     height: 16px;
     right: 0px;
@@ -109,7 +109,7 @@
 #arrow{
    position: relative;
     left: 25px;
-    top: 10px;
+    top: 13px;
    
     
 }
@@ -132,8 +132,77 @@
     right: 15px;
 }
 
-.greet {
-	position: absolute;
+.greet-flag{
+    position: absolute;
+	display: none;
+    top: 52px;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 10px;
+    width: 175px;
+    height: 80px;
+	z-index: 1;
+	color: darkgray;
+	font-family: 'PT-sans',sans-serif;
+	text-align: left;
+	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    
+}
+input[type='radio']:checked{
+    width: 16px;
+    height: 16px;
+   color: orange;
+}
+
+.greet-flag .greet-links{
+    color: black;
+    font-size: 13px;
+     display: flex;
+    flex-direction: none;
+    align-items: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 12px;
+}
+
+greet-flag .greet-links input {
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+#flagarrow:hover .greet-flag{
+    display: block;
+}
+
+.greet-flag:before {
+    content: "";
+    width: 4;
+    height: 4;
+    position: absolute;
+    bottom: 100%;
+    right: 132px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1) transparent;    
+}
+
+.greet-flag:after {
+    content: "";
+    width: 4;
+    height: 4;
+    position: absolute;
+    bottom: 100%;
+    right: 134px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;    
+}
+
+.outergreet .greet {
+position: absolute;
 	display: none;
 	top: 52px;
     right: 132px;
@@ -141,8 +210,7 @@
 	border: 1px solid lightgray;
 	border-radius: 3px;
 	padding: 10px;
-    width: 275px;
-    height: 120px;
+    width: 475px;
 	z-index: 1;
 	color: darkgray;
 	font-family: 'PT-sans',sans-serif;
@@ -167,7 +235,7 @@
     border-color: rgba(0,0,0,0.1) transparent;    
 }
 
-.greet:after {
+.greet:after{
     content: "";
     width: 4;
     height: 4;
@@ -179,25 +247,109 @@
     border-color: #fff transparent;    
 }
 
-.greet-links{
+.greet .outer-greet-links{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.greet-links li{
+.nav-group .greet .greet-links{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+.outergreet .greet .greet-links{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: -45px;
+    border-top: 1px solid rgb(233, 231, 231);
+    padding-top: 15px;
+    margin-top: -62px;
+}
+
+
+.nav-group .greet {
+    position: absolute;
+	display: none;
+	top: 52px;
+    right: 132px;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 10px;
+    width: 475px;
+    height: 425px;
+	z-index: 1;
+	color: darkgray;
+	font-family: 'PT-sans',sans-serif;
+	text-align: left;
+	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    font-weight: initial;
+}
+.greet-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 1px solid rgb(233, 231, 231);
+}
+
+.greet-shopping-list{
+    margin-left: 8px;
+    margin-top: 5px;
+}
+.greet .greet-shopping-list li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.greet-links h1{
+    color: black;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+.greet-links ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 12.5px;
+}
+
+.greet-links ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F
+}
+
+.greet-links .greet-list li{
+    margin: 5px;
+}
+
+.nav-group:hover .greet{
+    display:block;
+}
+
+.greet-links li, .outer-greet-links li{
     margin: 15px 0;
 	border-radius: 3px;
 	font-size: 12px;
 }
 
-.greet-links li button:hover{
+.outer-greet-links li button:hover{
     cursor: pointer;
     background: linear-gradient(#f7e2af, #e9bf53, #f0bb36);
 }
 
-.greet-links li button{
+.outer-greet-links li button{
+    position: relative;
+    top: -11px;
     width: 192px;
     height: 33px;
     background: linear-gradient(#f7e2af, #f1d07a, #f3c247);
@@ -205,13 +357,19 @@
     border: 1px solid #8f732d;
 }
 
-.greet-links li{
+.greet-links li, .outer-greet-links li{
     color: black;
 }
-.greet-links li p {
+.outer-greet-links li p {
      position: relative;
-    top: -25px;
+    top: -45px;
     font-size: 11px;
+}
+
+#shopping-list-border{
+    border-bottom: 1px solid rgb(233, 231, 231);
+    width: 220px;
+    padding-bottom: 10px;
 }
 
 #greet-signin{

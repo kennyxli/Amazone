@@ -22,10 +22,6 @@ class Location extends React.Component {
                     <div className='top-address'>Hello</div>
                     <div className='address'><img className='loc' src={window.locURL}></img>Select your address</div>
                 </button>
-                <div className="greet">
-                    <Link to="/login">Login</Link>
-                    <Link to="/signup">Sign up!</Link>
-                </div>
             </nav>
         );
         const welcome = () => (

@@ -20,8 +20,10 @@ class Greeting extends React.Component{
                 <button onClick={this.handleClick} id="topbutton"><div id='topgreet'>Hello, Sign in</div>
                     <div id='bottomgreet'>Account & Lists<img src={window.arrowURL}></img></div></button>
                 <div className="greet">
-                    <Link to="/login">Login</Link>
-                    <Link to="/signup">Sign up!</Link>
+                    <ul className="greet-links">
+                        <li><Link to="/login" id="greet-signin"><button>Sign in</button></Link></li>
+                        <li><p>New customer?<Link to="/signup" id="start-link">Start here.</Link></p></li>
+                    </ul>
                 </div>
             </nav>
         );

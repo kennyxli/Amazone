@@ -135,22 +135,119 @@
 .greet {
 	position: absolute;
 	display: none;
-	top: 30px;
-	right: 0;
+	top: 52px;
+    right: 132px;
 	background-color: #fff;
 	border: 1px solid lightgray;
 	border-radius: 3px;
 	padding: 10px;
-	width: 225px;
+    width: 275px;
+    height: 120px;
 	z-index: 1;
 	color: darkgray;
 	font-family: 'PT-sans',sans-serif;
 	text-align: left;
 	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
     font-weight: initial;
+    
+
 }
 
 
+
+.greet:before {
+    content: "";
+    width: 4;
+    height: 4;
+    position: absolute;
+    bottom: 100%;
+    right: 78px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1) transparent;    
+}
+
+.greet:after {
+    content: "";
+    width: 4;
+    height: 4;
+    position: absolute;
+    bottom: 100%;
+    right: 80px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;    
+}
+
+.greet-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.greet-links li{
+    margin: 15px 0;
+	border-radius: 3px;
+	font-size: 12px;
+}
+
+.greet-links li button:hover{
+    cursor: pointer;
+    background: linear-gradient(#f7e2af, #e9bf53, #f0bb36);
+}
+
+.greet-links li button{
+    width: 192px;
+    height: 33px;
+    background: linear-gradient(#f7e2af, #f1d07a, #f3c247);
+    border-radius: 3px;
+    border: 1px solid #8f732d;
+}
+
+.greet-links li{
+    color: black;
+}
+.greet-links li p {
+     position: relative;
+    top: -25px;
+    font-size: 11px;
+}
+
+#greet-signin{
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+#start-link{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-decoration: none;
+     color:#10528c;
+     margin-left: 3px;
+}
+
+#start-link:hover{
+      text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F
+}
+
+
+.outergreet:hover .greet{
+    display:block;
+}
+
+
+
+#bottomgreet img {
+    position: relative;
+    top: 4px;
+}
 
 #topgreet, #bottomgreet{
     color:white;
@@ -225,7 +322,7 @@
 
 
 
-#topbutton:hover, #returnbutton:hover, .header-button:hover{
+ #topbutton:hover, #returnbutton:hover, .header-button:hover{
     cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;

@@ -70,7 +70,7 @@ class Greeting extends React.Component{
         const welcome = () => (
             
             <header className="nav-group">
-                <button className="header-button" onClick={this.props.logout}>
+                <button className="header-button">
                     <h2 id="greeting">Hello, {this.props.currentUser.name}</h2>
                     <div id='logingreet'>Account & Lists<img src={window.arrowURL}></img></div>
                 </button>
@@ -102,7 +102,7 @@ class Greeting extends React.Component{
                                 <li><a href="">Start a Selling Account</a></li>
                                 <li><a href="">Register for a Business Account</a></li>
                                 <li><a href="">Switch Accounts</a></li>
-                                <li><a href="">Sign Out</a></li>
+                                <li><a href="" onClick={this.props.logout}>Sign Out</a></li>
                             </ul>
                     
                         

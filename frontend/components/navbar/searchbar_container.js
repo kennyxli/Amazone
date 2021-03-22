@@ -3,7 +3,8 @@ import SearchBar from './searchbar'
 import {getProducts, receiveSearch} from '../../actions/product_action'
 
 const mSTP = (state, ownProps) => ({
-    history: ownProps.history.push('/products')
+    // history: ownProps.history.push('/products'),
+    products: Object.values(state.entities.products)
 })
 
 const mDTP = (dispatch) => {
@@ -13,4 +14,4 @@ const mDTP = (dispatch) => {
     }
 }
 
-export default connect(null, mDTP)(SearchBar)
+export default connect(mSTP, mDTP)(SearchBar)

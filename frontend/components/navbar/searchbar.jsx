@@ -14,6 +14,7 @@ export default class SearchBar extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     componenetDidMount(){
+        this.getProducts()
         this.getInput()
     }
     getInput(e) {
@@ -35,17 +36,23 @@ export default class SearchBar extends React.Component {
            <ProductIndex input={this.state.input}/>
        }
    }
+
+
+
     render(){
-        
+        let productHolder=''
+        if (this.props.products) {
+          productHolder =  this.props.products.map(product => (
+                <button key={product.id}>{product.title}</button>
+            ))
+        }    
         
         return(
-           
+               
                 <form className='outerSearch'>
                 <input id='search' 
                     type="text" 
-                    onChange={this.getInput}
-                />
-                
+                    onChange={this.getInput}/>
                 
                 <button id='sbutton'
                     onClick={this.handleSubmit}>
@@ -53,8 +60,9 @@ export default class SearchBar extends React.Component {
                     src={window.searchURL}>
                 </img>
                 </button>
+                {/* {productHolder} */}
                </form>
-           
+                
         )
     }
 }

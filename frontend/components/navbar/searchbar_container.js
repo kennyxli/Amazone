@@ -4,7 +4,8 @@ import {getProducts, receiveSearch} from '../../actions/product_action'
 
 const mSTP = (state, ownProps) => ({
     // history: ownProps.history.push('/products'),
-    products: Object.values(state.entities.products)
+    products: Object.values(state.entities.products),
+    search: state.search
 })
 
 const mDTP = (dispatch) => {

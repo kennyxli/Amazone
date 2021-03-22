@@ -19,6 +19,7 @@ export default class SearchBar extends React.Component {
     }
     getInput(e) {
         let search = e.currentTarget.value 
+        this.props.receiveSearch(search)
         this.setState(state=>({
             previousInput: state.input,
             input: search
@@ -31,27 +32,58 @@ export default class SearchBar extends React.Component {
        this.props.history.push('/products')
    }
 
-   handleRender(){
-       if(this.props.match.url === "/products"){
-           <ProductIndex input={this.state.input}/>
-       }
+   dropdownSubmit(e, input){
+       this.props.history.push('/products')
+       this.setState({ input: '',
+            previousInput: ''
+         })
+       this.props.receiveSearch(input)
+    
    }
 
-
+   dropdownItem(e, idx){
+       this.setState({
+           input: '',
+           previousInput: ''
+        })
+        this.props.history.push(`/product/${idx}`)
+   }
 
     render(){
         let productHolder=''
-        if (this.props.products) {
-          productHolder =  this.props.products.map(product => (
-                <button key={product.id}>{product.title}</button>
+        if (this.props.products && this.props.search && this.state.input) {
+
+          productHolder =  this.props.products.filter((option) => {
+              debugger
+              if (option.title.toLowerCase().includes(this.state.input.toLowerCase())){
+                  return option
+              }
+          })
+          .map((product,idx) => (
+                <button key={product.id} onClick={e => this.dropdownItem(e, product.id)}>{product.title}</button>
             ))
         }    
         
+        let categoryHolder = ''
+        if (this.props.products && this.props.search && this.state.input) {
+
+            categoryHolder = this.props.products.filter((option,idx) => {
+                
+                if (option.category.toLowerCase().includes(this.state.input.toLowerCase()) && (idx === 0 || idx % 4 === 0)) {
+                    return option
+                }
+            })
+                .map((product, idx) => (
+                    <button key={idx} onClick={(e)=>this.dropdownSubmit(e,product.category)}>{product.category}</button>
+                ))
+        }    
+
         return(
                
                 <form className='outerSearch'>
                 <input id='search' 
                     type="text" 
+                    
                     onChange={this.getInput}/>
                 
                 <button id='sbutton'
@@ -60,7 +92,10 @@ export default class SearchBar extends React.Component {
                     src={window.searchURL}>
                 </img>
                 </button>
-                {/* {productHolder} */}
+                <div className='search-dropdown'>
+                    {categoryHolder}
+                    {productHolder}
+                </div>
                </form>
                 
         )

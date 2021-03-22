@@ -7,6 +7,7 @@ export default class ProductIndex extends React.Component{
     }
     componentDidMount(){
         this.props.getProducts()
+        this.props.receiveSearch('')
     }
     handleClick(e){
 
@@ -24,7 +25,7 @@ export default class ProductIndex extends React.Component{
                     if (this.props.search == ""){
                         arrCount.push(val)
                         return val
-                    }else if (val.title.toLowerCase().includes(this.props.search.toLowerCase())){
+                    } else if (val.title.toLowerCase().includes(this.props.search.toLowerCase()) || val.category.toLowerCase().includes(this.props.search.toLowerCase())){
                         arrCount.push(val)
                         return val
                     }

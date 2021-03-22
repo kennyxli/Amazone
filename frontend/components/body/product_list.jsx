@@ -1,8 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default class ProductList extends React.Component{
     constructor(props){
         super(props)
+    }
+
+    handleClick(e, title) {
+
+        e.preventDefault()
+        this.props.receiveSearch(title)
+        this.props.history.push("/products")
+
+    }
+
+    handleRedirect(e,num){
+        e.preventDefault()
+        this.props.history.push(`/product/${num}`)
     }
 
     render(){
@@ -10,16 +24,16 @@ export default class ProductList extends React.Component{
             <div>
             <ul id="product-list">
                 <li className="product-list-item"><p className='title'>Our Best Seller</p>
-                    <img className='product-list-image' src={window.yogaURL} ></img><br />
-                    <a href="" className="product-link">Shop now</a>
+                    <img onClick={(e) => this.handleRedirect(e, 9)} className='product-list-image' src={window.yogaURL} ></img><br/>
+                    <a href="" onClick={(e) => this.handleRedirect(e, 9)} className="product-link">Shop now</a>
                 </li>
                     <li className="product-list-item"><p className='title'>Number 1 Rated</p>
-                    <img className='product-list-image' src={window.theraURL} ></img><br />
-                    <a href="" className="product-link">Check it out</a>
+                        <img onClick={(e) => this.handleRedirect(e, 1)} className='product-list-image' src={window.theraURL} ></img><br />
+                        <a onClick={(e) => this.handleRedirect(e, 1)} href="" className="product-link">Check it out</a>
                 </li>
                 <li className="product-list-item"><p className='title'>Workout at Home</p>
-                    <img className='product-list-image' src={window.fitURL} ></img><br/>
-                    <a href="" className="product-link">Take a look</a>
+                <img onClick={(e) => this.handleClick(e, "Resistance Bands")} className='product-list-image' src={window.fitURL} ></img><br/>
+                <a href="" onClick={(e) => this.handleClick(e, "Resistance Bands")} className="product-link">Take a look</a>
                 </li>
                     <li className="product-list-item"><p className='title'>Our Favorite</p>
                     <img className='product-list-image' src={window.blenderURL} ></img><br />

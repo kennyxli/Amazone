@@ -13,7 +13,7 @@ export default class Body extends React.Component {
         return (
             <div className="body">
                 <img id='background' src={window.backgroundURL} ></img>
-                <ProductList/>
+                <ProductList receiveSearch={this.props.receiveSearch} history={this.props.history}/>
             </div>
         )
     }

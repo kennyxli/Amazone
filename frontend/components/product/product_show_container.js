@@ -5,7 +5,8 @@ import {getProduct} from '../../actions/product_action'
 const mSTP = (state, ownProps) => {
     return{
         productId: parseInt(ownProps.match.params.productId),
-        product: state.entities.products[ownProps.match.params.productId]
+        product: state.entities.products[ownProps.match.params.productId],
+        currentUser: state.entities.users[state.session.currentUser]
     }
 }
 

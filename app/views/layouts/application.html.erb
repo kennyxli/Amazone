@@ -7,6 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+        window.lockURL = "<%= image_url('lock.png') %>";
+      </script>
+     <script type="text/javascript">
+        window.wlocURL = "<%= image_url('w-loc.png') %>";
+      </script>
       <script type="text/javascript">
         window.freeURL = "<%= image_url('free.png') %>";
       </script>

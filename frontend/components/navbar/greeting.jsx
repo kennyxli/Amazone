@@ -9,7 +9,8 @@ class Greeting extends React.Component{
     }
 
     handleClick(e){
-        
+        e.preventDefault()
+        this.props.logout()
         this.props.push('/login')
     }
 
@@ -102,7 +103,7 @@ class Greeting extends React.Component{
                                 <li><a href="">Start a Selling Account</a></li>
                                 <li><a href="">Register for a Business Account</a></li>
                                 <li><a href="">Switch Accounts</a></li>
-                                <li><a href="" onClick={this.props.logout}>Sign Out</a></li>
+                                <li><a href="" onClick={this.handleClick}>Sign Out</a></li>
                             </ul>
                     
                         

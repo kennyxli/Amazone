@@ -17,7 +17,7 @@ export default class ProductList extends React.Component{
     handleRedirect(e,num){
         e.preventDefault()
         this.props.history.push(`/product/${num}`)
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0)   
     }
 
     render(){

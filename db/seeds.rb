@@ -13,8 +13,12 @@ user1 = User.create!(name:"Guest",email:"guest@guest.com", password:"password")
 
 Product.create!(
 id: 1,
-title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
-description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor delivers powerful deep muscle treatment quieter than the average massage device", 
+title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun",  
+description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor delivers powerful deep muscle treatment quieter than the average massage device,  
+120 MIN. BATTERY LIFE - internal Lithium-ion battery offers double the battery life of previous generations for 2 hours of continuous use,  
+5 SPEED RANGE & LED SCREEN - Monitor current speed on LED screen, use with Therabody app,  
+ERGONOMIC MULTI-GRIP - provides a number of ways to comfortably hold the device without strain on hands and arms,  
+SMART APP INTEGRATION - connects to Therabody app via Bluetooth to run personalized wellness routines based on your behaviors & preferences", 
 category:"Massage gun, Theragun", 
 price: 29999, 
 user_id: 1, 
@@ -32,7 +36,7 @@ quantity: 12)
 Product.create!(
 id: 3,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
-description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor delivers powerful deep muscle treatment quieter than the average massage device", 
+description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor delivers powerful deep muscle treatment quieter than the average massage device, 120 MIN. BATTERY LIFE - internal Lithium-ion battery offers double the battery life of previous generations for 2 hours of continuous use", 
 category:"Massage gun", 
 price: 29999, 
 user_id: 1, 

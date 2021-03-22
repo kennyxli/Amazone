@@ -7,7 +7,7 @@ export default class ProductList extends React.Component{
     }
 
     handleClick(e, title) {
-
+        
         e.preventDefault()
         this.props.receiveSearch(title)
         this.props.history.push("/products")

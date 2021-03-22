@@ -7,7 +7,7 @@ export default class ProductIndex extends React.Component{
     }
     componentDidMount(){
         this.props.getProducts()
-        this.props.receiveSearch('')
+        
     }
     handleClick(e){
 

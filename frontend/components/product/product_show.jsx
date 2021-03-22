@@ -73,7 +73,9 @@ class ProductShow extends React.Component{
                         {loc} 
                         <li><h3>In Stock.</h3></li>
                         {button}
-                        <li id="product-secure"><img src={window.lockURL}></img><Link className="product-secure-link" to={`/product/${this.props.product.id}`}>Secure transaction</Link></li>
+                        <li className="product-secure"><img src={window.lockURL}></img><Link className="product-secure-link" to={`/product/${this.props.product.id}`}>Secure transaction</Link></li>
+                        <li className="product-secure-button">Ships From <div>Amazone</div></li>
+                        <li className="product-secure-button">Sold by <Link id="product-secure-link" to={`/product/${this.props.product.id}`}>Amazone</Link></li>
                     </ul>
                 </div>
             </div>

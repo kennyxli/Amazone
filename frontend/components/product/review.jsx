@@ -20,7 +20,7 @@ export default class Review extends React.Component {
             <div>
                 <div>
                     <h1>Customer reviews</h1>
-                    <h2>{this.props.product.reviews}</h2>
+                    {/* <h2>{this.props.product.reviews}</h2> */}
                 </div>
             </div>
         )

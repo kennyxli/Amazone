@@ -61,7 +61,7 @@
 
 .review-image{
     position: relative;
-    top: -6px;
+    
 }
 
 .product-price {
@@ -90,7 +90,7 @@
 }
 .price-offer{
     position: relative;
-    top: 2px;
+    top: 5px;
     font-size: 14px;
     font-family:"PT-sans", sans-serif;
     
@@ -117,9 +117,9 @@
 .product-show{
     display: flex;
     flex-direction: row;
-    margin-top: 55px;
+    margin-top: 45px;
     width:83%;
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 .product-show > img{
@@ -177,6 +177,7 @@ top:20px;
     margin-bottom: 15px;
 }
 .product-show-list > li{
+        font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: row;
     margin-top:10px;

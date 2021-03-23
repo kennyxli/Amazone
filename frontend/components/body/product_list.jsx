@@ -25,20 +25,20 @@ export default class ProductList extends React.Component{
             <div>
             <ul id="product-list">
                 <li className="product-list-item"><p className='title'>Our Best Seller</p>
-                    <img onClick={(e) => this.handleRedirect(e, 9)} className='product-list-image' src={window.yogaURL} ></img><br/>
-                    <a href="" onClick={(e) => this.handleRedirect(e, 9)} className="product-link">Shop now</a>
+                    <img onClick={(e) => this.handleRedirect(e, 14)} className='product-list-image' src={window.yogaURL} ></img><br/>
+                    <a href="" onClick={(e) => this.handleRedirect(e, 14)} className="product-link">Shop now</a>
                 </li>
                 <li className="product-list-item"><p className='title'>Number 1 Rated</p>
-                    <img onClick={(e) => this.handleRedirect(e, 1)} className='product-list-image' src={window.theraURL} ></img><br />
-                    <a onClick={(e) => this.handleRedirect(e, 1)} href="" className="product-link">Check it out</a>
+                    <img onClick={(e) => this.handleRedirect(e, 2)} className='product-list-image' src={window.theraURL} ></img><br />
+                    <a onClick={(e) => this.handleRedirect(e, 2)} href="" className="product-link">Check it out</a>
                 </li>
                 <li className="product-list-item"><p className='title'>Our Favorite</p>
-                    <img onClick={(e) => this.handleRedirect(e, 5)} className='product-list-image' src={window.blenderURL} ></img><br />
-                    <a onClick={(e) => this.handleRedirect(e, 5)} href="" className="product-link">Shop favorite</a>
+                    <img onClick={(e) => this.handleRedirect(e, 10)} className='product-list-image' src={window.blenderURL} ></img><br />
+                    <a onClick={(e) => this.handleRedirect(e, 10)} href="" className="product-link">Shop favorite</a>
                 </li>
                 <li className="product-list-item"><p className='title'>The Perfect Gift</p>
-                    <img onClick={(e) => this.handleRedirect(e, 2)} className='product-list-image' src={window.giftURL} ></img><br />
-                    <a onClick={(e) => this.handleRedirect(e, 2)} href="" className="product-link">Come unwrap</a>
+                    <img onClick={(e) => this.handleRedirect(e, 9)} className='product-list-image' src={window.giftURL} ></img><br />
+                    <a onClick={(e) => this.handleRedirect(e, 9)} href="" className="product-link">Come unwrap</a>
                 </li>
             </ul>
              <ul id="lower-product-list">

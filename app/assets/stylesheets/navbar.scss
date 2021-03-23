@@ -13,20 +13,19 @@
     line-height: 0;
     top: 9px;
     left: 6px;
-    height: 70%;
+    height: 75%;
     width: 130px;
-    padding: 0px 10px 0px 9px;
+    padding: 3px 11px 3px 10px;
     background-color: #131A22;
     border-radius: 3px;
+    border: 1px solid transparent;
 }
 
 
 #navlogo:hover{
     border: 1px solid white;
-    padding: 0px 9px 0px 8px;
     cursor: pointer;
-     height: 75%;
-     top:7px;
+     
 }
 
 .outerSearch{

@@ -27,14 +27,14 @@ export default class LowerNavBar extends React.Component {
                 <a onClick={(e) => this.handleClick(e, "Yoga")} href="" className="lowerlist">Yoga</a>
                 <a onClick={(e) => this.handleClick(e, "Resistance Bands")} href="" className="lowerlist">Resistance Bands</a>
                 <a onClick={(e) => this.handleClick(e, "Blender")} href="" className="lowerlist">Blender</a>
-                <Link to="/product/1" className="lowerlist">Best Seller</Link>
-                <Link to="/product/2" className="lowerlist">New Release</Link>
-                <Link to="/product/3" className="lowerlist">Today's Choice</Link>
-                <Link to="/product/4" className="lowerlist">Our Favorite</Link>
-                <Link to="/product/5" className="lowerlist">Highest Rated</Link>
-                <Link to="/product/6" className="lowerlist">A Classic</Link>
+                <Link to="/product/14" className="lowerlist">Best Seller</Link>
+                <Link to="/product/11" className="lowerlist">New Release</Link>
+                <Link to="/product/5" className="lowerlist">Today's Choice</Link>
+                <Link to="/product/10" className="lowerlist">Our Favorite</Link>
+                <Link to="/product/2" className="lowerlist">Highest Rated</Link>
+                <Link to="/product/15" className="lowerlist">A Classic</Link>
                 <Link to="/product/7" className="lowerlist">Customer Loved</Link>
-                <Link to="/product/8" className="lowerlist">The Perfect Gift</Link>
+                <Link to="/product/9" className="lowerlist">The Perfect Gift</Link>
             </nav>
         )
     }

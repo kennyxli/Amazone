@@ -18,7 +18,7 @@ class ProductShow extends React.Component{
         let loc= ""
         if (this.props.currentUser){
             
-            loc = <li id="product-show-loc"><img style={{ 'width': '16px', 'height': '18px' }} src={window.wlocURL}></img><h4><Link> Deliver to {this.props.currentUser.name} - New York 10002</Link></h4></li>
+            loc = <li id="product-show-loc"><img style={{ 'width': '16px', 'height': '18px' }} src={window.wlocURL}></img><h4><Link to=""> Deliver to {this.props.currentUser.name} - New York 10002</Link></h4></li>
         }
         let button= ""
         if (this.props.currentUser){
@@ -55,7 +55,7 @@ class ProductShow extends React.Component{
                         <li id="product-show-title">{this.props.product.title}</li>
                         <li id="border-bottom-link"><Link to="/products">Visit the Amazone Store</Link></li>
                         <li>Price: <div>${(this.props.product.price) / 100}</div> <h1>(${(this.props.product.price) / 100}/ Count)</h1><img src={window.freeURL}></img></li>
-                        <div id="product-show-list-link"><Link to={`/product/${this.props.product.id}`}>Get $20 off instantly: Pay ${(this.props.product.price-2000)/100} upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</Link></div>
+                        <div id="product-show-list-link"><Link to={`/product/${this.props.product.id}`}>Get $5 off instantly: Pay ${(this.props.product.price-500)/100} upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</Link></div>
                         <div>{this.props.product.description.split(",  ").map(desc=>(
                             <li id="product-show-description">{desc}</li>
                         ))}</div>
@@ -73,9 +73,9 @@ class ProductShow extends React.Component{
                         {loc} 
                         <li><h3>In Stock.</h3></li>
                         {button}
-                        <li className="product-secure"><img src={window.lockURL}></img><Link className="product-secure-link" to={`/product/${this.props.product.id}`}>Secure transaction</Link></li>
+                        <li className="product-secure"><img src={window.lockURL}></img><Link to={`/product/${this.props.product.id}`} className="product-secure-link" >Secure transaction</Link></li>
                         <li className="product-secure-button">Ships From <div>Amazone</div></li>
-                        <li className="product-secure-button">Sold by <Link id="product-secure-link" to={`/product/${this.props.product.id}`}>Amazone</Link></li>
+                        <li className="product-secure-button">Sold by <Link to={`/product/${this.props.product.id}`} id="product-secure-link" >Amazone</Link></li>
                     </ul>
                 </div>
             </div>

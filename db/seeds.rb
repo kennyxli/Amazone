@@ -8,9 +8,13 @@
 
 User.delete_all
 Product.delete_all
-Review.delete_all
 
-user1 = User.create!(name:"Guest",email:"guest@guest.com", password:"password")
+
+user1 = User.create!(id:1, name:"Guest",email:"guest@guest.com", password:"password")
+user1 = User.create!(id:2, name:"Guest",email:"guest1@guest.com", password:"password")
+user1 = User.create!(id:3, name:"Guest",email:"guest2@guest.com", password:"password")
+user1 = User.create!(id:4, name:"Guest",email:"guest3@guest.com", password:"password")
+
 
 Product.create!(
 id: 1,
@@ -221,6 +225,9 @@ price: 2299,
 user_id: 1, 
 image_url: "yoga4.jpg",
 quantity: 32)
+
+Review.delete_all
+
 Review.create!(
     id: 1,
     title: "Best Theragun Ever!!",
@@ -233,7 +240,7 @@ Review.create!(
     id: 2,
     title: "Best Theragun Ever!!",
     body: "Worth the purchase",
-    stars: 5,
+    stars: 4,
     user_id: 1,
     product_id: 1
 )
@@ -241,7 +248,72 @@ Review.create!(
     id: 3,
     title: "Best Resistance Band Ever!!",
     body: "Very affordable",
+    stars: 4,
+    user_id: 1,
+    product_id: 1
+)
+Review.create!(
+    id: 4,
+    title: "Worst Resistance Band!!",
+    body: "Very affordable",
+    stars: 2,
+    user_id: 1,
+    product_id: 2
+)
+Review.create!(
+    id: 5,
+    title: "Best Resistance Band Ever!!",
+    body: "Very affordable",
+    stars: 3,
+    user_id: 1,
+    product_id: 2
+)
+Review.create!(
+    id: 6,
+    title: "Worst Resistance Band!!",
+    body: "Very affordable",
+    stars: 2,
+    user_id: 1,
+    product_id: 3
+)
+Review.create!(
+    id: 7,
+    title: "Best Resistance Band Ever!!",
+    body: "Very affordable",
     stars: 5,
-    user_id: 2,
+    user_id: 1,
+    product_id: 3
+)
+Review.create!(
+    id: 8,
+    title: "Worst Resistance Band!!",
+    body: "Very affordable",
+    stars: 2,
+    user_id: 1,
+    product_id: 4
+)
+Review.create!(
+    id: 9,
+    title: "Best Resistance Band Ever!!",
+    body: "Very affordable",
+    stars: 5,
+    user_id: 1,
+    product_id: 4
+)
+
+Review.create!(
+    id: 10,
+    title: "Worst Resistance Band!!",
+    body: "Very affordable",
+    stars: 5,
+    user_id: 1,
+    product_id: 5
+)
+Review.create!(
+    id: 11,
+    title: "Best Resistance Band Ever!!",
+    body: "Very affordable",
+    stars: 4,
+    user_id: 1,
     product_id: 5
 )

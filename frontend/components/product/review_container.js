@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Review from './review';
-import { requestReviews, createReview, updateReview, destroyReview } from '../../actions/product_action'
+import { requestReviews, createReview, updateReview, destroyReview } from '../../actions/review_action'
 
 const mSTP = (state) => {
     return {
@@ -11,7 +11,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
 
     return {
-        requesrReviews: productId => dispatch(requestReviews(productId)),
+        requestReviews: productId => dispatch(requestReviews(productId)),
         createReview: (productId, review) => dispatch(createReview(productId, review)),
         updateReview: (review) => dispatch(updateReview(review)),
         destroyReview: (id) => dispatch(destroyReview(id))

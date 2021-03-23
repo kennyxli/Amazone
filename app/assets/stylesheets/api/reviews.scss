@@ -1,3 +1,49 @@
 // Place all the styles related to the api::reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-container{
+    display: flex;
+    margin-top: 120px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top: 1px solid lightgray;
+}
+
+.review-sidebar{
+    position: relative;
+    top: 20px;
+    right: 7px;
+}
+
+.review-sidebar h1{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'PT-sans',sans-serif;
+    margin-bottom: 12px;
+}
+
+.review-sidebar h2{
+    font-family: 'Lato',sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.review-sidebar h3{
+    font-family: 'Lato',sans-serif;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.review-sidebar ul button{
+    position: relative;
+    top: 2px;
+    width: 182px;
+    height: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}

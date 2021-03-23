@@ -54,8 +54,8 @@ export default class Review extends React.Component {
             body = 
             <div className='review-body'>
                 <h1>Top reviews from the United States</h1>
-                {this.props.reviews.map(review=>(
-                    <div>
+                {this.props.reviews.map((review,idx)=>(
+                    <div key={idx}>
                         {/* <h2>{review.user.name}</h2> */}
                         <h2>{review.title}</h2>
                         <h4>Reviewed in the United States</h4>

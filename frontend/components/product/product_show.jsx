@@ -27,9 +27,9 @@ class ProductShow extends React.Component{
         let button= ""
         if (this.props.currentUser){
             button = 
-            <li style={{display: 'flex', 'flex-direction':'column'}}>
+            <li style={{display: 'flex', 'flexDirection':'column'}}>
             <select className="product-show-select">
-                <option value="1" selected="selected">Qty: 1</option>
+                <option value="1">Qty: 1</option>
                 <option value="2">Qty: 2</option>
                 <option value="3">Qty: 3</option>
                 <option value="4">Qty: 4</option>
@@ -43,7 +43,7 @@ class ProductShow extends React.Component{
             <button className='product-sidebar-button lower-button'>Buy Now</button>
             </li>
         }else{
-           button= <li style={{display: 'flex', 'flex-direction':'column'}}>
+           button= <li style={{display: 'flex', 'flexDirection':'column'}}>
             <button className='product-sidebar-button' onClick={(e)=> this.handleClick(e,'/signup')}>Sign up</button>
             <button className='product-sidebar-button lower-button' onClick={(e) => this.handleClick(e, '/login')}>Sign In</button>
             </li>
@@ -61,8 +61,8 @@ class ProductShow extends React.Component{
                         <li id="border-bottom-link"><Link to="/products">Visit the Amazone Store</Link></li>
                         <li>Price: <div>${(this.props.product.price) / 100}</div> <h1>(${(this.props.product.price) / 100}/ Count)</h1><img src={window.freeURL}></img></li>
                         <div id="product-show-list-link"><Link to={`/product/${this.props.product.id}`}>Get $5 off instantly: Pay ${(this.props.product.price-500)/100} upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</Link></div>
-                        <div>{this.props.product.description.split(",  ").map(desc=>(
-                            <li id="product-show-description">{desc}</li>
+                        <div>{this.props.product.description.split(",  ").map((desc,idx)=>(
+                            <li key={idx} id="product-show-description">{desc}</li>
                         ))}</div>
                         <h3><Link to={`/product/${this.props.product.id}`}>Compare with similar Items</Link></h3>
                     </ul>

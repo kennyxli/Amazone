@@ -3,9 +3,9 @@ import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW} from "../actions/rev
 const reviewReducer = (state={}, action) => {
     switch(action.type){
         case RECEIVE_ALL_REVIEWS:
-            return Object.assign({}, state, action.reviews)
+            return Object.assign({}, action.reviews)
         case RECEIVE_REVIEW:
-            return Object.assign({}, state,action.review)
+            return Object.assign({}, action.review)
         case REMOVE_REVIEW:
             let newState = Object.assign({}, state)
             delete newState[action.reviewId]

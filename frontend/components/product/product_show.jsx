@@ -9,6 +9,9 @@ class ProductShow extends React.Component{
     }
     componentDidMount(){
         this.props.getProduct(this.props.productId)
+        if (this.props.product){
+            this.props.requestReviews(this.props.product.id)
+        }
     }
     handleClick(e, key){
         this.props.history.push(key)

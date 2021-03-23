@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import {getProduct} from '../../actions/product_action'
+import { requestReviews } from '../../actions/review_action'
 
 const mSTP = (state, ownProps) => {
     return{
@@ -13,7 +14,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => {
     return{
-        getProduct: id => dispatch(getProduct(id))
+        getProduct: id => dispatch(getProduct(id)),
+        requestReviews: productId => dispatch(requestReviews(productId)),
     }
 }
 

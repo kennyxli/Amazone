@@ -38,7 +38,7 @@
 
 .review-sidebar ul button{
     position: relative;
-    top: 2px;
+    top: 7px;
     width: 182px;
     height: 20px;
     margin-left: 12px;
@@ -47,3 +47,64 @@
     border: 1px solid lightgray;
     border-radius: 3px;
 }
+
+.review-sidebar a {
+    text-decoration: none;
+    color: #007185;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.review-sidebar a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #C7511F
+}
+
+.review-sidebar a:hover button{
+    border: 1px solid orange;
+    background: beige;
+}
+
+.inner-review-button{
+    height: 20px;
+    float: left;
+    position: relative;
+    right: 7px;
+    bottom: 2px;
+    border: 0px;
+    background: #FFA41C;
+    box-shadow: inset -2px 0 0 -1px #f5961d, inset 0 0 0 1px #de7921;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+}
+
+
+
+.review-body{
+        display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+.review-body h1{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+}
+
+.review-body h2 {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+
+.review-body h4, .review-body h3{
+    margin-bottom: 12px;
+}
+

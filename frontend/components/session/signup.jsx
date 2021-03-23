@@ -41,20 +41,39 @@ export default class Signup extends React.Component {
         this.props.history.push('/signup')
     }
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, idx) => (
+        if(this.props.errors.length <= 1){
+            return (
+                <ul>
+                    {this.props.errors.map((error, idx) => (
+                        
+                        <div key={idx} className='errors'>
+                            <img id='ex' src={window.exURL}></img>
+                            <p className="innerError" id='problem'>There was a problem</p>
+                            <p className="innerError" >
+                                {error}
+                            </p>
+                        </div>
+                    ))}
+                </ul>
+            )
+        }else{
+            let arr = []
+            return(
+                <ul>
+                    {this.props.errors.map((error, idx) => {
+                        arr.push(error)
+                    })}
+                        <div className="errors">
+                            <img id='ex' src={window.exURL}></img>
+                            <p className="innerError" id='problem'>There was a problem</p>
+                            <p className="innerError" >
+                                {arr.join(", ")}
+                            </p>
+                        </div>
                     
-                    <div key={idx} className='errors'>
-                        <img id='ex' src={window.exURL}></img>
-                        <p className="innerError" id='problem'>There was a problem</p>
-                        <p className="innerError" >
-                            {error}
-                        </p>
-                    </div>
-                ))}
-            </ul>
-        );
+                </ul>
+            )
+        }
     }
 
     render () {

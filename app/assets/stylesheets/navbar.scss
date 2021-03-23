@@ -13,7 +13,8 @@
     line-height: 0;
     top: 9px;
     left: 6px;
-    height: 75%;
+    top: 3px;
+    height: 85%;
     width: 130px;
     padding: 3px 11px 3px 10px;
     background-color: #131A22;
@@ -120,7 +121,7 @@
 #navflag{
     position: relative;
     
-    top: 26px;
+        top: 20px;
     width: 21px;
     height: 16px;
     right: 0px;
@@ -128,24 +129,25 @@
 #arrow{
    position: relative;
     left: 25px;
-    top: 13px;
+        top: 6px;
    
     
 }
 #flagarrow{
-    position: relative;
+ position: relative;
     width: 60px;
-    right:20px;
+    right: 20px;
     padding: 0px 24px 5px 14px;
-    top:1px;
+    
+    margin-top: 5px;
+    height: 85%;
+    border: 1px solid transparent;
 }
 
 #flagarrow:hover {
     cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;
-    padding: 0px 23px 5px 13px; 
-    top:0px;
 }
 #flagarrow:hover + #arrow{
     right: 15px;
@@ -154,7 +156,7 @@
 .greet-flag{
     position: absolute;
 	display: none;
-    top: 52px;
+    top: 49px;
 	background-color: #fff;
 	border: 1px solid lightgray;
 	border-radius: 3px;
@@ -464,9 +466,10 @@ position: absolute;
 }
 
 #topbutton, #returnbutton, .header-button{
-    top:5px;
+    
     border: 0px;
     left: -2px;
+    top: 1px;
     background: none;
     outline: none;
     display: flex;
@@ -474,7 +477,7 @@ position: absolute;
     margin-top: 3px;
     padding: 7px 10px 8px 9px;
     width: 155px;
-    height:90%;
+    height:85%;
     position: relative;
     right: 20px;
 }
@@ -512,11 +515,17 @@ position: absolute;
     font-family: 'PT Sans', sans-serif;
     z-index:1;
     width: 90px;
-    
+    height: 85%;
 }
+
+// .outerReturn{
+//     position: relative;
+//     top: -4px;
+// }
+
 #cart-icon{
     position: relative;
-    bottom: 5px;
+    bottom: 2px;
 }
 
 #cart-number{
@@ -525,30 +534,28 @@ position: absolute;
     font-size: 19px;
     font-weight:bolder;
     position: relative;
-    top:-63px;
+    top:-61px;
     left: 20px;
     z-index: 2;
 }
 
 .loc-button{
-      border: 0px;
-    background: none;
+        background: none;
     outline: none;
     display: flex;
     flex-direction: column;
-    margin-top: 3px;
+    margin-bottom: 13px;
     padding: 0px 0px 0px 8px;
     width: 155px;
-    height:90%;
+    height: 82%;
     margin-left: 7px;
     min-width: 175px;
+    border: 1px solid transparent;
 }
 .loc-button:hover{
     cursor: pointer;
     border: 1px solid white;
     border-radius: 3px;
-    padding: 0px 0px 0px 7px;
-    margin-top: 2px;
 }
 
 .top-address{
@@ -558,7 +565,7 @@ position: absolute;
     text-decoration: none;
     font-size: 13px;
     left: 14px;
-    bottom: -9px;
+    bottom: -5px;
 }
 
 
@@ -570,11 +577,13 @@ position: absolute;
     font-family: 'PT Sans', sans-serif;
     position: relative;
     left:-4px;
+    top:-4px;
     
 }
 .outer-location{
     position: relative;
-    right:-10px
+    right:-10px;
+    top: 5px;
 }
 .loc{
     position: relative;

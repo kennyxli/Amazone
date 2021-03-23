@@ -14,7 +14,7 @@
     height: 444px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     z-index: 4;
     margin-top: -274px;
     
@@ -42,6 +42,8 @@
     justify-content: flex-start;
     padding: 4px 0px 5px 20px;
     background-color: white;
+     margin-left: 10px;
+    margin-right: 10px;
 }  
 
 .product-list-image{
@@ -74,7 +76,7 @@
     height: 425px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     z-index: 4;
    
 }

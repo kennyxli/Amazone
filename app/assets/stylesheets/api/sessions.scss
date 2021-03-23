@@ -261,6 +261,12 @@
     border-radius: 3px;
     font-family: 'PT Sans', sans-serif;
     margin-bottom: 122px;
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+}
+#redirect-button:hover{
+    cursor: pointer;
+    background: linear-gradient(to bottom,#f0f0f2,#d6d8dc);
+        border-color: #a2a6ac #979aa1 #82858a;
 }
 
 #new{
@@ -300,7 +306,11 @@
     position: absolute;
     left: 55px;
     bottom: -2px;
-    font-family: 'PT Sans', sans-serif;
+    top: 25px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    padding-right: 10px;
+    line-height: 16px;
 }
 
 #problem {

@@ -11,7 +11,7 @@ class Greeting extends React.Component{
     handleClick(e){
         e.preventDefault()
         this.props.logout()
-        this.props.push('/login')
+        .then(()=>this.props.push('/login'))
     }
 
     accountRender(){
@@ -84,7 +84,7 @@ class Greeting extends React.Component{
                                 <li><a href="">Create a List</a></li>
                                 <li><a href="">Find a List or Registry</a></li>
                                 <li><a href="">AmazonSmile Charity Lists</a></li>
-                            </ul>
+                            </ul>   
                             <ul className="greet-list">
                                 <h1>Your Account</h1>
                                 <li><a href="">Account</a></li>

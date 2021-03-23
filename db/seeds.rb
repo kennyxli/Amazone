@@ -8,6 +8,7 @@
 
 User.delete_all
 Product.delete_all
+Review.delete_all
 
 user1 = User.create!(name:"Guest",email:"guest@guest.com", password:"password")
 
@@ -83,7 +84,7 @@ Efficient Workout: Loop Resistance Bands increase the effectiveness of your exer
 Multifunctional: The resistance band set can be used to exercise all parts of muscles such as arms, abdomen, glutes and legs.,  
 Gym-in-your-pocket: The exercise bands take up little space so that you can use them at home or carry on the way, such as in office, on a vacation.,  
 What's Included: 5 exercise loop bands with color-coded resistance levels, portable carry bag and instructions manual.", 
-category:"Massage gun", 
+category:"Resistance Bands", 
 price: 999, 
 user_id: 1, 
 image_url: "resist2.jpg",
@@ -96,7 +97,7 @@ description:"【Universal Partner for Workout】Each exercise band offers differ
 【Durable Natural Latex】Red:15-35 lbs., Black:25-65 lbs., Purple:35-85 lbs., Green:50-125 lbs. Our pull up bands can be stretched repeatedly year after year. No odor, no poison. Environmentally friendly latex material isn't only durable, but also healthy.,  
 【Meet 90% of the Body Muscle Training】Our stretch bands are best for toning up your arms, chest, core, back, ABS, butt, legs or more; Obviously improves the muscle strength, enhances the body flexibility. Also can be used for rehabilitation training & physical therapy.,  
 【Suitable For Daily Use】Each fitness bands is carefully constructed to resist snapping and breaking，which are able to withstand intense daily exercise sessions. Now enjoy the exercise with WHATAFIT pull up bands resistance bands!", 
-category:"Massage gun", 
+category:"Resistance Bands", 
 price: 2999, 
 user_id: 1, 
 image_url: "resist3.jpg",
@@ -111,7 +112,7 @@ Comfortable & Durable, Non-Slip or No Snapping】MKAS long resistance bands are 
 【Easy to Use & Multifunction】Compare with a fancy gym membership or expensive group class, our lightweight excersice resistance bands set can work your entire body (shoulders, arms, chest, hips, glute, legs, abs), which means you can avoid stockpiling a mass of heavy, bulky exercise tools. The resistance band for women can be used alone, with a training partner or anywhere you feel the need to give your muscles some extra challenge. Suitable for beginners and experienced fitness athletes.,  
 【Working Out Anywhere】The fabric exercise bands for women are lightweight and portable. It comes with a carrying bag, the fabric bands can be placed directly into your sports gym bag without taking up too much space. Suitable for resistance training at travel, home, gym, park, beach, office, outdoors etc, allowing you can workout in any place and anytime. This versatility expands your workout needs whether they be at the gym or at the comfort of your own home or on the go.,  
 【Buy with Confidence】you are making a very intelligent decision shopping from MKAS brand. We know you're a big deal and we'll only provide you with quality products and service around! if you are not completely satisfied with our products for any reason after the purchase, please feel free to let us know, we will reply within 24hrs to reproduce the smile on your face. Add the MKAS Long Resistance Bands to your Cart and upgrade your fitness regimen right now!", 
-category:"Massage gun", 
+category:"Resistance Bands", 
 price: 1899, 
 user_id: 1, 
 image_url: "resist4.jpg",
@@ -220,3 +221,27 @@ price: 2299,
 user_id: 1, 
 image_url: "yoga4.jpg",
 quantity: 32)
+Review.create!(
+    id: 1,
+    title: "Best Theragun Ever!!",
+    body: "Worth the purchase",
+    stars: 5,
+    user_id: 1,
+    product_id: 1
+)
+Review.create!(
+    id: 2,
+    title: "Best Theragun Ever!!",
+    body: "Worth the purchase",
+    stars: 5,
+    user_id: 1,
+    product_id: 1
+)
+Review.create!(
+    id: 3,
+    title: "Best Resistance Band Ever!!",
+    body: "Very affordable",
+    stars: 5,
+    user_id: 2,
+    product_id: 5
+)

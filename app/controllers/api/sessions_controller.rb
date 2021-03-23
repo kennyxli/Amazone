@@ -11,7 +11,7 @@ class Api::SessionsController < ApplicationController
         else
             render json: ["Invalid email/password combination"], status: 401
         end
-        
+    
     end
     def destroy
         @user = current_user

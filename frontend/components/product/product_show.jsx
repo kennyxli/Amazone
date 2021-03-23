@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewContainer from './review_container'
 
 
 class ProductShow extends React.Component{
@@ -48,6 +49,7 @@ class ProductShow extends React.Component{
         let product= "broken"  
         if (this.props.product){
             product=
+            <div>
                 <div className="product-show">
             
                     <img src={this.props.product.image_url}/>
@@ -79,6 +81,8 @@ class ProductShow extends React.Component{
                     </ul>
                 </div>
             </div>
+            <ReviewContainer product={this.props.product}/>
+         </div >
         }
                 
         return (

@@ -6,6 +6,8 @@ class User < ApplicationRecord
     attr_reader :password 
     after_initialize :ensure_session_token 
 
+    has_many :reviews
+
     def ensure_session_token
         self.session_token ||= SecureRandom.base64
     end

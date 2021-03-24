@@ -79,6 +79,7 @@ export default class Review extends React.Component {
                 return(
                 <div className='review-container'>
                 <div className='review-sidebar'>
+                <h1>Customer Reviews</h1>
                 <h2 key={this.props.product.id}>
                     <ReactStars
                         count={5}

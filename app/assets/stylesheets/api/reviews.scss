@@ -125,3 +125,142 @@
     margin-bottom: 12px;
 }
 
+#review-redirect{
+    position: relative;
+    top:11px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0px 20px 0px;
+    line-height: 32px;
+}
+
+#review-redirect h5{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'PT-sans', sans-serif;
+}
+
+#review-redirect h6{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'PT-sans', sans-serif;
+}
+
+#review-redirect button{
+    width:100%;
+    height: 29px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 5px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    background: white;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+}
+
+#review-redirect button:hover{
+    cursor: pointer;
+    background: rgb(255, 255, 252);
+}
+
+
+
+
+#outer-review-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#outer-review-form > div {
+    max-width: 705px;
+}
+
+#outer-review-form h1{
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    padding: 35px 0px 35px 0px
+}
+
+#outer-review-form  h3 img{
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+#outer-review-form h5 div {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 27px;
+}
+
+#outer-review-form h6{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+#inner-review-form h6 div {
+      
+    border-bottom: 0px solid lightgray;
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
+
+#inner-review-form div form {
+    display: flex;
+    flex-direction: column;
+}
+
+#inner-review-form h5 #div-form-review{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0px solid transparent ;
+}
+
+#div-form-review h5, #div-form-review h6{
+        margin-top: 17px;
+    margin-bottom: 17px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'PT-sans', sans-serif;
+}
+
+#div-form-review input{
+        border: 1px solid gray;
+    height: 30px;
+    border-radius: 3px;
+    padding: 2px 0px 2px 8px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    margin-bottom: 19px;
+}
+#div-form-review textarea{
+        padding: 5px 0px 0px 8px;
+    color: black;
+    height: 130px;
+    font-family: 'PT-sans',sans-serif;
+    
+
+}
+
+#div-form-review button {
+        width: 65px;
+    position: relative;
+    height: 31px;
+    top: 30px;
+    right: -640px;
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    outline: none;
+    border: 1px solid rgb(128, 92, 45);
+    border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+}

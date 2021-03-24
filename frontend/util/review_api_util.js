@@ -6,7 +6,7 @@ export const getReviews = (productId) => {
 }
 
 export const createReview = (productId, review) => {
-    debugger
+    
     return $.ajax({
         method: 'POST',
         url: `api/products/${productId}/reviews`,

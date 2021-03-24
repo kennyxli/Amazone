@@ -62,8 +62,9 @@ class ProductShow extends React.Component{
                     <ul className="product-show-list">
                         <li id="product-show-title">{this.props.product.title}</li>
                         <li ><Link to="/products">Visit the Amazone Store</Link></li>
-                        <h2 key={this.props.product.id} id="react-stars" className="long-react-stars border-bottom-link"><ReactStars
+                        <h2 key={this.props.product.id+this.props.product.stars} id="react-stars" className="long-react-stars border-bottom-link"><ReactStars
                             count={5}
+                            key={this.props.product.id + this.props.product.avg_rating}
                             value={parseFloat(this.props.product.avg_rating.toFixed(2))}
                             edit={false}
                             size={17}

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component"
+import { Link} from 'react-router-dom'
 import { removeReview } from '../../actions/review_action'
 
 export default class Review extends React.Component {
@@ -83,6 +84,7 @@ export default class Review extends React.Component {
                 <h2 key={this.props.product.id}>
                     <ReactStars
                         count={5}
+                        key={this.props.product.id + this.props.product.avg_rating}
                         value={parseFloat(this.props.product.avg_rating.toFixed(2))}
                         edit={false}
                         size={24}
@@ -98,6 +100,11 @@ export default class Review extends React.Component {
                         <li><a href="">1 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num1 / num) * 100}%` }} value="" /></button>{Math.floor((num1 / num) * 100)}%</a></li>
                     </ul>
                     <a href="">How are ratings calculated?</a>
+                    <div id="review-redirect">
+                        <h5>Review this product</h5>
+                        <h6>Share your thoughts with other customers</h6>
+                                <Link to={this.props.currentUser ? `/product/${this.props.product.id}/review` : '/login'}><button>Write a customer review</button></Link>
+                    </div>
                 </div>
                 {body}
             </div>

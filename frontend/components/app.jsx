@@ -9,6 +9,8 @@ import BodyContainer from "./body/body_container"
 import Footer from "./footer/footer"
 import ProductShowContainer from "./product/product_show_container"
 import ProductIndexContainer from "./product/product_index_container"
+import ReviewFormContainer from "./product/review_form_container"
+
 
 export default () => (
     <div >
@@ -22,10 +24,12 @@ export default () => (
         <Route path="/product" />
         <Route path="/product/:productId" component={NavBarContainer}/>
         <Route path="/product/:productId" component={LowerNavBarContainer}/>
-        <Route path="/product/:productId" component={ProductShowContainer}/>
+        <Route exact path="/product/:productId" component={ProductShowContainer}/>
+        <Route path="/product/:productId/review" component={ReviewFormContainer}/>
         <Route exact path="/products/" component={NavBarContainer} />
         <Route exact path="/products/" component={LowerNavBarContainer} />
         <Route exact path="/products/" component={ProductIndexContainer} />
+
         <Route exact path="/" component={Footer}/>
     </div>
 )

@@ -54,7 +54,7 @@ export default class SearchBar extends React.Component {
         if (this.props.products && this.props.search && this.state.input) {
 
           productHolder =  this.props.products.filter((option) => {
-              debugger
+              
               if (option.title.toLowerCase().includes(this.state.input.toLowerCase())){
                   return option
               }

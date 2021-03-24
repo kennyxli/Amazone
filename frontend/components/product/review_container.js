@@ -7,7 +7,9 @@ const mSTP = (state, ownProps) => {
     return {
         reviews: Object.values(state.entities.reviews).filter(review=>(
             review.product_id === ownProps.product.id
-        ))
+        )),
+        currentUser: state.session.currentUser
+        // user: state.entities.users[state.entities.reviews.user_id]
     }
 }
 

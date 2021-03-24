@@ -7,7 +7,7 @@ export default class ProductIndex extends React.Component{
         super(props)
     }
     componentDidMount(){
-        this.props.getProducts()
+        // this.props.getProducts()
         
     }
 

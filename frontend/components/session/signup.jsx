@@ -60,16 +60,16 @@ export default class Signup extends React.Component {
             let arr = []
             return(
                 <ul>
+                    <div className="errors long-errors">
+                    <img id='ex' src={window.exURL}></img>
+                    <p className="innerError long-innerError" id='problem'>There was a problem</p>
+                    <p className="innerError long-innerError" >
                     {this.props.errors.map((error, idx) => {
-                        arr.push(error)
+                            return <div>- {error}</div>
                     })}
-                        <div className="errors">
-                            <img id='ex' src={window.exURL}></img>
-                            <p className="innerError" id='problem'>There was a problem</p>
-                            <p className="innerError" >
-                                {arr.join(", ")}
-                            </p>
-                        </div>
+                        </p>
+                                
+                    </div>
                     
                 </ul>
             )

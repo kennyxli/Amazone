@@ -126,7 +126,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -150px;
+    margin-left: -175px;
 }
 
 
@@ -183,6 +183,7 @@
 
 #react-stars{
     margin-bottom: 2px;
+    margin-top: 5px;
 }
 
 .product-show-list h3 a{
@@ -216,6 +217,7 @@ top:20px;
     color:#a43d10;
     margin-left: 5px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 
@@ -238,7 +240,7 @@ top:20px;
 
 #product-show-sidebar{
     width: 300px;
-    max-width: 250px;
+    max-width: 240px;
     height: 600px;
     padding: 15px;
     position: relative;
@@ -322,6 +324,11 @@ top:20px;
     font-family: 'Lato', sans-serif;
     padding: 2px;
     width: 65px;
+}
+
+.product-show-select:focus, .product-show-select:active{
+    outline:none;
+    box-shadow: 0px 0px 15px rgb(113, 193, 220);
 }
 
 .product-sidebar-button{

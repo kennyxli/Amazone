@@ -295,22 +295,30 @@
 
 .errors {
    position: relative;
-    height:92px;
+    height:90px;
     width: 340px;
     border: 1px solid rgb(177, 0, 0);
     border-radius: 5px;
     
 }
 
+.long-errors{
+    height:108px;
+}
+
 .innerError {
     position: absolute;
     left: 55px;
     bottom: -2px;
-    top: 25px;
+    top: 32px;
     font-family: 'Lato', sans-serif;
     font-size: 13px;
     padding-right: 10px;
     line-height: 16px;
+}
+
+.long-innerError{
+    top:25px;
 }
 
 #problem {

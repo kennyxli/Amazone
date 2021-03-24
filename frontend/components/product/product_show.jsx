@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewContainer from './review_container'
-
+import ReactStars from "react-rating-stars-component"
 
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
     }
     componentDidMount(){
+        
         this.props.getProduct(this.props.productId)
-        if (this.props.product){
-            this.props.requestReviews(this.props.product.id)
-        }
+        // this.props.clearReview()
+        this.props.requestReviews(this.props.productId)
+       
     }
     handleClick(e, key){
         this.props.history.push(key)
@@ -52,13 +53,21 @@ class ProductShow extends React.Component{
         let product= "broken"  
         if (this.props.product){
             product=
-            <div>
+            <div id="outer-product-show">
                 <div className="product-show">
             
                     <img src={this.props.product.image_url}/>
                     <ul className="product-show-list">
                         <li id="product-show-title">{this.props.product.title}</li>
                         <li id="border-bottom-link"><Link to="/products">Visit the Amazone Store</Link></li>
+                        <h2 id="react-stars"><ReactStars
+                            count={5}
+                            value={this.props.product.avg_rating.toFixed(2)}
+                            edit={false}
+                            size={17}
+                            isHalf={true}
+                            activeColor="#FFA41C"
+                        /> </h2>
                         <li>Price: <div>${(this.props.product.price) / 100}</div> <h1>(${(this.props.product.price) / 100}/ Count)</h1><img src={window.freeURL}></img></li>
                         <div id="product-show-list-link"><Link to={`/product/${this.props.product.id}`}>Get $5 off instantly: Pay ${(this.props.product.price-500)/100} upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</Link></div>
                         <div>{this.props.product.description.split(",  ").map((desc,idx)=>(
@@ -84,7 +93,7 @@ class ProductShow extends React.Component{
                     </ul>
                 </div>
             </div>
-            <ReviewContainer product={this.props.product}/>
+            <ReviewContainer product={this.props.product} />
          </div >
         }
                 

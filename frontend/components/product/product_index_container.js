@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ProductIndex from './product_index';
 import {getProducts, receiveSearch} from '../../actions/product_action'
-
+import { clearReview } from '../../actions/review_action'
 const mSTP = (state, ownProps) => {
     
     return {
@@ -13,7 +13,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         getProducts: () => dispatch(getProducts()),
-        receiveSearch: (search) => dispatch(receiveSearch(search))
+        receiveSearch: (search) => dispatch(receiveSearch(search)),
+        clearReview: () => dispatch(clearReview())
     }
 }
 

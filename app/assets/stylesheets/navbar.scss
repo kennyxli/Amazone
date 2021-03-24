@@ -79,22 +79,31 @@
 }
 
 .search-dropdown{
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-left: -25px;
     margin-top: -3px;
     width: 88%;
-        border: 1px solid lightgray
+    border: 1px solid lightgray
 }
 .search-dropdown button {
     display: flex;
     background: white;
     font-size: 15px;
-    padding: 5px 0px 5px 5px;
+    padding: 10px 0px 10px 5px;
     border:0px;
     outline:none;
     z-index:5;
 }
+.outerSearch #search:focus ~ .search-dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.outerSearch #search:active ~ .search-dropdown{
+    display: flex;
+    flex-direction: column;
+}
+
 .search-dropdown button:hover{
     cursor: pointer;
     background:rgb(223, 223, 223);

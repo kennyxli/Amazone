@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactStars from "react-rating-stars-component"
 
 export default class ProductIndex extends React.Component{
     constructor(props){
@@ -7,8 +8,8 @@ export default class ProductIndex extends React.Component{
     }
     componentDidMount(){
         this.props.getProducts()
-        
     }
+
     handleClick(e){
 
     }
@@ -37,9 +38,16 @@ export default class ProductIndex extends React.Component{
                             <li className='product-title'>{product.title}</li>
                         </Link>
                         <Link to={`/product/${product.id}`}className="product-price">
-                            <li>
-                                <img src={window.starURL} className="review-image"></img>
-                            </li>
+                                <h2 id="react-stars">
+                                    <ReactStars
+                                    count={5}
+                                    value={product.avg_rating.toFixed(2)}
+                                    edit={false}
+                                    size={16}
+                                    isHalf={true}
+                                    activeColor="#FFA41C"/>
+                                    
+                                </h2>
                              <li className="product-price">${(product.price) / 100}</li>
                         </Link>
                         <li className="product-delivery"><img className="product-prime"src={window.primeURL}></img> FREE Delivery </li>
@@ -57,7 +65,7 @@ export default class ProductIndex extends React.Component{
         }
         return (
             <div>
-                <h1 id="search-result">1-{arrCount.length} of {arrCount.length} results for <p> "{this.props.search}"</p></h1>
+                <h1 id="search-result"><div>1-{arrCount.length} of {arrCount.length} results for</div> <p> "{this.props.search}"</p></h1>
                 {product}
             </div>
         )

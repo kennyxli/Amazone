@@ -94,7 +94,7 @@ export default class SearchBar extends React.Component {
                 </button>
                 <div className='search-dropdown'>
                     {categoryHolder}
-                    {productHolder}
+                    {/* {productHolder} */}
                 </div>
                </form>
                 

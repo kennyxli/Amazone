@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component"
+import { removeReview } from '../../actions/review_action'
 
 export default class Review extends React.Component {
     constructor(props){
@@ -10,9 +11,11 @@ export default class Review extends React.Component {
 
     }
     componentDidMount(){
+        // this.props.clearReview()
         this.props.requestReviews(this.props.product.id)
         
     }
+   
 
 
 
@@ -45,7 +48,7 @@ export default class Review extends React.Component {
             }
         })
 
-
+        
        let num =0 
        let body = ''
         
@@ -57,19 +60,33 @@ export default class Review extends React.Component {
                 {this.props.reviews.map((review,idx)=>(
                     <div key={idx}>
                         {/* <h2>{review.user.name}</h2> */}
-                        <h2>{review.title}</h2>
+                        <h2><ReactStars
+                            count={5}
+                            value={review.stars}
+                            edit={false}
+                            size={14}
+                            isHalf={true}
+                            activeColor="#FFA41C"
+                        /><div>{review.title}</div></h2>
                         <h4>Reviewed in the United States</h4>
                         <h3>{review.body}</h3>
                     </div>
-                ))}
-                    
+                    ))}
             </div>
-        }
-        return(
-            <div className='review-container'>
+                }
+
+                return(
+                <div className='review-container'>
                 <div className='review-sidebar'>
-                    <h1>Customer reviews</h1>
-                    <h2>{this.props.product.avg_rating.toFixed(2)} out of 5</h2>
+                <h2>
+                    <ReactStars
+                        count={5}
+                        value={this.props.product.avg_rating.toFixed(2)}
+                        edit={false}
+                        size={24}
+                        isHalf={true}
+                        activeColor="#FFA41C"
+                    /> <p>{this.props.product.avg_rating.toFixed(2)} out of 5</p></h2>
                     <h3>{num} global rating</h3>
                     <ul>
                         <li><a href="">5 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num5 / num) * 100}%` }} value="" /></button>{Math.floor((num5 / num) * 100)}%</a></li>
@@ -86,9 +103,3 @@ export default class Review extends React.Component {
         
     }
 }
-{/* <ReactStars
-    count={5}
-    // onChange={handleRating}
-    size={24}
-    activeColor="#ffd700"
-/> */}

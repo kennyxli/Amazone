@@ -3,6 +3,7 @@ import * as APIReview from "../util/review_api_util"
 export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS'
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'
 export const REMOVE_REVIEW = 'REMOVE_REVIEW'
+export const CLEAR_REVIEW = 'CLEAR_REVIEW'
 
 export const receiveAllReviews = (reviews) => ({
     type: RECEIVE_ALL_REVIEWS,
@@ -18,6 +19,9 @@ export const removeReview = (reviewId) => {
     type: REMOVE_REVIEW,
     reviewId
 }}
+export const clearReview = () =>({
+    type: CLEAR_REVIEW
+})
 
 export const requestReviews = (productId) => dispatch => (
     APIReview.getReviews(productId).then(reviews => dispatch(receiveAllReviews(reviews)))

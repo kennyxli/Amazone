@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW} from "../actions/review_action"
+import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW, CLEAR_REVIEW} from "../actions/review_action"
 
 const reviewReducer = (state={}, action) => {
     switch(action.type){
@@ -10,6 +10,8 @@ const reviewReducer = (state={}, action) => {
             let newState = Object.assign({}, state)
             delete newState[action.reviewId]
             return newState
+        case CLEAR_REVIEW:
+            return {}
         default:
             return state
     }

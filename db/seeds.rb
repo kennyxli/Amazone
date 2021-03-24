@@ -190,8 +190,8 @@ Product.create!(
 id: 14,
 title:"Dralegend Yoga Mat Exercise Fitness Mat - High Density Non-Slip Workout Mat for Yoga, Pilates & Exercises, Anti - Tear, Sweat - Proof, Classic 1/4 Inch", 
 description:"Upgraded Eco & Skin Friendly Material - Say NO to a skin-irritant and slippery yoga mat! You won’t want a yoga mat that can be only used for few times. Made of premium TPE, Dralegend yoga mat solves many problems with other materials, unlike rubber and PVC, it's odorless, much more resilient, incredibly lightweight, extra soft to practice on and anti–skid.,  
-Dual - Side Anti-Skid Design - Stop making your yoga a toil! No one enjoys slipping and sliding - You need a truly grippy and safe fitness mat, especially when doing hot yoga. Upgraded with non-slip texture for optimal grip on both sides, you can practice yoga in many forms on wood/tile/cement floor without any worries. When dripping sweat, the TPE material absorbs moisture, reducing the risk of injury and keeping you cool and cozy in any session,  
-Just The Right Amount Of Support & Cushion - Did you know? Too much thickness brings down the stability of the mat while a thin one will leave you bruised knees. That’s why we choose the best thickness - 6mm(0.24 inch), keeping things especially grippy and safe - even durable, offering plenty of support with just the right amount of cushion for your joints and knees.,  
+Dual - Side Anti-Skid Design - Stop making your yoga a toil! No one enjoys slipping and sliding - You need a truly grippy and safe fitness mat, especially when doing hot yoga.,  
+Just The Right Amount Of Support & Cushion - Did you know? Too much thickness brings down the stability of the mat while a thin one will leave you bruised knees. That’s why we choose the best thickness - 6mm(0.24 inch).,  
 Easier To Clean & Ideal Size - It’s okay to get lazy! Cleaning this exercise mat is more than easy - just wipe it with soap water, and rinse under water. Occasional washing will help it remain immaculate, as though you bought it yesterday! With a large size of 72 x 26 x 0.24 inch, you don’t have to worry your toes stretching out of the mat anymore.,  
 Lightweight & Portable -The fitness mat weights only 32ounce. Rest sure with our 2 year quality assurance, if you feel dissatisfied in anyway, you can always contact us to get a replacement or refund, we stand behind our brand.",  
 category:"Yoga Mat", 
@@ -254,15 +254,15 @@ Review.create!(
 )
 Review.create!(
     id: 4,
-    title: "Worst Resistance Band!!",
-    body: "Very affordable",
+    title: "Worst Theragun!!",
+    body: "Very unaffordable",
     stars: 2,
     user_id: 1,
     product_id: 2
 )
 Review.create!(
     id: 5,
-    title: "Best Resistance Band Ever!!",
+    title: "Best Resistance Band Ever?!",
     body: "Very affordable",
     stars: 3,
     user_id: 1,

@@ -86,6 +86,10 @@
     width: 88%;
     border: 1px solid lightgray
 }
+
+.search-dropdown:hover{
+    display:flex;
+}
 .search-dropdown button {
     display: flex;
     background: white;
@@ -99,10 +103,7 @@
     display: flex;
     flex-direction: column;
 }
-.outerSearch #search:active ~ .search-dropdown{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .search-dropdown button:hover{
     cursor: pointer;

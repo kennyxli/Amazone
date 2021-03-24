@@ -8,6 +8,7 @@ export default class ProductIndex extends React.Component{
     }
     componentDidMount(){
         this.props.getProducts()
+        
     }
 
     handleClick(e){
@@ -16,6 +17,8 @@ export default class ProductIndex extends React.Component{
     getRandomNumber(min,max){
     return Math.floor(Math.random()*(max-min+1))+min;
     }
+
+    
     render(){
         let arrCount = []
         let product = "broken"
@@ -38,10 +41,10 @@ export default class ProductIndex extends React.Component{
                             <li className='product-title'>{product.title}</li>
                         </Link>
                         <Link to={`/product/${product.id}`}className="product-price">
-                                <h2 id="react-stars">
+                                <h2 key={idx + product.id} id="react-stars">
                                     <ReactStars
                                     count={5}
-                                    value={product.avg_rating.toFixed(2)}
+                                    value={product.avg_rating ? product.avg_rating.toFixed(2) : 0}
                                     edit={false}
                                     size={16}
                                     isHalf={true}

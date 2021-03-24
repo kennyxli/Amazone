@@ -12,7 +12,7 @@ export default class Review extends React.Component {
     }
     componentDidMount(){
         // this.props.clearReview()
-        this.props.requestReviews(this.props.product.id)
+        // this.props.requestReviews(this.props.product.id)
         
     }
    
@@ -58,11 +58,12 @@ export default class Review extends React.Component {
             <div className='review-body'>
                 <h1>Top reviews from the United States</h1>
                 {this.props.reviews.map((review,idx)=>(
-                    <div key={idx}>
+                    <div key={idx + review.id}>
                         {/* <h2>{review.user.name}</h2> */}
                         <h2><ReactStars
+                            key={this.props.reviews}
                             count={5}
-                            value={review.stars}
+                            value={parseInt(review.stars)}
                             edit={false}
                             size={14}
                             isHalf={true}
@@ -78,10 +79,10 @@ export default class Review extends React.Component {
                 return(
                 <div className='review-container'>
                 <div className='review-sidebar'>
-                <h2>
+                <h2 key={this.props.product.id}>
                     <ReactStars
                         count={5}
-                        value={this.props.product.avg_rating.toFixed(2)}
+                        value={parseInt(this.props.product.avg_rating.toFixed(2))}
                         edit={false}
                         size={24}
                         isHalf={true}

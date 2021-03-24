@@ -7,6 +7,7 @@ export default class LowerNavBar extends React.Component {
     }
     componentDidMount(){
         this.props.getProducts()
+        
     }
 
     handleClick(e, title){

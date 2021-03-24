@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
      def index
-        @reviews = Review.select("*").where("product_id = '#{params[:product_id]}'")
+        @reviews = Review.all
         render :index
     end
 

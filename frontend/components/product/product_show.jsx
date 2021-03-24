@@ -6,12 +6,14 @@ import ReactStars from "react-rating-stars-component"
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
+        this.state={placeHolder: 0}
     }
     componentDidMount(){
         
         this.props.getProduct(this.props.productId)
         // this.props.clearReview()
         this.props.requestReviews(this.props.productId)
+        this.setState({placeHolder: 1})
        
     }
     handleClick(e, key){
@@ -60,9 +62,9 @@ class ProductShow extends React.Component{
                     <ul className="product-show-list">
                         <li id="product-show-title">{this.props.product.title}</li>
                         <li id="border-bottom-link"><Link to="/products">Visit the Amazone Store</Link></li>
-                        <h2 id="react-stars"><ReactStars
+                        <h2 key={this.props.product.id} id="react-stars"><ReactStars
                             count={5}
-                            value={this.props.product.avg_rating.toFixed(2)}
+                            value={parseInt(this.props.product.avg_rating.toFixed(2))}
                             edit={false}
                             size={17}
                             isHalf={true}

@@ -83,7 +83,7 @@ export default class Review extends React.Component {
                 <h2 key={this.props.product.id}>
                     <ReactStars
                         count={5}
-                        value={parseInt(this.props.product.avg_rating.toFixed(2))}
+                        value={parseFloat(this.props.product.avg_rating.toFixed(2))}
                         edit={false}
                         size={24}
                         isHalf={true}

@@ -61,10 +61,10 @@ class ProductShow extends React.Component{
                     <img src={this.props.product.image_url}/>
                     <ul className="product-show-list">
                         <li id="product-show-title">{this.props.product.title}</li>
-                        <li id="border-bottom-link"><Link to="/products">Visit the Amazone Store</Link></li>
-                        <h2 key={this.props.product.id} id="react-stars"><ReactStars
+                        <li ><Link to="/products">Visit the Amazone Store</Link></li>
+                        <h2 key={this.props.product.id} id="react-stars" className="long-react-stars border-bottom-link"><ReactStars
                             count={5}
-                            value={parseInt(this.props.product.avg_rating.toFixed(2))}
+                            value={parseFloat(this.props.product.avg_rating.toFixed(2))}
                             edit={false}
                             size={17}
                             isHalf={true}

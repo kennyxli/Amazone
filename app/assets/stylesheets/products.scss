@@ -175,15 +175,19 @@
     font-family: 'PT Sans', sans-serif;
     font-size: 15px;
 }
-#border-bottom-link{
+.border-bottom-link{
     width:95%;
     border-bottom: 1px solid lightgray;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
 }
 
 #react-stars{
     margin-bottom: 5px;
  
+}
+
+.long-react-stars{
+    margin-top: 5px;
 }
 
 .product-show-list h3 a{

@@ -225,6 +225,8 @@
     border-bottom: 0px solid lightgray;
     padding-bottom: 0px;
     padding-top: 10px;
+    outline:none;
+   
 }
 
 #inner-review-form div form {
@@ -256,12 +258,19 @@
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     margin-bottom: 19px;
+    outline: none;
+}
+
+#div-form-review input:focus, #div-form-review textarea:focus{
+    border:1px solid rgb(227, 125, 0);
+    box-shadow: 0px 0px 5px rgb(208, 114, 0);
 }
 #div-form-review textarea{
         padding: 5px 0px 0px 8px;
     color: black;
     height: 130px;
     font-family: 'PT-sans',sans-serif;
+    outline: none;
     
 
 }

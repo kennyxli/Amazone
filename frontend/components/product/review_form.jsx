@@ -51,7 +51,7 @@ export default class ReviewForm extends React.Component {
                         isHalf={false}
                         color='lightgray'
                         onChange={value => this.handleStar(value)}
-                        activeColor="#FFA41C"
+                           activeColor="#f0c14b"
                     />
                 </h6>
             </div>

@@ -21,7 +21,7 @@ export const receiveSearch = (search) => ({
 
 export const getProducts = () => dispatch => {
     
-    APIProduct.getProducts().then(products => dispatch(receiveAllProducts(products)))
+    return APIProduct.getProducts().then(products => dispatch(receiveAllProducts(products)),()=>{debugger})
 }
 export const getProduct = (id) => dispatch => (
     APIProduct.getProduct(id).then(product => dispatch(receiveProduct(product)))

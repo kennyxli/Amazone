@@ -60,14 +60,15 @@ export default class Review extends React.Component {
                 <h1>Top reviews from the United States</h1>
                 {this.props.reviews.map((review,idx)=>(
                     <div key={idx + review.id}>
-                        {/* <h2>{review.user.name}</h2> */}
+                        <h5><img src={window.userURL}></img><div>{review.name}</div></h5>
                         <h2><ReactStars
                             key={this.props.reviews}
                             count={5}
                             value={parseInt(review.stars)}
                             edit={false}
                             size={14}
-                            isHalf={true}
+                            isHalf={false}
+                            color={'gray'}
                             activeColor="#FFA41C"
                         /><div>{review.title}</div></h2>
                         <h4>Reviewed in the United States</h4>

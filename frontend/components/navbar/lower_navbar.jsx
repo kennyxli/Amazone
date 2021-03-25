@@ -8,8 +8,8 @@ export default class LowerNavBar extends React.Component {
     componentDidMount(){
         
         if (this.props.products.length < 1){
-            
             this.props.getProducts()
+            
         }
     }
 

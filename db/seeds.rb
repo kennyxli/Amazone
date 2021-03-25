@@ -11,9 +11,9 @@ Product.delete_all
 
 
 user1 = User.create!(id:1, name:"Guest",email:"guest@guest.com", password:"password")
-user1 = User.create!(id:2, name:"Guest",email:"guest1@guest.com", password:"password")
-user1 = User.create!(id:3, name:"Guest",email:"guest2@guest.com", password:"password")
-user1 = User.create!(id:4, name:"Guest",email:"guest3@guest.com", password:"password")
+user2 = User.create!(id:2, name:"Johnny",email:"guest1@guest.com", password:"password")
+user3 = User.create!(id:3, name:"Charm",email:"guest2@guest.com", password:"password")
+user4 = User.create!(id:4, name:"Jon",email:"guest3@guest.com", password:"password")
 
 
 Product.create!(
@@ -230,18 +230,18 @@ Review.delete_all
 
 Review.create!(
     id: 1,
-    title: "Best Theragun Ever!!",
-    body: "Worth the purchase",
+    title: "Works And Worth Every Penny",
+    body: "Thought the price was a little high, but was swayed by the reviews and an article I read in Esquire about it, so took a chance and so glad I did. I've had chronic lower back pain - and repeated injuries - over the years. Nothing much seemed to help - MRIs, spinal docs, PT, chiropractors, meds, rest, heat, ice, etc. After my most recent injury, I wondered if maybe I just had horribly knotted/swollen muscles that needed to calm down. So I started hammering my lower back area with this thing and over the days all the muscles finally started to smooth out and relax and my pain went away. It's like you're hammering the muscles into submission. It's been amazing. Almost addictive. I would say just be careful with it and start off slowly - don't put on the hardest attachment and press it against you as hard as you can, etc. Start with the slowest setting and softest head and be very gentle with yourself until you get a feel for it.",
     stars: 5,
-    user_id: 1,
+    user_id: 3,
     product_id: 1
 )
 Review.create!(
     id: 2,
-    title: "Best Theragun Ever!!",
-    body: "Worth the purchase",
+    title: "Ouch...",
+    body: "I’ve had 3 percussion massagers ever since a cranial attack in 2016 that pushed my head into my body. None of them are this powerful. Even on the lowest setting, it completely pulverizes my muscles. Overall, I think it’s very effective. I’m giving it 4 stars because it does not last 120 minutes as advertised. The battery is significantly shorter, but doesn’t seem to matter if it gets the job done on back and neck. We’ll see how it holds up as other massagers loser their power over time. Day 2 is impressive minus the battery issue.",
     stars: 4,
-    user_id: 1,
+    user_id: 4,
     product_id: 1
 )
 Review.create!(
@@ -256,17 +256,17 @@ Review.create!(
     id: 4,
     title: "Worst Theragun!!",
     body: "Very unaffordable",
-    stars: 2,
-    user_id: 1,
-    product_id: 2
+    stars: 1,
+    user_id: 2,
+    product_id: 1
 )
 Review.create!(
     id: 5,
     title: "Best Resistance Band Ever?!",
     body: "Very affordable",
     stars: 3,
-    user_id: 1,
-    product_id: 2
+    user_id: 3,
+    product_id: 1
 )
 Review.create!(
     id: 6,
@@ -274,23 +274,23 @@ Review.create!(
     body: "Very affordable",
     stars: 2,
     user_id: 1,
-    product_id: 3
+    product_id: 1
 )
 Review.create!(
     id: 7,
     title: "Best Resistance Band Ever!!",
     body: "Very affordable",
     stars: 5,
-    user_id: 1,
-    product_id: 3
+    user_id: 2,
+    product_id: 1
 )
 Review.create!(
     id: 8,
     title: "Worst Resistance Band!!",
     body: "Very affordable",
     stars: 2,
-    user_id: 1,
-    product_id: 4
+    user_id: 4,
+    product_id: 1
 )
 Review.create!(
     id: 9,
@@ -298,7 +298,7 @@ Review.create!(
     body: "Very affordable",
     stars: 5,
     user_id: 1,
-    product_id: 4
+    product_id: 1
 )
 
 Review.create!(
@@ -306,14 +306,14 @@ Review.create!(
     title: "Worst Resistance Band!!",
     body: "Very affordable",
     stars: 5,
-    user_id: 1,
-    product_id: 5
+    user_id: 2,
+    product_id: 1
 )
 Review.create!(
     id: 11,
     title: "Best Resistance Band Ever!!",
     body: "Very affordable",
     stars: 4,
-    user_id: 1,
-    product_id: 5
+    user_id: 3,
+    product_id: 1
 )

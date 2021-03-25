@@ -4,6 +4,10 @@ class Product < ApplicationRecord
 
     has_many :reviews
 
+    has_many :cartitems,
+    foreign_key: :product_id,
+    class_name: :CartItem
+
     def average_rating()
         avg_review = 0
         

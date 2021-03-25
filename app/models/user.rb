@@ -10,6 +10,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
+    has_many :cartitems,
+    foreign_key: :user_id,
+    class_name: :CartItem
+
     def ensure_session_token
         self.session_token ||= SecureRandom.base64
     end

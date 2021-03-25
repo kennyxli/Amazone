@@ -83,11 +83,13 @@
     
 }
 
-.signupbutton:active, .signbutton:active{
-    box-shadow: 0px 0px 3px 1px rgb(197, 132, 11);
+
+
+.signupbutton:active, .signbutton:active, #redirect-button:active{
+    box-shadow: 0px 0px 2px 1px rgb(197, 132, 11);
     border: 1px solid darkorange;
 }
-.signupbutton:active, .signupbutton:focus{
+.signupbutton:active, .signupbutton:focus, #redirect-button:focus{
     outline:none;
     
 }
@@ -169,6 +171,10 @@
     color: #C7511F
 }
 
+.triangle-icon{
+    font-size: 8px;
+}
+
 #cont{
     padding: 0px 55px 0px 55px;
 
@@ -247,6 +253,7 @@
      left: 18px;
      font-size: 13px;
      font-family: 'PT Sans', sans-serif;
+     line-height: 15px;
 }
 
 #redirect-button {
@@ -262,11 +269,14 @@
     font-family: 'PT Sans', sans-serif;
     margin-bottom: 122px;
     background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    outline: none;
 }
+
+
 #redirect-button:hover{
     cursor: pointer;
     background: linear-gradient(to bottom,#f0f0f2,#d6d8dc);
-        border-color: #a2a6ac #979aa1 #82858a;
+        
 }
 
 #new{

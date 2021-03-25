@@ -28,8 +28,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 100%;
-    border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
+    // border-top: 1px solid lightgray;
+    border-left: 2px solid lightgray;
     margin-left: 20%;
     margin-top: 13px;
     max-width: 1300px;
@@ -48,6 +48,15 @@
     border-bottom: 2px solid lightgray;
 }
 
+.inner-container:nth-child(1){
+    border-top: 2px solid lightgray;
+    padding-top: 40px;
+    margin-top: 0px;
+}
+
+.inner-container:last-child{
+    margin-bottom: 2px;
+}
 .description{
     height: 150px;
     display: flex;

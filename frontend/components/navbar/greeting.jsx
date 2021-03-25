@@ -6,12 +6,17 @@ class Greeting extends React.Component{
     constructor(props){
         super(props)
         this.handleClick = this.handleClick.bind(this)
+        this.handleSign = this.handleSign.bind(this)
     }
 
     handleClick(e){
         e.preventDefault()
         this.props.logout()
-        .then(()=>this.props.push('/login'))
+        .then(() => this.props.push('/login'))
+    }
+
+    handleSign(e) {
+        this.props.push('/login')
     }
 
     accountRender(){
@@ -54,7 +59,7 @@ class Greeting extends React.Component{
     render() {
         const signin = () => (
             <nav className="outergreet">
-                <button onClick={this.handleClick} id="topbutton"><div id='topgreet'>Hello, Sign in</div>
+                <button onClick={this.handleSign} id="topbutton"><div id='topgreet'>Hello, Sign in</div>
                     <div id='bottomgreet'>
                         Account & Lists<img src={window.arrowURL}></img>
                     </div>

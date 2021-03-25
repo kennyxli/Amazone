@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = (dispatch) => {
-
+    debugger
     return {
         requestReviews: (productId) => dispatch(requestReviews(productId)),
         createReview: (productId, review) => dispatch(createReview(productId, review)),

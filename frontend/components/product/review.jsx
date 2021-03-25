@@ -16,7 +16,12 @@ export default class Review extends React.Component {
         // this.props.requestReviews(this.props.product.id)
         
     }
-   
+    
+    handleDelete(e, id){
+        e.preventDefault()
+        debugger
+        this.props.destroyReview(id)
+    }
 
 
 
@@ -54,13 +59,14 @@ export default class Review extends React.Component {
        let body = ''
         
         if (this.props.reviews){
+            debugger
             num = this.props.reviews.length
             body = 
             <div className='review-body'>
                 <h1>Top reviews from the United States</h1>
                 {this.props.reviews.map((review,idx)=>(
                     <div key={idx + review.id}>
-                        <h5><img src={window.userURL}></img><div>{review.name}</div></h5>
+                        <h5><img src={window.userURL}></img><div>{review.name}</div> {this.props.currentUser === review.user_id ? <button onClick={(e)=>this.handleDelete(e, review.id)}>Delete</button> : ""}</h5>
                         <h2><ReactStars
                             key={this.props.reviews}
                             count={5}
@@ -94,11 +100,11 @@ export default class Review extends React.Component {
                     /> <p>{this.props.product.avg_rating.toFixed(2)} out of 5</p></h2>
                     <h3>{num} global rating</h3>
                     <ul>
-                        <li><a href={`#product/${this.props.product.id}`}>5 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num5 / num) * 100}%` }} value="" /></button>{Math.floor((num5 / num) * 100)}%</a></li>
-                        <li><a href={`#product/${this.props.product.id}`}>4 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num4 / num) * 100}%` }} value="" /></button>{Math.floor((num4 / num) * 100)}%</a></li>
-                        <li><a href={`#product/${this.props.product.id}`}>3 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num3 / num) * 100}%` }} value="" /></button>{Math.floor((num3 / num) * 100)}%</a></li>
-                        <li><a href={`#product/${this.props.product.id}`}>2 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num2 / num) * 100}%` }} value="" /></button>{Math.floor((num2 / num) * 100)}%</a></li>
-                        <li><a href={`#product/${this.props.product.id}`}>1 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num1 / num) * 100}%` }} value="" /></button>{Math.floor((num1 / num) * 100)}%</a></li>
+                                <li><a href={`#product/${this.props.product.id}`}>5 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num5 / num) * 100}%` }} value="" /></button>{Math.floor((num5 / num) * 100) ? Math.floor((num5 / num) * 100): 0}%</a></li>
+                                <li><a href={`#product/${this.props.product.id}`}>4 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num4 / num) * 100}%` }} value="" /></button>{Math.floor((num4 / num) * 100) ? Math.floor((num4 / num) * 100) : 0}%</a></li>
+                                <li><a href={`#product/${this.props.product.id}`}>3 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num3 / num) * 100}%` }} value="" /></button>{Math.floor((num3 / num) * 100) ? Math.floor((num3 / num) * 100) : 0}%</a></li>
+                                <li><a href={`#product/${this.props.product.id}`}>2 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num2 / num) * 100}%` }} value="" /></button>{Math.floor((num2 / num) * 100) ? Math.floor((num2 / num) * 100) : 0}%</a></li>
+                                <li><a href={`#product/${this.props.product.id}`}>1 star<button><input type="submit" className="inner-review-button" style={{ width: `${(num1 / num) * 100}%` }} value="" /></button>{Math.floor((num1 / num) * 100) ? Math.floor((num1 / num) * 100) : 0}%</a></li>
                     </ul>
                     <a href={`#product/${this.props.product.id}`}>How are ratings calculated?</a>
                     <div id="review-redirect">

@@ -90,7 +90,13 @@
     box-shadow: inset -2px 0 0 -1px #f5961d, inset 0 0 0 1px #de7921;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    outline: none;
+    outline: none;  
+    padding-left: 0;
+    padding-right: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
@@ -117,6 +123,7 @@
     margin-bottom: 5px;
     display: flex;
     margin-left: -15px;
+    margin-top: 13px;
 }
 
 .review-body h2 div{
@@ -129,14 +136,32 @@
 }
 
 .review-body h5{
+    display: flex;
     position:relative;
     top:10px;
 }
 
 .review-body h5 div{ 
     position: relative;
-    bottom: 25px;
-    left: 38px;
+    bottom: -10px;
+    left: 8px;
+}
+
+.review-body h5 button {
+    margin-left: 15px;
+    height: 20px;
+    width: 55px;
+    margin-top: 8px;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid rgb(254, 189, 70);
+    // box-shadow: 0px 0px 5px orange;
+    border-radius: 4px;
+    outline:none;
+}
+
+.review-body h5 button:hover {
+    cursor:pointer;
+    
 }
 
 #review-redirect{

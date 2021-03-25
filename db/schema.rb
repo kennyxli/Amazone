@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_25_002919) do
     t.index ["user_id", "product_id"], name: "index_cart_items_on_user_id_and_product_id", unique: true
     t.index ["user_id"], name: "index_cart_items_on_user_id"
   end
-
+  
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false

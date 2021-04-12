@@ -35,6 +35,7 @@
     left: 55px;
     height: 35px;
     width:97%;
+    min-width: 200px;
 }
 
 #search {
@@ -49,13 +50,15 @@
     left: auto;
     right: 25px;
     outline: none;
-    border-radius: 5px;;
+    border-radius: 5px;
+    min-width: 200px;
 }
 
 
 #sbutton {
     position: relative;
     right: 65px;
+    margin-right: -120px;
     top:4px;
     padding: 0px 0px 0px 0px;
     height: 38px;

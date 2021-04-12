@@ -23,6 +23,6 @@ export const updateCartItem = (cartItem, productId) => dispatch => (
     APICart.updateCartItem(cartItem, productId).then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 
-export const removeCartItem = (productId) => dispatch (
+export const removeCartItems = (productId) => dispatch (
     APICart.destroyCartItem(productId).then(cartItemId => dispatch(removeCartItem(cartItemId)))
 )

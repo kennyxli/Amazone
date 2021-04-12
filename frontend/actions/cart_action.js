@@ -15,6 +15,14 @@ export const removeCartItem = (cartid) => ({
     cartid
 })
 
-export const createReview = (cartItem, productId) => dispatch => (
+export const createCartItem = (cartItem, productId) => dispatch => (
     APICart.createCartItem(cartItem, productId).then(cartitem => dispatch(receiveCartItem(cartitem)))
+)
+
+export const updateCartItem = (cartItem, productId) => dispatch => (
+    APICart.updateCartItem(cartItem, productId).then(cartItem => dispatch(receiveCartItem(cartItem)))
+)
+
+export const removeCartItem = (productId) => dispatch (
+    APICart.destroyCartItem(productId).then(cartItemId => dispatch(removeCartItem(cartItemId)))
 )

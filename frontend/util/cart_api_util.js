@@ -21,8 +21,8 @@ export const updateCartItem = (cartitem, id) => {
         method:'PATCH',
         url: `api/cart_items/${id}`,
         data: { cartitem } 
-    })           
-}             
+    })            
+}              
  
 export const destroyCartItem = (id) => {
     return $.ajax({

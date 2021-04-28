@@ -11,6 +11,7 @@ class Greeting extends React.Component{
 
     handleClick(e){
         e.preventDefault()
+        this.props.deleteCart()
         this.props.logout()
         .then(() => this.props.push('/login'))
     }

@@ -4,6 +4,8 @@ import Cart from './cart'
 
 const mSTP = (state) => ({
     cartItems: Object.values(state.entities.cartItem),
+    user: Object.values(state.entities.users),
+    currentUser: state.entities.users[state.session.currentUser],
 });
 
 const mDTP = dispatch => ({

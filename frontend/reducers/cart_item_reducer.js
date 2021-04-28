@@ -1,4 +1,4 @@
-import {RECEIVE_CART_ITEM, REMOVE_CART_ITEM, RECEIVE_CART_ITEMS} from "../actions/cart_action"
+import {RECEIVE_CART_ITEM, REMOVE_CART_ITEM, RECEIVE_CART_ITEMS, DELETE_CART} from "../actions/cart_action"
 
 const cartItemReducer = (state={}, action) => {
     switch(action.type){
@@ -10,6 +10,8 @@ const cartItemReducer = (state={}, action) => {
             let newState = Object.assign({}, state)
             delete newState[action.cartid]
             return newState
+        case DELETE_CART:
+            return {}
         default:
             return state
     }

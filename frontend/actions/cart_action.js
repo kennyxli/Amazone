@@ -4,6 +4,7 @@ import * as APICart from "../util/cart_api_util"
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM'
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM'
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS'
+export const DELETE_CART = 'DELETE_CART'
 // export const CLEAR_CART_ITEM = 'CLEAR_CART_ITEM'
 
 export const receiveCartItems = (payload) => ({
@@ -19,6 +20,10 @@ export const receiveCartItem = (cartitem) => ({
 export const removeCartItem = (cartid) => ({
     type: REMOVE_CART_ITEM,
     cartid
+})
+
+export const deleteCart = () => ({
+    type: DELETE_CART
 })
 
 export const getCartItems = () => dispatch => (

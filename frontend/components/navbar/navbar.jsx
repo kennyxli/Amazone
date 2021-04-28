@@ -26,7 +26,7 @@ export default class NavBar extends React.Component{
                         </ul>
                     </div>
                 </div>
-                <Greeting id='greet' currentUser={this.props.currentUser} logout={this.props.logout} push={this.props.history.push}/>
+                <Greeting id='greet' deleteCart={this.props.deleteCart}currentUser={this.props.currentUser} logout={this.props.logout} push={this.props.history.push}/>
                 <Return/>
                 <CartIcon cartItems={this.props.cartItems}/>
             </nav>

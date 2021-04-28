@@ -18,6 +18,7 @@ export default () => (
             <Route exact path="/" component={NavBarContainer}/>
             <Route exact path="/" component={LowerNavBarContainer} />
             <Route exact path="/" component={BodyContainer}/>
+
         </div>
         <AuthRoute path="/signup" component={SignupContainer}/>
         <AuthRoute path="/login" component={LogInContainer}/>
@@ -29,8 +30,12 @@ export default () => (
         <Route exact path="/products/" component={NavBarContainer} />
         <Route exact path="/products/" component={LowerNavBarContainer} />
         <Route exact path="/products/" component={ProductIndexContainer} />
-        <Route exact path="/cart/" component={CartContainer} />
-
         <Route exact path="/" component={Footer}/>
+        <div id="cart-cont">
+            <Route exact path="/cart/" component={NavBarContainer}/>
+            <Route exact path="/cart/" component={LowerNavBarContainer} />
+            <Route exact path="/cart/" component={CartContainer} />
+            <Route exact path="/cart" component={Footer}/>
+        </div>
     </div>
 )

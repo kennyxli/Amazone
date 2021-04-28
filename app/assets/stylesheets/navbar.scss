@@ -2,7 +2,7 @@
     display: flex;
     margin-top: 0px;
     width: 100%;
-    height: 60px;
+    height: 63px;
     background-color: #131A22
 
 }
@@ -11,9 +11,8 @@
     position: relative;
     float: left;
     line-height: 0;
-    top: 9px;
     left: 6px;
-    top: 3px;
+    top: 5px;
     height: 85%;
     width: 130px;
     padding: 3px 11px 3px 10px;
@@ -454,14 +453,14 @@ position: absolute;
 }
 
 #topgreet, #topreturn{ 
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'PT Sans', sans-serif; 
     font-weight:bolder;
 }
 
 #bottomgreet, #bottomreturn{
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'PT Sans', sans-serif; 
 }
 
@@ -581,8 +580,8 @@ position: absolute;
     position: relative;
     font-family: 'PT Sans', sans-serif; 
     text-decoration: none;
-    font-size: 13px;
-    left: 14px;
+    font-size: 14px;
+    left: 16px;
     bottom: -5px;
 }
 
@@ -590,7 +589,7 @@ position: absolute;
 
 .address{
     color:white;
-    font-size: 15px;
+    font-size: 17px;
     font-weight:bolder;
     font-family: 'PT Sans', sans-serif;
     position: relative;
@@ -605,8 +604,8 @@ position: absolute;
 }
 .loc{
     position: relative;
-    height:20px;
-    width:18px;
+    height:22px;
+    width:20px;
     top:2px;
     right:2px;
     

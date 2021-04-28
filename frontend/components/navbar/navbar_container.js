@@ -12,7 +12,8 @@ const mSTP = (state) => {
         
         
     return {
-        currentUser: state.entities.users[state.session.currentUser]
+        currentUser: state.entities.users[state.session.currentUser],
+        cartItems: Object.values(state.entities.cartItem)
     };
 };
 

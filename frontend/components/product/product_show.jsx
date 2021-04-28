@@ -7,6 +7,7 @@ class ProductShow extends React.Component{
     constructor(props){
         super(props)
         this.state={placeHolder: 0}
+        this.handleAdd = this.handleAdd.bind(this)
     }
     componentDidMount(){
         
@@ -19,6 +20,10 @@ class ProductShow extends React.Component{
     handleClick(e, key){
         this.props.history.push(key)
     }
+    handleAdd(e){
+        this.props.addCartItem({product_id:this.props.productId})
+    }
+
 
     render(){  
         
@@ -42,7 +47,7 @@ class ProductShow extends React.Component{
                 <option value="8">Qty: 8</option>
                 <option value="9">Qty: 9</option>
             </select>
-            <button className='product-sidebar-button'>Add to Cart</button>
+            <button className='product-sidebar-button' onClick={this.handleAdd}>Add to Cart</button>
             <button className='product-sidebar-button lower-button'>Buy Now</button>
             </li>
         }else{

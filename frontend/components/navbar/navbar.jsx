@@ -14,7 +14,7 @@ export default class NavBar extends React.Component{
         
         return (
             <nav className="nav">
-                <a href=""><img src={window.logoURL} id="navlogo"></img></a>
+                <Link  to="/"><img src={window.logoURL} id="navlogo"></img></Link>
                 <Location push={this.props.history.push} currentUser={this.props.currentUser}/>
                 <SearchBarContainer match={this.props.match}history={this.props.history}/><br/>
                 <div id='flagarrow'>
@@ -28,7 +28,7 @@ export default class NavBar extends React.Component{
                 </div>
                 <Greeting id='greet' currentUser={this.props.currentUser} logout={this.props.logout} push={this.props.history.push}/>
                 <Return/>
-                <CartIcon/>
+                <CartIcon cartItems={this.props.cartItems}/>
             </nav>
         )
     }

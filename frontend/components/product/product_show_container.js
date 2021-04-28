@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import {getProduct} from '../../actions/product_action'
 import { requestReviews, clearReview } from '../../actions/review_action'
+import { createCartItem } from '../../actions/cart_action';
 
 const mSTP = (state, ownProps) => {
     return{
@@ -16,7 +17,8 @@ const mDTP = (dispatch) => {
     return{
         getProduct: id => dispatch(getProduct(id)),
         requestReviews: productId => dispatch(requestReviews(productId)),
-        clearReview: () => dispatch(clearReview())
+        clearReview: () => dispatch(clearReview()),
+        addCartItem: (productId) => dispatch(createCartItem(productId))
     }
 }
 

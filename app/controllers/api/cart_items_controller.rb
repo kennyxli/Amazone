@@ -1,8 +1,13 @@
 class Api::CartItemsController < ApplicationController
+    def index
+        @cartitems = current_user.cartitems
+        render :index
+    end
     def create 
         @cartitem = CartItem.new(cart_params)
         @cartitem.user_id = current_user.id
-        @cartitem.product_id = params[:product_id]
+        @cartitem.quantity = 1
+        # @cartitem.product_id = :product_id
         if @cartitem.save!
             render :new
         else
@@ -38,6 +43,6 @@ class Api::CartItemsController < ApplicationController
 
     private
     def cart_params
-        params.require(:cartitem).permit(:quantity)
+        params.require(:cartitem).permit(:product_id)
     end
 end

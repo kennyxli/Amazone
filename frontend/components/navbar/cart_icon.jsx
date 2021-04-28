@@ -1,12 +1,13 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 const CartIcon = (props) => {
+    
     return (
         <div className='outerReturn'>
-            <button id="returnbutton">
-                <img id='cart-icon'src={window.carticonURL}></img><p id='cart-number'>0</p>
-            </button>
+            <Link style={{textDecoration:"none"}} to="/cart" id="returnbutton">
+                <img id='cart-icon'src={window.carticonURL}></img><p id='cart-number'>{props.cartItems.length}</p>
+            </Link>
         </div>
     )
 

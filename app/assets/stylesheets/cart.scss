@@ -94,8 +94,9 @@
 .signin-cart-cont{
     background: white;
     
-    width: 80%;
-    min-width: 1100px;
+    width: 75%;
+    padding-right: 25px;
+    min-width: 1200px;
     max-width: 1600px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -134,8 +135,8 @@
 }
 
 .cart-title-cont{
-    min-width: 70%;
-    max-width: 70%;
+    min-width: 73%;
+    max-width: 73%;
     display: flex;
     flex-direction: column;
     font-family: 'PT-sans', sans-serif;
@@ -161,7 +162,7 @@
 .cart-shipped{
     position: relative;
     top: -16px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
 }
 .cart-shipped a{
@@ -176,7 +177,7 @@
 }
 
 .cart-gift{
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
     position: relative;
     top: -10px;
@@ -232,6 +233,64 @@
 }
 
 .cart-subtotal{
-    margin-top: 25px;
+    position: relative;
+    margin-top: 15px;
+    padding-bottom: 50px;
+    left: 79%;
+    font-size: 20px;
+    font-family: 'PT-sans', sans-serif;
 
 }
+
+.inner-cart-subtotal{
+    font-weight:bold;
+}
+
+
+.cart-checkout{
+    font-size: 20px;
+    font-family: 'PT-sans', sans-serif;
+    position:relative;
+    background: white;
+    height: 185px;
+    padding: 30px 40px 0px 20px;
+    top: 30px;
+    left: 5px;
+    width: 340px;
+
+}
+
+.cart-checkout-button{
+     text-decoration: none;
+    font-family: 'PT-sans', sans-serif;
+    color: black;
+    font-size: 17px;
+    padding: 6px 12px 7px 12px;
+    border: 1px solid #FCD200;
+    border-radius: 8px;
+    background: #FFA41C;
+    border-color: #FF8F00;
+    position: relative;
+    top: 50px;
+
+    margin-right: 8px;
+    box-shadow: 0px 1px 6px 1px rgb(230, 230, 230);
+    width: 300px;
+}
+
+.cart-checkout-button:hover{
+    background: #FA8900;
+    border-color: #E3931E;
+    cursor: pointer;
+}
+
+
+//    font-size: 19px;
+//     font-family: 'PT-sans', sans-serif;
+//     position:relative;
+//     background: white;
+//     height: 150px;
+//     padding: 30px 45px 0px 15px;
+//     top: -1243px;
+//     left: 80%;
+//     max-width: 400px;

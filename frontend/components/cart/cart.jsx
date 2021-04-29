@@ -32,7 +32,7 @@ export default class Cart extends React.Component{
             subtotal += cartitem.price
         })}
         const cart = () => (
-            <div>
+            <div style={{display: "flex"}}>
                 <div className='signin-cart-cont'>
                     <h1 >Shopping Cart</h1>
                     <div>{this.props.cartItems.map((cartItem,idx) => (
@@ -63,12 +63,17 @@ export default class Cart extends React.Component{
                             </div>
                         </div>
                     ))}
-
                     </div>
                             <div class="cart-subtotal">
-                                Subtotal <span> ({this.props.cartItems.length} Items): {subtotal/100}</span>
+                                Subtotal <span> ({this.props.cartItems.length} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
                             </div>
-                </div>
+                    </div>
+                    <div className="outer-cart-checkout">
+                    <div className="cart-checkout">
+                        Subtotal <span> ({this.props.cartItems.length} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
+                        <button className="cart-checkout-button">Proceed to checkout</button>
+                    </div>
+                    </div>
             </div>
         )
 

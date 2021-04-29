@@ -26,6 +26,11 @@ export default class Cart extends React.Component{
                 </p>
             </div>
         )
+        
+        let subtotal = 0;
+        {this.props.cartItems.forEach(cartitem=>{
+            subtotal += cartitem.price
+        })}
         const cart = () => (
             <div>
                 <div className='signin-cart-cont'>
@@ -50,13 +55,19 @@ export default class Cart extends React.Component{
                                         <option value="8">Qty: 8</option>
                                         <option value="9">Qty: 9</option>
                                     </select>
-                                    <button>Delete</button>
+                                    <button class="cart-delete">Delete</button>
                                 </div>
+                            </div>
+                            <div class="cartitem-price">
+                                ${cartItem.price/100}
                             </div>
                         </div>
                     ))}
 
                     </div>
+                            <div class="cart-subtotal">
+                                Subtotal <span> ({this.props.cartItems.length} Items): {subtotal/100}</span>
+                            </div>
                 </div>
             </div>
         )

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :reviews, only:[:destroy, :update, :show]
     
     post 'product/:product_id/cart_items', to: 'cartitem#create', as: 'create_cart'
-    delete 'cart_items/:product_id', to: 'cartitem#destroy_item', as: 'delete_cart'
+    # delete 'cart_items/:product_id', to: 'cartitem#destroy_item', as: 'delete_cart'
     patch 'cart_items/:product_id', to: 'cartitem#update', as: 'update_cart'
     resources :cart_items, only:[:destroy, :create, :index]
   end

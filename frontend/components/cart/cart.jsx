@@ -2,7 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Cart extends React.Component{
+    constructor(props){
+        super(props)
+    }
 
+    handleDelete(e,id){
+
+        e.preventDefault()
+        this.props.deleteCartItem(id)
+    }
     render(){
         debugger
         const signin = () => (
@@ -32,7 +40,7 @@ export default class Cart extends React.Component{
             subtotal += cartitem.price
         })}
         const cart = () => (
-            <div style={{display: "flex"}}>
+            <div style={{display: "flex", marginBottom: "500px"}}>
                 <div className='signin-cart-cont'>
                     <h1 >Shopping Cart</h1>
                     <div>{this.props.cartItems.map((cartItem,idx) => (
@@ -55,7 +63,7 @@ export default class Cart extends React.Component{
                                         <option value="8">Qty: 8</option>
                                         <option value="9">Qty: 9</option>
                                     </select>
-                                    <button class="cart-delete">Delete</button>
+                                    <button class="cart-delete" onClick={(e) => this.handleDelete(e,cartItem.id)}>Delete</button>
                                 </div>
                             </div>
                             <div class="cartitem-price">

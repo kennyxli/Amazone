@@ -5,7 +5,7 @@ export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM'
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM'
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS'
 export const DELETE_CART = 'DELETE_CART'
-// export const CLEAR_CART_ITEM = 'CLEAR_CART_ITEM'
+
 
 export const receiveCartItems = (payload) => ({
     type: RECEIVE_CART_ITEMS,
@@ -38,6 +38,6 @@ export const updateCartItem = (cartItem, productId) => dispatch => (
     APICart.updateCartItem(cartItem, productId).then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 
-export const removeCartItems = (productId) => dispatch (
-    APICart.destroyCartItem(productId).then(cartItemId => dispatch(removeCartItem(cartItemId)))
+export const removeCartItems = (id) => dispatch => (
+    APICart.destroyCartItem(id).then(cartid => dispatch(removeCartItem(cartid)))
 )

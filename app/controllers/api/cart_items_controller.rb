@@ -23,23 +23,23 @@ class Api::CartItemsController < ApplicationController
         end
     end
     def destroy
-        @cartitems = CartItem.find_by(id: params[:id])
+        @cartitem = current_user.cartitems.find_by(id: params[:id])
         if @cartitem 
             @cartitem.destroy 
             render json: @cartitem.id 
         else
-            render json["Can't delete cart"], status: 404
+            render json:["Can't delete cart"], status: 404
         end
     end
-    def destroy_item
-        @cartitem = current_user.cartitems.find_by(product_id: params[:product_id])
-        if @cartitem
-            @cartitem.destroy 
-            render json: @cartitem.id 
-        else 
-            render json["Can't find item"], status: 404
-        end
-    end
+    # def destroy_item
+    #     @cartitem = current_user.cartitems.find_by(product_id: params[:product_id])
+    #     if @cartitem
+    #         @cartitem.destroy 
+    #         render json: @cartitem.id 
+    #     else 
+    #         render json:["Can't find item"], status: 404
+    #     end
+    # end
 
     private
     def cart_params

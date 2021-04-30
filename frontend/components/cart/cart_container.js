@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {removeCartItem} from '../../actions/cart_action'
+import {removeCartItems} from '../../actions/cart_action'
 import Cart from './cart'
 
 const mSTP = (state) => ({
@@ -9,7 +9,7 @@ const mSTP = (state) => ({
 });
 
 const mDTP = dispatch => ({
-    deleteCartItem: (cartItemId) => dispatch(removeCartItem(cartItemId))
+    deleteCartItem: (cartItemId) => dispatch(removeCartItems(cartItemId))
 });
 
 export default connect(mSTP, mDTP)(Cart);

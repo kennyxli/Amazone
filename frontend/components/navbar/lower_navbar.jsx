@@ -6,8 +6,8 @@ export default class LowerNavBar extends React.Component {
         super(props)
     }
     componentDidMount(){
-        this.props.getCartItems()
         if (this.props.currentUser){
+            this.props.getCartItems()
         }
         if (this.props.products.length < 1){
             this.props.getProducts()

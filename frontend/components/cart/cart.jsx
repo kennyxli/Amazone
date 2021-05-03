@@ -12,8 +12,9 @@ export default class Cart extends React.Component{
         this.props.deleteCartItem(id)
     }
     handleChange(e, productId, id){
-        let value = document.getElementById("cart-select").value
-        this.props.updateCartItem({product_id: productId, quantity: value}, id)
+        // let value = document.getElementById("cart-select").value
+        console.log(e.target.value)
+        this.props.updateCartItem({product_id: productId, quantity: e.target.value}, id)
     }
     render(){
         

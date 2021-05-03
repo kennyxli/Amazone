@@ -84,7 +84,7 @@ export default class Cart extends React.Component{
                         </div>
                     ))}
                     </div>
-                            <div class="cart-subtotal">
+                            <div className="cart-subtotal">
                                 Subtotal <span> ({quantity} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
                             </div>
                     </div>

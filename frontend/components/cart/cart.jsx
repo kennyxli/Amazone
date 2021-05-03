@@ -34,7 +34,7 @@ export default class Cart extends React.Component{
                 </div>
                 <p className="cart-clause">
                     The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price.
-                    <p style={{marginTop: "4px"}}>Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+                    <span style={{marginTop: "4px"}}>Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</span>
                 </p>
             </div>
         )

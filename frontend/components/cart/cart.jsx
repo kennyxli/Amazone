@@ -39,6 +39,10 @@ export default class Cart extends React.Component{
         {this.props.cartItems.forEach(cartitem=>{
             subtotal += cartitem.price
         })}
+
+        
+
+        
         const cart = () => (
             <div style={{display: "flex", marginBottom: "500px"}}>
                 <div className='signin-cart-cont'>
@@ -85,7 +89,29 @@ export default class Cart extends React.Component{
             </div>
         )
 
-        return this.props.currentUser ? cart() : signin();
+        const empty = () => (
+             <div>
+                <div className="cart-cont" style={{marginBottom: "400px"}}>
+                    <div className="cart-inner-cont" s>
+                        <img src={window.emptyCartURL} id="empty-cart"></img>
+                        <div>
+                            <div className="empty-title">Your Amazone Cart is empty</div>
+                            <Link to="/products" className="cart-shopping-link">Continue shopping.</Link>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        )
+        if (this.props.currentUser){
+            if (this.props.cartItems.length > 0){
+                return cart()
+            }else{
+                return empty();
+            }
+        }else{
+            return signin();
+        }      
+        
         // return(
         //     <div>
         //         <div>

@@ -285,6 +285,22 @@
 }
 
 
+.cart-shopping-link{
+    position: relative;
+    top: 20px;
+    left: 5px;
+    color: #007185;
+    text-decoration: none;
+    font-family: 'PT-sans', sans-serif;
+    font-size: 16px;
+}
+
+.cart-shopping-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F;
+}
+
 //    font-size: 19px;
 //     font-family: 'PT-sans', sans-serif;
 //     position:relative;

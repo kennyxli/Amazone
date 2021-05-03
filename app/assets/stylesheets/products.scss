@@ -347,6 +347,7 @@ top:20px;
 .product-sidebar-button{
     position: relative;
     top: 58px;
+    width: 200px;
     height: 33px;
     border-radius: 15px;
     border: 0px;
@@ -356,15 +357,16 @@ top:20px;
     outline: none;
 }
 
-#product-show-sidebar .product-sidebar-button .buy-now-product{
+#product-show-sidebar ul li .buy-now-product{
     color: black;
     position: relative;
-    top: 0px;
+    top: 70px;
+    left: 0px;
     text-decoration: none;
 }
 
 .lower-button{
-    top: 67px;
+    top: 0px;
     background: #FFD814;
     border-color: #FCD200;  
 }

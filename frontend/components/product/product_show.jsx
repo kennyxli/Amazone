@@ -68,7 +68,7 @@ class ProductShow extends React.Component{
                 <option value="9">Qty: 9</option>
             </select>
             <button className='product-sidebar-button' onClick={this.handleAdd}>Add to Cart</button>
-            <button className='product-sidebar-button lower-button'><Link to="/cart" className="buy-now-product">Buy Now</Link> </button>
+            <Link to="/cart" className="buy-now-product"><button className='product-sidebar-button lower-button' onClick={this.handleAdd}>Buy Now </button></Link>
             </li>
         }else{
            button= <li style={{display: 'flex', 'flexDirection':'column'}}>
@@ -77,7 +77,7 @@ class ProductShow extends React.Component{
             </li>
         }
 
-        let product= "broken"  
+        let product= ""  
         if (this.props.product){
             product=
             <div id="outer-product-show">

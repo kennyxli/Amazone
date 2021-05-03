@@ -44,7 +44,7 @@ export default class ProductIndex extends React.Component{
                                 <h2 key={idx + product.id} id="react-stars">
                                     <ReactStars
                                     count={5}
-                                    value={product.avg_rating ? product.avg_rating.toFixed(2) : 0}
+                                    value={product.avg_rating ? parseFloat(product.avg_rating.toFixed(2)) : 0}
                                     edit={false}
                                     size={16}
                                     isHalf={true}

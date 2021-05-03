@@ -63,8 +63,8 @@ export default class Cart extends React.Component{
                                 <span className="cart-shipped">Shipped from: <Link to="/">Amazone</Link></span>
                                 <span className="cart-gift">Gift options not available.</span>
                                 <div>
-                                    <select id="cart-select" onChange={(e) => this.handleChange(e, cartItem.product_id, cartItem.id)}>
-                                        <option value={cartItem.quantity} selected disabled hidden>Qty: {cartItem.quantity}</option>
+                                    <select defaultValue={'DEFAULT'} id="cart-select" onChange={(e) => this.handleChange(e, cartItem.product_id, cartItem.id)}>
+                                        <option value="DEFAULT" disabled hidden>Qty: {cartItem.quantity}</option>
                                         <option value="1">Qty: 1</option>
                                         <option value="2">Qty: 2</option>
                                         <option value="3">Qty: 3</option>
@@ -100,7 +100,7 @@ export default class Cart extends React.Component{
         const empty = () => (
              <div>
                 <div className="cart-cont" style={{marginBottom: "400px"}}>
-                    <div className="cart-inner-cont" s>
+                    <div className="cart-inner-cont" >
                         <img src={window.emptyCartURL} id="empty-cart"></img>
                         <div>
                             <div className="empty-title">Your Amazone Cart is empty</div>

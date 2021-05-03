@@ -34,8 +34,8 @@ export const createCartItem = (productId) => dispatch => (
     APICart.createCartItem(productId).then(cartitem => dispatch(receiveCartItem(cartitem)))
 )
 
-export const updateCartItem = (cartItem, productId) => dispatch => (
-    APICart.updateCartItem(cartItem, productId).then(cartItem => dispatch(receiveCartItem(cartItem)))
+export const updateCartItem = (cartItem, id) => dispatch => (
+    APICart.updateCartItem(cartItem, id).then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 
 export const removeCartItems = (id) => dispatch => (

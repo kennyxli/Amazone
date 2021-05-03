@@ -6,7 +6,6 @@ class Api::CartItemsController < ApplicationController
     def create 
         @cartitem = CartItem.new(cart_params)
         @cartitem.user_id = current_user.id
-        @cartitem.quantity = 1
         # @cartitem.product_id = :product_id
         if @cartitem.save!
             render :new
@@ -15,8 +14,8 @@ class Api::CartItemsController < ApplicationController
         end
     end
     def update
-        @cartitem = current_user.cartitems.find_by(product_id: params[:product_id])
-        if @cartitem && @review.update(cart_params)
+        @cartitem = current_user.cartitems.find_by(id: params[:id])
+        if @cartitem && @cartitem.update(cart_params)
             render :show
         else
             render json: @review.errors.full_messages, status: 422
@@ -43,6 +42,6 @@ class Api::CartItemsController < ApplicationController
 
     private
     def cart_params
-        params.require(:cartitem).permit(:product_id)
+        params.require(:cartitem).permit(:product_id, :quantity)
     end
 end

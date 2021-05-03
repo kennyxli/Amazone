@@ -19,7 +19,7 @@ export default class Review extends React.Component {
     
     handleDelete(e, id){
         e.preventDefault()
-        debugger
+        
         this.props.destroyReview(id)
     }
 
@@ -59,7 +59,7 @@ export default class Review extends React.Component {
        let body = ''
         
         if (this.props.reviews){
-            debugger
+            
             num = this.props.reviews.length
             body = 
             <div className='review-body'>

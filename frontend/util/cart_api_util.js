@@ -16,11 +16,11 @@ export const createCartItem = (cartitem) => {
     })
 }
 
-export const updateCartItem = (cartItem, productId) => {
+export const updateCartItem = (cartitem, id) => {
     return $.ajax({
         method:'PATCH',
-        url: `api/cart_items/${productId}`,
-        data: { cartItem }
+        url: `api/cart_items/${id}`,
+        data: { cartitem }
     })
 }
 

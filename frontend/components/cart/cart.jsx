@@ -11,8 +11,12 @@ export default class Cart extends React.Component{
         e.preventDefault()
         this.props.deleteCartItem(id)
     }
+    handleChange(e, productId, id){
+        let value = document.getElementById("cart-select").value
+        this.props.updateCartItem({product_id: productId, quantity: value}, id)
+    }
     render(){
-        debugger
+        
         const signin = () => (
             <div>
                 <div className="cart-cont">
@@ -37,9 +41,12 @@ export default class Cart extends React.Component{
         
         let subtotal = 0;
         {this.props.cartItems.forEach(cartitem=>{
-            subtotal += cartitem.price
+            subtotal += cartitem.quantity * cartitem.price
         })}
-
+        let quantity = 0;
+        {this.props.cartItems.forEach(cartitem=>{
+            quantity += cartitem.quantity
+        })}
         
 
         
@@ -56,7 +63,8 @@ export default class Cart extends React.Component{
                                 <span className="cart-shipped">Shipped from: <Link to="/">Amazone</Link></span>
                                 <span className="cart-gift">Gift options not available.</span>
                                 <div>
-                                    <select className="cart-select">
+                                    <select id="cart-select" onChange={(e) => this.handleChange(e, cartItem.product_id, cartItem.id)}>
+                                        <option value={cartItem.quantity} selected disabled hidden>Qty: {cartItem.quantity}</option>
                                         <option value="1">Qty: 1</option>
                                         <option value="2">Qty: 2</option>
                                         <option value="3">Qty: 3</option>
@@ -77,12 +85,12 @@ export default class Cart extends React.Component{
                     ))}
                     </div>
                             <div class="cart-subtotal">
-                                Subtotal <span> ({this.props.cartItems.length} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
+                                Subtotal <span> ({quantity} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
                             </div>
                     </div>
                     <div className="outer-cart-checkout">
                     <div className="cart-checkout">
-                        Subtotal <span> ({this.props.cartItems.length} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
+                        Subtotal <span> ({quantity} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
                         <button className="cart-checkout-button">Proceed to checkout</button>
                     </div>
                     </div>

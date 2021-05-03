@@ -326,7 +326,7 @@ top:20px;
     top:23px;
 }
 
-.product-show-select{
+#product-show-select{
     position: relative;
     top: 35px;
     border:1px solid lightgray;
@@ -339,7 +339,7 @@ top:20px;
     width: 65px;
 }
 
-.product-show-select:focus, .product-show-select:active{
+#product-show-select:focus, #product-show-select:active{
     outline:none;
     box-shadow: 0px 0px 15px rgb(113, 193, 220);
 }

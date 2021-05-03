@@ -28,12 +28,12 @@ export default class ReviewForm extends React.Component {
     }
 
     handleStar(value){
-        debugger
+        
         this.setState({stars: value})
     }
 
     render(){
-        debugger
+        
         let product= ''
         if (this.props.product){
            product=

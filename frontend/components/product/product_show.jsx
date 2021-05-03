@@ -21,7 +21,27 @@ class ProductShow extends React.Component{
         this.props.history.push(key)
     }
     handleAdd(e){
-        this.props.addCartItem({product_id:this.props.productId})
+        let id = 0
+        let value = document.getElementById("product-show-select").value
+        let quantity = 0
+        let that = this;
+        this.props.cartItems.forEach((cartitem) => {
+      
+            if (that.props.productId === cartitem.product_id){
+                id = cartitem.id
+                quantity = cartitem.quantity
+            } 
+        })
+        if (id > 0){
+            debugger
+            let newValue = parseInt(value) + quantity
+            this.props.updateCartItem({product_id:this.props.productId, quantity: newValue}, id)
+            debugger
+        }else{
+            this.props.addCartItem({product_id:this.props.productId, quantity: value})
+
+        }
+
     }
 
 
@@ -36,7 +56,7 @@ class ProductShow extends React.Component{
         if (this.props.currentUser){
             button = 
             <li style={{display: 'flex', 'flexDirection':'column'}}>
-            <select className="product-show-select">
+            <select id="product-show-select">
                 <option value="1">Qty: 1</option>
                 <option value="2">Qty: 2</option>
                 <option value="3">Qty: 3</option>

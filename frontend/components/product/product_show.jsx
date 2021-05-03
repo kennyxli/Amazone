@@ -68,7 +68,7 @@ class ProductShow extends React.Component{
                 <option value="9">Qty: 9</option>
             </select>
             <button className='product-sidebar-button' onClick={this.handleAdd}>Add to Cart</button>
-            <button className='product-sidebar-button lower-button'>Buy Now</button>
+            <button className='product-sidebar-button lower-button'><Link to="/cart" className="buy-now-product">Buy Now</Link> </button>
             </li>
         }else{
            button= <li style={{display: 'flex', 'flexDirection':'column'}}>

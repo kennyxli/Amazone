@@ -75,10 +75,10 @@ export default class Cart extends React.Component{
                                         <option value="8">Qty: 8</option>
                                         <option value="9">Qty: 9</option>
                                     </select>
-                                    <button class="cart-delete" onClick={(e) => this.handleDelete(e,cartItem.id)}>Delete</button>
+                                    <button className="cart-delete" onClick={(e) => this.handleDelete(e,cartItem.id)}>Delete</button>
                                 </div>
                             </div>
-                            <div class="cartitem-price">
+                            <div className="cartitem-price">
                                 ${cartItem.price/100}
                             </div>
                         </div>

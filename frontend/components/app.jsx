@@ -15,26 +15,18 @@ import CartContainer from "./cart/cart_container"
 export default () => (
     <div >
         <div id='app-cont'>
-            <Route exact path="/" component={NavBarContainer}/>
-            <Route exact path="/" component={LowerNavBarContainer} />
+            <Route path="/" component={NavBarContainer}/>
+            <Route path="/" component={LowerNavBarContainer} />
             <Route exact path="/" component={BodyContainer}/>
-
         </div>
         <AuthRoute path="/signup" component={SignupContainer}/>
         <AuthRoute path="/login" component={LogInContainer}/>
-        <Route path="/product" />
-        <Route path="/product/:productId" component={NavBarContainer}/>
-        <Route path="/product/:productId" component={LowerNavBarContainer}/>
         <Route exact path="/product/:productId" component={ProductShowContainer}/>
         <Route path="/product/:productId/review" component={ReviewFormContainer}/>
-        <Route exact path="/products/" component={NavBarContainer} />
-        <Route exact path="/products/" component={LowerNavBarContainer} />
         <Route exact path="/products/" component={ProductIndexContainer} />
         <Route exact path="/" component={Footer}/>
         <div id="cart-cont">
-            <Route exact path="/cart/" component={NavBarContainer}/>
-            <Route exact path="/cart/" component={LowerNavBarContainer} />
-            <Route exact path="/cart/" component={CartContainer} />
+            <Route exact path="/cart" component={CartContainer} />
             <Route exact path="/cart" component={Footer}/>
         </div>
     </div>

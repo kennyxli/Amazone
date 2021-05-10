@@ -24,9 +24,9 @@ export default class LowerNavBar extends React.Component {
         
     }
     render() {
-
-        return (
-            <nav className="lowernavbar">
+        let lowerNav = null
+        if (this.props.location.pathname !== "/login" && this.props.location.pathname !== "/signup"){
+            lowerNav = <nav className="lowernavbar">
                 <a href="https://github.com/kennyxli" className="lowerlist"><img id="nav-github" src={window.githubURL} ></img></a>
                 <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="lowerlist"><img id="nav-github" src={window.linkedinURL} ></img></a>
                 <a onClick={(e)=>this.handleClick(e,"")} href="" className="lowerlist">All</a>
@@ -43,6 +43,7 @@ export default class LowerNavBar extends React.Component {
                 {/* <Link to="/product/7" className="lowerlist">Customer Loved</Link> */}
                 <Link to="/product/9" className="lowerlist">The Perfect Gift</Link>
             </nav>
-        )
+        }
+        return lowerNav
     }
 }

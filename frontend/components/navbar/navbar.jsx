@@ -11,9 +11,10 @@ export default class NavBar extends React.Component{
         super(props)
     }
     render(){
-        
-        return (
-            <nav className="nav">
+        debugger
+        let nav = ""
+        if (this.props.location.pathname !== "/login" && this.props.location.pathname !== "/signup"){
+            nav =  <nav className="nav">
                 <Link  to="/"><img src={window.logoURL} id="navlogo"></img></Link>
                 <Location push={this.props.history.push} currentUser={this.props.currentUser}/>
                 <SearchBarContainer match={this.props.match}history={this.props.history}/><br/>
@@ -30,6 +31,9 @@ export default class NavBar extends React.Component{
                 <Return/>
                 <CartIcon cartItems={this.props.cartItems}/>
             </nav>
-        )
+        }
+
+
+        return nav
     }
 }

@@ -92,7 +92,7 @@ export default class Signup extends React.Component {
                     </label>
                         <label className="signup-param">Email
                         <br />
-                            <input className="signupinput" type="text" value={this.state.email} onChange={this.handleInput('email')}/>
+                            <input className="signupinput" type="email" value={this.state.email} onChange={this.handleInput('email')}/>
                     </label >
                         <label className="signup-param">Password
                         <br />

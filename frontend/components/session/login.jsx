@@ -73,7 +73,7 @@ class Login extends React.Component {
                     <label className="login-param">Email:  <br/>
                         <input
                             className="signupinput"
-                            type="text"
+                            type="email"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
                         />

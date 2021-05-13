@@ -24,7 +24,7 @@ export default class NavBar extends React.Component{
                     <div className="greet-flag">
                         <ul className="greet-links">
                             <input type="radio" name="language" defaultChecked/> English - EN
-                        </ul>
+                        </ul>   
                     </div>
                 </div>
                 <Greeting id='greet' deleteCart={this.props.deleteCart}currentUser={this.props.currentUser} logout={this.props.logout} push={this.props.history.push}/>

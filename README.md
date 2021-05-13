@@ -2,4 +2,5 @@
 
 [Live Site](https://amazonee.herokuapp.com/#/)
 
-![Datcord Banner](/app/assets/images/amazone.png)
+<img src="/app/assets/images/amazone.png" width="620" height="200" />
+

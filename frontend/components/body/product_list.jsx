@@ -22,7 +22,7 @@ export default class ProductList extends React.Component{
 
     render(){
         return (
-            <div>
+            <div style={{height:'2000px'}}>
             <ul id="product-list">
                 <li className="product-list-item"><p className='title'>Our Best Seller</p>
                     <img onClick={(e) => this.handleRedirect(e, 14)} className='product-list-image' src={window.yogaURL} ></img><br/>

@@ -141,11 +141,11 @@
         top: 20px;
     width: 21px;
     height: 16px;
-    right: -10px;
+    right: -7px;
 }
 #arrow{
    position: relative;
-    left: 35px;
+    left: 28px;
         top: 6px;
    
     
@@ -184,7 +184,8 @@
 	color: darkgray;
 	font-family: 'PT-sans',sans-serif;
 	text-align: left;
-	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    z-index: 7;
     
 }
 input[type='radio']:checked{
@@ -203,6 +204,7 @@ input[type='radio']:checked{
     font-weight: 500;
     border-bottom: 1px solid lightgray;
     padding-bottom: 12px;
+    z-index: 7;
 }
 
 greet-flag .greet-links input {
@@ -255,7 +257,7 @@ position: absolute;
 	text-align: left;
 	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
     font-weight: initial;
-    
+    z-index: 7;
 
 }
 

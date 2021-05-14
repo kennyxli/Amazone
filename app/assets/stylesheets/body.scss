@@ -15,7 +15,7 @@ html, body{
 
 #background{
 
-    width: 1490px;
+    width: 1500px;
     height: 500px;
     z-index: 1;
 
@@ -29,7 +29,7 @@ html, body{
     flex-direction: row;
     justify-content: center;
     z-index: 4;
-    margin-top: -285px;
+    margin-top: -275px;
     margin-bottom: 20px;
 }
 
@@ -44,7 +44,7 @@ html, body{
 .product-list-item{
     border: 1px solid rgb(231, 231, 231);
     z-index: 5;
-    height: 440px;
+    height: 435px;
     width: 23.5%;
     max-width: 340px;
     font-weight: bold;

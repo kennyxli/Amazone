@@ -29,7 +29,7 @@ class Location extends React.Component {
             <header className="outer-location">
                 <button className="loc-button">
                     <h2 className="top-address">Deliver to {this.props.currentUser.name}</h2>
-                    <div className='address'><img className='loc'src={window.locURL}></img>New York 10002</div>
+                    <div className='address'><img className='loc'src={window.locURL}></img>New York, NY</div>
                 </button>
             </header>
 

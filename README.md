@@ -13,3 +13,5 @@
 
 ## About
 Amazone is a clean, functional fullstack application based off of Amazon. This application allows users to signup, signin and shop from a variety of products. These users can also search for products, leave reviews and add them to their cart.
+
+## UserAuth

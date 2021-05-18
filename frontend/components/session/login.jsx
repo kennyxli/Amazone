@@ -89,7 +89,7 @@ class Login extends React.Component {
                         <button className="signbutton"  onClick={this.handleSubmit}>Sign-In</button>
                         <button className="signbutton"  onClick={this.handleDemo}>Demo Sign-In</button>
                     </label>
-                            <p className="signcond">By continuing, you agree to Amazone's <a href="" className="form-hyperlink" onClick={this.handleLink}>Conditions of <br /> Use</a> and <a href="" className="form-hyperlink" onClick={this.handleLink}>Privacy Notice.</a></p>
+                            <p className="signcond">By continuing, you agree to Amazone's <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="form-hyperlink">Conditions of <br /> Use</a> and <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="form-hyperlink">Privacy Notice.</a></p>
                     </div>
                 </form>
             </div>

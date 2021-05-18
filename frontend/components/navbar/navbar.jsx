@@ -11,7 +11,7 @@ export default class NavBar extends React.Component{
         super(props)
     }
     render(){
-        debugger
+        
         let nav = ""
         if (this.props.location.pathname !== "/login" && this.props.location.pathname !== "/signup"){
             nav =  <nav className="nav">

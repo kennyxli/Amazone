@@ -33,10 +33,10 @@ class ProductShow extends React.Component{
             } 
         })
         if (id > 0){
-            debugger
+            
             let newValue = parseInt(value) + quantity
             this.props.updateCartItem({product_id:this.props.productId, quantity: newValue}, id)
-            debugger
+            
         }else{
             this.props.addCartItem({product_id:this.props.productId, quantity: value})
 

@@ -17,6 +17,7 @@ Amazone is a clean, functional fullstack application based off of Amazon. This a
 ## UserAuth
 ![Alt Text](https://media.giphy.com/media/HWOW0OIYsE7Zz0yx8W/giphy.gif)
 
-* Users can sign up, log in and log out
-* Have a Demo user button
-* Users have to be logged in to use certain features such as: add a product to their cart, checkout their cart and write/edit/remove their review.
+* Users can sign up, log in and log out on Amazone
+* Users have to be logged in to use certain features such as
+   * Add a product to their cart
+   * Create/remove their reviews on a product

@@ -1,13 +1,13 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 const Return = (props) =>{
     return (
         <div className='outerReturn'>
-            <button id="returnbutton">
+            <Link style={{textDecoration:"none"}} to="/cart" id="returnbutton">
                 <div id='topreturn'>Returns</div>
                 <div id='bottomreturn'>& Orders</div>
-            </button>
+            </Link>
         </div>
     )
     

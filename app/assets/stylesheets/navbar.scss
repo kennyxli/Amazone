@@ -557,13 +557,16 @@ position: absolute;
 }
 
 #cart-number{
-    color: rgb(206, 140, 19);
+    color: #ce8c13;
     font-family: 'PT Sans', sans-serif;
-    font-size: 19px;
-    font-weight:bolder;
+    font-size: 17px;
+    font-weight: bolder;
     position: relative;
-    top:-58px;
-    left: 20px;
+    display: flex;
+    justify-self: center;
+    top: -56px;
+    align-self: center;
+    left: -10px;
     z-index: 2;
 }
 

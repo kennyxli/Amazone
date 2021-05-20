@@ -130,9 +130,12 @@
     margin-left: 8px;
 }
 
+.review-body h3{
+    font-size: 18px;
+}
 
 .review-body h4, .review-body h3{
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .review-body h5{
@@ -162,6 +165,21 @@
 .review-body h5 button:hover {
     cursor:pointer;
     
+}
+
+.delete-button{
+    background: white;
+    border: none;
+    position: relative;
+    left: -5px;
+    font-size: 14px;
+    color: #007185;
+}
+
+.delete-button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #C7511F;
 }
 
 #review-redirect{

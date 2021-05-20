@@ -66,7 +66,7 @@ export default class Review extends React.Component {
                 <h1>Top reviews from the United States</h1>
                 {this.props.reviews.map((review,idx)=>(
                     <div key={idx + review.id}>
-                        <h5><img src={window.userURL}></img><div>{review.name}</div> {this.props.currentUser === review.user_id ? <button onClick={(e)=>this.handleDelete(e, review.id)}>Delete</button> : ""}</h5>
+                        <h5><img src={window.userURL}></img><div>{review.name}</div></h5>
                         <h2><ReactStars
                             key={this.props.reviews}
                             count={5}
@@ -79,6 +79,7 @@ export default class Review extends React.Component {
                         /><div>{review.title}</div></h2>
                         <h4>Reviewed in the United States</h4>
                         <h3>{review.body}</h3>
+                        {this.props.currentUser === review.user_id ? <button className="delete-button" onClick={(e)=>this.handleDelete(e, review.id)}>Delete</button> : ""}
                     </div>
                     ))}
             </div>

@@ -10,7 +10,8 @@
 * [Features](#Features)
     * [UserAuth](#UserAuth)
     * [Searchbar](#Searchbar)
-    * [Reviews] (#Reviews)
+    * [Reviews](#Reviews)
+    * [Cart](#Cart)
 
 
 ## About
@@ -36,7 +37,7 @@ Amazone is a clean, functional fullstack application based off of Amazon. This a
 * The average star rating is dsplayed for each product and rerenders on new reviews
 * The percentages of how many 1-5 star ratings is also displayed. 
 
-## Checkout Cart
+## Cart
 * Logged in users can add products into their cart. They can also adjust the quantity of how many they want to add from the product page.
 * Logged in users can adjust the quantity of each item within the cart page. They can also remove these items.
 * Cart page shows how many items and total price of all products.

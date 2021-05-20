@@ -40,5 +40,4 @@ Amazone is a clean, functional fullstack application based off of Amazon. This a
 ## Cart
 * Logged in users can add products into their cart. They can also adjust the quantity of how many they want to add from the product page.
 * Logged in users can adjust the quantity of each item within the cart page. They can also remove these items.
-* Cart page shows how many items and total price of all products.
-* 
+* Cart page shows how many items and subtotal of all products.

@@ -9,7 +9,8 @@
 * [Technologies](#Technologies)
 * [Features](#Features)
     * [UserAuth](#UserAuth)
-    * [ProductReviews] (#ProductReviews)
+    * [Searchbar](#Searchbar)
+    * [Reviews] (#Reviews)
 
 
 ## About
@@ -23,13 +24,13 @@ Amazone is a clean, functional fullstack application based off of Amazon. This a
    * Add a product to their cart
    * Create/remove their reviews on a product
 
-## Searchbar and Product Page
+## Searchbar
 
 * Users can search the category of a product through the searchbar and it will filter to those products
 * The product pages display the items along with its description and reviews
 * Allows user to add product to cart or buy it now
 
-## ProductReviews
+## Reviews
 
 * Logged in users can add/remove reviews
 * The average star rating is dsplayed for each product and rerenders on new reviews

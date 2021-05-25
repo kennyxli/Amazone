@@ -102,7 +102,7 @@ export default class Signup extends React.Component {
                     </div>
                     <button className="signupbutton">Create your Amazone account</button>
                 </form>
-                    <p className="cond">By creating an account, you agree to Amazone's<br /><li id='break'> <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="form-hyperlink">Conditions of Use</a> and <a className="form-hyperlink" href="https://www.linkedin.com/in/kenny-li-793b6b15b/">Privacy Notice.</a></li></p>
+                    <p className="cond">By creating an account, you agree to Amazone's<br /><li id='break'> <a target="_blank" href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="form-hyperlink">Conditions of Use</a> and <a className="form-hyperlink" target="_blank" href="https://www.linkedin.com/in/kenny-li-793b6b15b/">Privacy Notice.</a></li></p>
                     <div id="cont"><p className="already">Already have an account? <a href="" onClick={this.handleRedirect} className="form-hyperlink">Sign-In <GoTriangleRight className="triangle-icon"/></a></p></div>
             </div>
             </div>

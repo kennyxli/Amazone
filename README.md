@@ -1,8 +1,5 @@
 # Amazone
-
-[Live Site](https://amazonee.herokuapp.com/#/)
-
-<img src="/app/assets/images/amazone.png" width="620" height="200" />
+<img src="/app/assets/images/homepage.png" width="620" height="200" />
 
 ## Table of Contents
 * [About](#About)
@@ -15,6 +12,8 @@
 
 
 ## About
+[Live Site](https://amazonee.herokuapp.com/#/)
+
 Amazone is a clean, functional fullstack application based off of Amazon. This application allows users to signup, signin and shop from a variety of products. These users can also search for products, leave reviews and add them to their cart.
 
 ## UserAuth

@@ -1,5 +1,5 @@
 # Amazone
-<img src="/app/assets/images/homepage.png" width="620" height="200" />
+<img src="/app/assets/images/homepage.png" width="1000" height="500" />
 
 ## Table of Contents
 * [About](#About)

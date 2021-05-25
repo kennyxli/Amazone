@@ -28,10 +28,10 @@ export default class LowerNavBar extends React.Component {
 
         return (
             <nav className="lowernavbar">
-                <a href="https://github.com/kennyxli" className="lowerlist"><img id="nav-github" src={window.githubURL} ></img></a>
-                <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" className="lowerlist"><img id="nav-github" src={window.linkedinURL} ></img></a>
-                <a href="https://angel.co/u/kenny-li-9" className="lowerlist"><FaAngellist style={{fontSize: "18px"}}/></a>
-                <a href="https://kennyxli.github.io/KennyLi/" className="lowerlist">Portfolio</a>
+                <a href="https://github.com/kennyxli" target="_blank" className="lowerlist"><img id="nav-github" src={window.githubURL} ></img></a>
+                <a href="https://www.linkedin.com/in/kenny-li-793b6b15b/" target="_blank" className="lowerlist"><img id="nav-github" src={window.linkedinURL} ></img></a>
+                <a href="https://angel.co/u/kenny-li-9" target="_blank" className="lowerlist"><FaAngellist style={{fontSize: "18px"}}/></a>
+                <a href="https://kennyxli.github.io/KennyLi/" target="_blank" className="lowerlist">Portfolio</a>
                 <a onClick={(e)=>this.handleClick(e,"")} href="" className="lowerlist">All</a>
                 <a onClick={(e) => this.handleClick(e, "Theragun")} href="" className="lowerlist">Theragun</a>
                 <a onClick={(e) => this.handleClick(e, "Yoga")} href="" className="lowerlist">Yoga</a>

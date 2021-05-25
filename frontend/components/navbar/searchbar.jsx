@@ -7,46 +7,38 @@ export default class SearchBar extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            input:'',
-            previousInput:''
+            input:''
         }
         this.getInput = this.getInput.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+    getInput(e) {
+        let search = e.currentTarget.value 
+        this.props.receiveSearch(search)
+        this.setState({input: search})
+    }
+    
+    handleSubmit(e){
+        e.preventDefault()
+        this.props.receiveSearch(this.state.input)
+        this.props.history.push('/products')
+    }
+    
     componenetDidMount(){
         this.getProducts()
         this.getInput()
     }
-    getInput(e) {
-        let search = e.currentTarget.value 
-        this.props.receiveSearch(search)
-        this.setState(state=>({
-            previousInput: state.input,
-            input: search
-        }))
-    }
-
-   handleSubmit(e){
-       e.preventDefault()
-        this.props.receiveSearch(this.state.input)
-       this.props.history.push('/products')
-   }
 
    dropdownSubmit(e, input){
        this.props.history.push('/products')
-       this.setState({ input: '',
-            previousInput: ''
-         })
+       this.setState({ input: ''})
        this.props.receiveSearch(input)
     
    }
 
    dropdownItem(e, idx){
-       this.setState({
-           input: '',
-           previousInput: ''
-        })
-        this.props.history.push(`/product/${idx}`)
+       this.setState({ input: '' })
+       this.props.history.push(`/product/${idx}`)
    }
 
     render(){

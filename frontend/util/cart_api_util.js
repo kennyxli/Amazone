@@ -6,7 +6,7 @@ export const getCartItems = () => {
         url: 'api/cart_items'
     })
 }   
-
+ 
 
 export const createCartItem = (cartitem) => {
     return $.ajax({

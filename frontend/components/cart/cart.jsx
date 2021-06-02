@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 export default class Cart extends React.Component{
     constructor(props){
         super(props)
+        this.handleDestroy = this.handleDestroy.bind(this)
     }
 
     handleDelete(e,id){
 
         e.preventDefault()
         this.props.deleteCartItem(id)
+    }
+
+    handleDestroy(){
+        this.props.deleteCart()
     }
     handleChange(e, productId, id){
         // let value = document.getElementById("cart-select").value
@@ -92,7 +97,7 @@ export default class Cart extends React.Component{
                     <div className="outer-cart-checkout">
                     <div className="cart-checkout">
                         Subtotal <span> ({quantity} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
-                        <button className="cart-checkout-button">Proceed to checkout</button>
+                        <button className="cart-checkout-button" onClick={this.handleDestroy}>Proceed to checkout</button>
                     </div>
                     </div>
             </div>

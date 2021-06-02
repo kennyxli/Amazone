@@ -30,3 +30,9 @@ export const destroyCartItem = (id) => {
         url: `api/cart_items/${id}`
     })
 }
+export const destroyCart = () => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `api/cart_items/destroy_items`
+    })
+}

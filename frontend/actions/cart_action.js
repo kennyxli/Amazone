@@ -26,6 +26,8 @@ export const deleteCart = () => ({
     type: DELETE_CART
 })
 
+
+
 export const getCartItems = () => dispatch => (
     APICart.getCartItems().then(cartitems => dispatch(receiveCartItems(cartitems)))
 )
@@ -40,4 +42,8 @@ export const updateCartItem = (cartItem, id) => dispatch => (
 
 export const removeCartItems = (id) => dispatch => (
     APICart.destroyCartItem(id).then(cartid => dispatch(removeCartItem(cartid)))
+)
+
+export const deleteCarts = () => dispatch => (
+    APICart.destroyCart().then(()=> dispatch(deleteCart()))
 )

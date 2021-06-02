@@ -13,7 +13,9 @@ export default class Cart extends React.Component{
         this.props.deleteCartItem(id)
     }
 
-    handleDestroy(){
+    handleDestroy(e){
+
+        e.preventDefault
         this.props.deleteCart()
     }
     handleChange(e, productId, id){

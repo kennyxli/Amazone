@@ -6,7 +6,7 @@
     min-width: 1000px;
     margin-left: 20px;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .cart-inner-cont{
     display: flex;
@@ -300,6 +300,14 @@
     text-decoration: underline;
     cursor: pointer;
     color: #C7511F;
+}
+
+.purchase-message{
+    position: absolute;
+    font-family: 'PT-sans', sans-serif;
+    right: 50%;
+    top: 110px;
+    font-size: 25px;
 }
 
 //    font-size: 19px;

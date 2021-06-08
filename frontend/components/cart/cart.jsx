@@ -33,8 +33,8 @@ export default class Cart extends React.Component{
         let checkout = ""
         if (this.state.show){
             checkout = 
-            <div>
-                Thank you for your purchase! Thank you for your purchase! Thank you for your purchase! Thank you for your purchase!
+            <div className="purchase-message">
+                Thank you for your purchase!
             </div>
         }
         const signin = () => (
@@ -72,7 +72,6 @@ export default class Cart extends React.Component{
         
         const cart = () => (
             <div style={{display: "flex", marginBottom: "500px"}}>
-                {checkout}
                 <div className='signin-cart-cont'>
                     <h1 >Shopping Cart</h1>
                     <div>{this.props.cartItems.map((cartItem,idx) => (
@@ -120,8 +119,8 @@ export default class Cart extends React.Component{
 
         const empty = () => (
              <div>
-                <div className="cart-cont" style={{marginBottom: "400px"}}>
                  {checkout}
+                <div className="cart-cont" style={{marginBottom: "400px"}}>
                     <div className="cart-inner-cont" >
                         <img src={window.emptyCartURL} id="empty-cart"></img>
                         <div>

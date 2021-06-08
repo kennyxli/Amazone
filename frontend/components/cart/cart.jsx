@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 export default class Cart extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+            show: false
+        }
         this.handleDestroy = this.handleDestroy.bind(this)
     }
 
@@ -12,11 +15,14 @@ export default class Cart extends React.Component{
         e.preventDefault()
         this.props.deleteCartItem(id)
     }
-
+    
     handleDestroy(e){
-
+        
         e.preventDefault
         this.props.deleteCart()
+        this.setState({
+            show: true
+        })
     }
     handleChange(e, productId, id){
         // let value = document.getElementById("cart-select").value
@@ -24,7 +30,13 @@ export default class Cart extends React.Component{
         this.props.updateCartItem({product_id: productId, quantity: e.target.value}, id)
     }
     render(){
-        
+        let checkout = ""
+        if (this.state.show){
+            checkout = 
+            <div>
+                Thank you for your purchase! Thank you for your purchase! Thank you for your purchase! Thank you for your purchase!
+            </div>
+        }
         const signin = () => (
             <div>
                 <div className="cart-cont">
@@ -60,6 +72,7 @@ export default class Cart extends React.Component{
         
         const cart = () => (
             <div style={{display: "flex", marginBottom: "500px"}}>
+                {checkout}
                 <div className='signin-cart-cont'>
                     <h1 >Shopping Cart</h1>
                     <div>{this.props.cartItems.map((cartItem,idx) => (
@@ -108,6 +121,7 @@ export default class Cart extends React.Component{
         const empty = () => (
              <div>
                 <div className="cart-cont" style={{marginBottom: "400px"}}>
+                 {checkout}
                     <div className="cart-inner-cont" >
                         <img src={window.emptyCartURL} id="empty-cart"></img>
                         <div>

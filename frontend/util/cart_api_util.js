@@ -22,7 +22,7 @@ export const updateCartItem = (cartitem, id) => {
         url: `api/cart_items/${id}`,
         data: { cartitem } 
     })        
-}         
+}          
 
 export const destroyCartItem = (id) => {
     return $.ajax({

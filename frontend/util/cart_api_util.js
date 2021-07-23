@@ -13,7 +13,7 @@ export const createCartItem = (cartitem) => {
         method: 'POST',
         url: `api/cart_items`,
         data: {cartitem}
-    }) 
+    })  
 }
 
 export const updateCartItem = (cartitem, id) => {

@@ -23,7 +23,7 @@ export const updateCartItem = (cartitem, id) => {
         data: { cartitem } 
     })           
 }             
-
+ 
 export const destroyCartItem = (id) => {
     return $.ajax({
         method: 'DELETE',

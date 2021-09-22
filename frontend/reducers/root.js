@@ -10,6 +10,6 @@ const RootReducer = combineReducers({
     session: sessionReducer,
     errors: errorsReducer,
     search: searchReducer,
-})            
+})             
 
 export default RootReducer 

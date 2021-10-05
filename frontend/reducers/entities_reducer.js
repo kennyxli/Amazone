@@ -9,4 +9,4 @@ export default combineReducers({
     products: productsReducer,
     reviews: reviewReducer,
     cartItem: cartItemReducer
-})    
+})     

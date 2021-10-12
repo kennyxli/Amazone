@@ -20,7 +20,7 @@ export const updateCartItem = (cartitem, id) => {
     return $.ajax({ 
         method:'PATCH',
         url: `api/cart_items/${id}`,
-        data: { cartitem }
+        data: { cartitem } 
     })       
 }      
 

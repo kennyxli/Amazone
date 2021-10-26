@@ -11,7 +11,7 @@
      <meta property='og:image' content="<%= image_url('project_pic.png') %>"/>
      <meta property="og:description" content="A clean, fully functional Amazon clone"/>
      <meta property="og:url" content="http://amazonee.herokuapp.com/"/>
-     
+
     <script type="text/javascript">
         window.emptyCartURL = "<%= image_url('empty-cart.png') %>";
       </script>
@@ -93,6 +93,7 @@
       <script type="text/javascript">
         window.exURL = "<%= image_url('exclamation.png') %>";
       </script>
+      
     <% if current_user %>
       <script>
         window.currentUser = {

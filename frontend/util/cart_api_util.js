@@ -29,7 +29,7 @@ export const destroyCartItem = (id) => {
         method: 'DELETE',
         url: `api/cart_items/${id}`
     })
-}
+} 
 
 export const destroyCart = () => {
     return $.ajax({

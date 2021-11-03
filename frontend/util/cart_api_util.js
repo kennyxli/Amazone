@@ -5,7 +5,7 @@ export const getCartItems = () => {
         method: 'GET',
         url: 'api/cart_items'
     })
-}
+} 
 
 
 export const createCartItem = (cartitem) => {

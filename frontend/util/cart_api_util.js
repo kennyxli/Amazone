@@ -37,3 +37,4 @@ export const destroyCart = () => {
         url: `api/cart_items/destroy_items`
     }) 
 } 
+ 

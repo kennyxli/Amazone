@@ -36,5 +36,5 @@ export const destroyCart = () => {
         method: 'DELETE',
         url: `api/cart_items/destroy_items`
     }) 
-}  
+}   
      

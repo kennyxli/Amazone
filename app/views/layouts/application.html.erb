@@ -2,18 +2,16 @@
 <html>
   <head>
     <title>Amazone</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
      <meta property="og:title" content="Amazone" />
      <meta property='og:image' content="<%= image_url('project_pic.png') %>"/>
-     <meta property="og:description"
-       content="A clean, fully functional Amazon clone"
-     />
-     <meta property="og:url"
-       content="http://amazonee.herokuapp.com/"
-     />
+     <meta property="og:description" content="A clean, fully functional Amazon clone"/>
+     <meta property="og:url" content="http://amazonee.herokuapp.com/"/>
+     
     <script type="text/javascript">
         window.emptyCartURL = "<%= image_url('empty-cart.png') %>";
       </script>

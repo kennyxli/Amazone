@@ -8,6 +8,8 @@ class Product < ApplicationRecord
     foreign_key: :product_id,
     class_name: :CartItem
 
+    has_one_attached :photo
+
     def average_rating()
         avg_review = 0
         

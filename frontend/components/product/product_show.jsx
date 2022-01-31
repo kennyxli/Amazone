@@ -83,7 +83,7 @@ class ProductShow extends React.Component{
             <div id="outer-product-show">
                 <div className="product-show">
             
-                    <img src={this.props.product.image_url}/>
+                    <img src={this.props.product.photo}/>
                     <ul className="product-show-list">
                         <li id="product-show-title">{this.props.product.title}</li>
                         <li ><Link to="/products">Visit the Amazone Store</Link></li>

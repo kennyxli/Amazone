@@ -22,7 +22,7 @@ export default class ProductIndex extends React.Component{
                     }
                 }).map((product, idx)=>(
                     <div key={idx} className="inner-container">
-                        <Link to={`/product/${product.id}`}><img className='product-image' src={product.image_url} /></Link>
+                        <Link to={`/product/${product.id}`}><img className='product-image' src={product.photo} /></Link>
                         <ul className="description">
                             <Link to={`/product/${product.id}`} className='product-title'>
                                 <li className='product-title'>{product.title}</li>

@@ -1,3 +1,4 @@
+require 'down'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -16,7 +17,7 @@ user3 = User.create!(id:3, name:"Charm",email:"guest2@guest.com", password:"pass
 user4 = User.create!(id:4, name:"Jon",email:"guest3@guest.com", password:"password")
 
 
-Product.create!(
+product1 = Product.create!(
 id: 1,
 title:"Theragun Prime - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun",  
 description:"QX65 MOTOR WITH QUIETFORCE TECHNOLOGY - proprietary brushless motor delivers powerful deep muscle treatment quieter than the average massage device,  
@@ -29,7 +30,11 @@ price: 29999,
 user_id: 1, 
 image_url: "thera1.jpg",
 quantity: 24)
-Product.create!(
+
+thera_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera1.jpg')
+product1.photo.attach(io: thera_1, filename: "thera1.jpg")
+
+product2 = Product.create!(
 id: 2,
 title:"Theragun PRO - All-New 4th Generation Percussive Therapy Deep Tissue Muscle Treatment Massage Gun", 
 description:"POWERFULLY QUIET - Proprietary brushless QX150 motor with QuietForce Technology delivers powerful, professional-grade deep muscle treatment as quiet as average massage devices,  
@@ -42,7 +47,11 @@ price: 49999,
 user_id: 1, 
 image_url: "thera2.jpg",
 quantity: 12)
-Product.create!(
+
+thera_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera2.jpg')
+product2.photo.attach(io: thera_2, filename: "thera2.jpg")
+
+product3 = Product.create!(
 id: 3,
 title:"Theragun - Massage Gun for Athletes, Portable Body Muscle Massager Professional Deep Tissue Massage Gun for Pain Relief with 6 Massage Heads 20 Speed High-Intensity Vibration Rechargeable Legiral Le3 Massage Gun", 
 description:"MUSCLE SORENESS RELIEVES: Helps for relieves tight muscles, soreness, and stiff backs. Great for personal use as well as being one of the best massage devices for professional users, perfect for a physical therapist or chiropractor.,  
@@ -54,7 +63,11 @@ price: 12999,
 user_id: 1, 
 image_url: "thera3.jpg",
 quantity: 36)
-Product.create!(
+
+thera_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera3.jpg')
+product3.photo.attach(io: thera_3, filename: "thera3.jpg")
+
+product4 = Product.create!(
 id: 4,
 title:"Theragun - Muscle Massage Gun Deep Tissue for Athletes Deep Tissue Massage Gun Percussion Muscle Massager for Muscles Handheld Deep Tissue Massager Gun 6 Speed High Intensity Vibration-2600mAh-Include 6 Heads", 
 description:"[SAY GOOD TO PAIN-FREE LIFE]: This massage gun deep tissue is designed for deep muscle treatment. It has a powerful motor that can make the surrounding area of ​​the soreness insensitive through gentle pressure waves, and gradually vibrate when penetrating the target area. muscle. Whether you are an avid athletes or just a patient with muscle pain, this massage gun can make your body healthier and help increase blood flow and myofascial release.,  
@@ -67,7 +80,11 @@ price: 8999,
 user_id: 1, 
 image_url: "thera4.jpg",
 quantity: 18)
-Product.create!(
+
+thera_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera4.jpg')
+product4.photo.attach(io: thera_4, filename: "thera4.jpg")
+
+product5 = Product.create!(
 id: 5,
 title:"Resistance Bands Set 13pcs, Workout Bands Recredo, Exercise Bands Set with Door Anchor, Handles and Ankle Straps, Stackable Up to 150 lbs, for Resistance Training, Physical Therapy, Home Workouts", 
 description:"Different Color & Stackable Up to 150 LBS: 5pcs resistance bands correspond to different colors , Yellow (10 lbs.), Blue (20 lbs.), Green (30 lbs.), Black (40 lbs.), Red(50 lbs.), 48 inches in length and can be used alone stacked in any combination to a maximum equivalent of 150 lbs.,  
@@ -80,7 +97,11 @@ price: 1999,
 user_id: 1, 
 image_url: "resist1.jpg",
 quantity: 29)
-Product.create!(
+
+resist_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist1.jpg')
+product5.photo.attach(io: resist_1, filename: "resist1.jpg")
+
+product6 = Product.create!(
 id: 6,
 title:"Black Mountain Products Loop Resistance Bands Exercise Bands with Carrying Case (Set of 5), 9 inch", 
 description:"5 Resistance Bands Include: Comes in 5 different resistance strength levels: X-Light, Light, Medium, Heavy and X-Heavy.,  
@@ -93,7 +114,11 @@ price: 999,
 user_id: 1, 
 image_url: "resist2.jpg",
 quantity: 48)
-Product.create!(
+
+resist_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist2.jpg')
+product6.photo.attach(io: resist_2, filename: "resist2.jpg")
+
+product7 = Product.create!(
 id: 7,
 title:"Whatafit Pull Up Assist Bands Resistance Bands for Men and Women, Assistance Band for Exercise, Chin Ups, Powerlifting, Training, Gyms, Mobility Home Fitness (Set of 4)", 
 description:"【Universal Partner for Workout】Each exercise band offers different level of resistance, both for heavy duty pull up training, adding resistances to bench press, squats, push up, Olympic lifts. A must have sports accessory for Pilates, calisthenics, yoga, powerlifting, crossfit etc.,  
@@ -106,7 +131,11 @@ price: 2999,
 user_id: 1, 
 image_url: "resist3.jpg",
 quantity: 33)
-Product.create!(
+
+resist_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist3.jpg')
+product7.photo.attach(io: resist_3, filename: "resist3.jpg")
+
+product8 = Product.create!(
 id: 8,
 title:"MKAS 3 Pack Long Resistance Bands Set Fabric for Women Elastic Fitness Body Bands Heavy Duty Stretch Exercise Pull Up Mobility Assistance Workout Resistance Bands Set for Home Gym", 
 description:"【 Brand: MKAS】If you need other product about fitness at home/gym, Please click our brand 'MKAS' to visit our store!,  
@@ -119,7 +148,12 @@ price: 1899,
 user_id: 1, 
 image_url: "resist4.jpg",
 quantity: 7)
-Product.create!(
+
+resist_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist4.jpg')
+product8.photo.attach(io: resist_4, filename: "resist4.jpg")
+
+
+product9 = Product.create!(
 id: 9,
 title:"Magic Bullet Blender, Small, Silver, 11 Piece Set", 
 description:"11 piece blender set: Includes blender, additional blender cups, blades, recipe book & more,  
@@ -131,7 +165,12 @@ price: 3999,
 user_id: 1, 
 image_url: "blender1.jpg",
 quantity: 21)
-Product.create!(
+
+blender_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender1.jpg')
+product9.photo.attach(io: blender_1, filename: "blender1.jpg")
+
+
+product10 = Product.create!(
 id: 10,
 title:"NutriBullet NB9-1301K Pro 13 Pcs Onyx Black, 900W", 
 description:"With 900 watts of power, the NutriBullet Pro is faster and stronger than the original, but just as simple to use. Load it up with dense whole foods like nuts, seeds, hard fruits, and kale, then push, twist and blend your way to a healthier lifestyle.Oothies,  
@@ -145,7 +184,11 @@ price: 7999,
 user_id: 1, 
 image_url: "blender2.jpg",
 quantity: 37)
-Product.create!(
+
+blender_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender2.jpg')
+product10.photo.attach(io: blender_2, filename: "blender2.jpg")
+
+product11 = Product.create!(
 id: 11,
 title:"Ninja BL480D Nutri 1000 Watt Auto-IQ Base for Juices, Shakes & Smoothies Personal Blender, 18 and 24 Oz, Black/Silver", 
 description:"Auto IQ technology optimizes ninja: Pro extractor blades and power to deliver powerful nutrient and vitamin extraction,  
@@ -158,7 +201,11 @@ price: 9999,
 user_id: 1, 
 image_url: "blender3.jpg",
 quantity: 51)
-Product.create!(
+
+blender_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender3.jpg')
+product11.photo.attach(io: blender_3, filename: "blender3.jpg")
+
+product12 = Product.create!(
 id: 12,
 title:"OYeet Personal Blender Shakes and Smoothies 10 Sec Quick Nutrition Extractor 1000W iF Design Award BPA Free Recipes Available(Coral Red)", 
 description:"IF Design Award: The most powerful personal blender for making nutrient and vitamin extraction- packed smoothies. Load it up with your favorite whole foods like nuts, berries and spinach, then push, twist and blend your way to a healthier lifestyle. Easily fits office, home, gym, hotel, homestay.,  
@@ -171,7 +218,11 @@ price: 6899,
 user_id: 1, 
 image_url: "blender4.jpg",
 quantity: 32)
-Product.create!(
+
+blender_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender4.jpg')
+product12.photo.attach(io: blender_4, filename: "blender4.jpg")
+
+product13 = Product.create!(
 id: 13,
 title:"Gaiam Essentials Thick Yoga Mat Fitness & Exercise Mat with Easy-Cinch Yoga Mat Carrier Strap, 72'L x 24'W x 2/5 Inch Thick", 
 description:"Fitness & exercise mat: Classic yoga mat is great for all types of fitness and exercise routines including yoga, pilates and any floor exercise where additional cushion and support is appreciated,  
@@ -184,7 +235,11 @@ price: 1699,
 user_id: 1, 
 image_url: "yoga1.jpg",
 quantity: 32)
-Product.create!(
+
+yoga_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga1.jpg')
+product13.photo.attach(io: yoga_1, filename: "yoga1.jpg")
+
+product14 = Product.create!(
 id: 14,
 title:"Dralegend Yoga Mat Exercise Fitness Mat - High Density Non-Slip Workout Mat for Yoga, Pilates & Exercises, Anti - Tear, Sweat - Proof, Classic 1/4 Inch", 
 description:"Upgraded Eco & Skin Friendly Material - Say NO to a skin-irritant and slippery yoga mat! You won’t want a yoga mat that can be only used for few times. Made of premium TPE, Dralegend yoga mat solves many problems with other materials, unlike rubber and PVC, it's odorless, much more resilient, incredibly lightweight, extra soft to practice on and anti–skid.,  
@@ -197,7 +252,11 @@ price: 1899,
 user_id: 1, 
 image_url: "yoga2.jpg",
 quantity: 32)
-Product.create!(
+
+yoga_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga2.jpg')
+product14.photo.attach(io: yoga_2, filename: "yoga2.jpg")
+
+product15 = Product.create!(
 id: 15,
 title:"i-CHONY Yoga Mat for Women, 1/4 Inch Thick High Density Non-Slip Floor Exercise Fitness Yoga Mat Tear Resistant Workout Mat with Carrying Strap", 
 description:"HIGH QUALITY MATERIAL: The exercise fitness yoga mat has superior durability, resilience and slip-resistance as it is constructed with premium TPE. It features non-metallic, non-toxic and non-irritating.,  
@@ -210,7 +269,11 @@ price: 1999,
 user_id: 1, 
 image_url: "yoga3.jpg",
 quantity: 32)
-Product.create!(
+
+yoga_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga3.jpg')
+product15.photo.attach(io: yoga_3, filename: "yoga3.jpg")
+
+product16 = Product.create!(
 id: 16,
 title:"Yoga Mat with Strap, 1/3 Inch Extra Thick Yoga Mat Double-Sided Non Slip, Professional TPE Yoga Mats for Women Men, Workout Mat for Yoga, Pilates and Floor Exercises", 
 description:"PREMIUM ECO FRIENDLY TPE MATERIAL - The material of a mat will determine the texture, stickiness, sponginess, and eco-friendliness. Most yoga mats are made of either plastic or rubber. BEAUTYOVO eco friendly TPE yoga mat moisturizes the advantages of plastic and rubber in one, which features higher elasticity, better abrasion & tear resistance, and more eco-friendly than traditional PVC, NBR materials. It last a long time and can endure many yoga practice.,  
@@ -223,6 +286,11 @@ price: 2299,
 user_id: 1, 
 image_url: "yoga4.jpg",
 quantity: 32)
+
+yoga_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga4.jpg')
+product16.photo.attach(io: yoga_4, filename: "yoga4.jpg")
+
+
 
 Review.delete_all
 

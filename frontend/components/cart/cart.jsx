@@ -1,42 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Cart extends React.Component{
-    constructor(props){
-        super(props)
-        this.state={
-            show: false
-        }
-        this.handleDestroy = this.handleDestroy.bind(this)
-    }
+export default function Cart(props) {
+    const [show, setShow] = useState(false)
 
-    handleDelete(e,id){
-
+    const handleDelete = (e,id) =>{
         e.preventDefault()
-        this.props.deleteCartItem(id)
+        props.deleteCartItem(id)
     }
     
-    handleDestroy(e){
-        
-        e.preventDefault
-        this.props.deleteCart()
-        this.setState({
-            show: true
-        })
+    const handleDestroy = (e) => {
+        e.preventDefault()
+        props.deleteCart()
+        setShow(true)
     }
-    handleChange(e, productId, id){
-        // let value = document.getElementById("cart-select").value
-        console.log(e.target.value)
-        this.props.updateCartItem({product_id: productId, quantity: e.target.value}, id)
+    const handleChange = (e, productId, id) => {
+        props.updateCartItem({product_id: productId, quantity: e.target.value}, id)
     }
-    render(){
-        let checkout = ""
-        if (this.state.show){
-            checkout = 
+     
+        const checkout = () => (
             <div className="purchase-message">
-                Thank you for your purchase!
+                    Thank you for your purchase!
             </div>
-        }
+        )
+
         const signin = () => (
             <div>
                 <div className="cart-cont">
@@ -60,21 +47,19 @@ export default class Cart extends React.Component{
         )
         
         let subtotal = 0;
-        {this.props.cartItems.forEach(cartitem=>{
+        {props.cartItems.forEach(cartitem=>{
             subtotal += cartitem.quantity * cartitem.price
         })}
         let quantity = 0;
-        {this.props.cartItems.forEach(cartitem=>{
+        {props.cartItems.forEach(cartitem=>{
             quantity += cartitem.quantity
         })}
-        
-
         
         const cart = () => (
             <div style={{display: "flex", marginBottom: "500px"}}>
                 <div className='signin-cart-cont'>
                     <h1 >Shopping Cart</h1>
-                    <div>{this.props.cartItems.map((cartItem,idx) => (
+                    <div>{props.cartItems.map((cartItem,idx) => (
                         <div key={idx} className="cart-product">
                             <Link to={`/product/${cartItem.product_id}`}><img className='cart-image' src={cartItem.image_url} /></Link>
                             <div className="cart-title-cont">
@@ -83,7 +68,7 @@ export default class Cart extends React.Component{
                                 <span className="cart-shipped">Shipped from: <Link to="/">Amazone</Link></span>
                                 <span className="cart-gift">Gift options not available.</span>
                                 <div>
-                                    <select defaultValue={'DEFAULT'} id="cart-select" onChange={(e) => this.handleChange(e, cartItem.product_id, cartItem.id)}>
+                                    <select defaultValue={'DEFAULT'} id="cart-select" onChange={(e) => handleChange(e, cartItem.product_id, cartItem.id)}>
                                         <option value="DEFAULT" disabled hidden>Qty: {cartItem.quantity}</option>
                                         <option value="1">Qty: 1</option>
                                         <option value="2">Qty: 2</option>
@@ -95,7 +80,7 @@ export default class Cart extends React.Component{
                                         <option value="8">Qty: 8</option>
                                         <option value="9">Qty: 9</option>
                                     </select>
-                                    <button className="cart-delete" onClick={(e) => this.handleDelete(e,cartItem.id)}>Delete</button>
+                                    <button className="cart-delete" onClick={(e) => handleDelete(e,cartItem.id)}>Delete</button>
                                 </div>
                             </div>
                             <div className="cartitem-price">
@@ -111,7 +96,7 @@ export default class Cart extends React.Component{
                     <div className="outer-cart-checkout">
                     <div className="cart-checkout">
                         Subtotal <span> ({quantity} Items):<span className="inner-cart-subtotal"> ${subtotal/100}</span></span>
-                        <button className="cart-checkout-button" onClick={this.handleDestroy}>Proceed to checkout</button>
+                        <button className="cart-checkout-button" onClick={handleDestroy}>Proceed to checkout</button>
                     </div>
                     </div>
             </div>
@@ -119,7 +104,7 @@ export default class Cart extends React.Component{
 
         const empty = () => (
              <div>
-                 {checkout}
+                 {show ? checkout() : ""}
                 <div className="cart-cont" style={{marginBottom: "400px"}}>
                     <div className="cart-inner-cont" >
                         <img src={window.emptyCartURL} id="empty-cart"></img>
@@ -131,26 +116,21 @@ export default class Cart extends React.Component{
                 </div>
                 </div>
         )
-        if (this.props.currentUser){
-            if (this.props.cartItems.length > 0){
-                return cart()
+
+        const renderContent = () => {
+            if (props.currentUser){
+                if (props.cartItems.length > 0){
+                    return cart()
+                }else{
+                    return empty();
+                }
             }else{
-                return empty();
-            }
-        }else{
-            return signin();
-        }      
-        
-        // return(
-        //     <div>
-        //         <div>
-        //             <span>{this.props.user[0].name}</span>
-        //         </div>
-        //         <div>
-        //             Your Amazone Cart is empty.
-                    
-        //         </div>
-        //     </div>
-        // )
-    }
+                return signin();
+            } 
+        }
+
+        return (
+            renderContent()
+        )
+
 }

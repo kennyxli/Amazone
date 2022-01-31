@@ -2,26 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Greeting extends React.Component{
-    constructor(props){
-        super(props)
-        this.handleClick = this.handleClick.bind(this)
-        this.handleSign = this.handleSign.bind(this)
-    }
+function Greeting (props){
 
-    handleClick(e){
+    const handleClick = (e) => {
         e.preventDefault()
-        this.props.deleteCart()
-        this.props.logout()
-        .then(() => this.props.push('/login'))
+        props.deleteCart()
+        props.logout()
+        .then(() => props.push('/login'))
     }
 
-    handleSign(e) {
-        this.props.push('/login')
+    const handleSign = () => {
+        props.push('/login')
     }
 
-    accountRender(){
-        return (
+    const accountRender = () => (
             
                 <ul className="greet-links">
                     <ul className="greet-shopping-list">
@@ -54,13 +48,13 @@ class Greeting extends React.Component{
                 </ul>
 
          
-        )
-    }
+    )
     
-    render() {
+    
+ 
         const signin = () => (
             <nav className="outergreet">
-                <button onClick={this.handleSign} id="topbutton"><div id='topgreet'>Hello, Sign in</div>
+                <button onClick={handleSign} id="topbutton"><div id='topgreet'>Hello, Sign in</div>
                     <div id='bottomgreet'>
                         Account & Lists<img src={window.arrowURL}></img>
                     </div>
@@ -70,7 +64,7 @@ class Greeting extends React.Component{
                         <li><Link to="/login" id="greet-signin"><button>Sign in</button></Link></li>
                         <li><p>New customer?<Link to="/signup" id="start-link">Start here.</Link></p></li>
                     </ul>
-                    {this.accountRender()}
+                    {accountRender()}
                 </div>
             </nav>
         );
@@ -78,7 +72,7 @@ class Greeting extends React.Component{
             
             <header className="nav-group">
                 <button className="header-button">
-                    <h2 id="greeting">Hello, {this.props.currentUser.name}</h2>
+                    <h2 id="greeting">Hello, {props.currentUser.name}</h2>
                     <div id='logingreet'>Account & Lists<img src={window.arrowURL}></img></div>
                 </button>
                     
@@ -109,7 +103,7 @@ class Greeting extends React.Component{
                                 <li><a href="">Start a Selling Account</a></li>
                                 <li><a href="">Register for a Business Account</a></li>
                                 <li><a href="">Switch Accounts</a></li>
-                                <li><a href="" onClick={this.handleClick}>Sign Out</a></li>
+                                <li><a href="" onClick={(e) => handleClick(e)}>Sign Out</a></li>
                             </ul>
                     
                         
@@ -121,9 +115,9 @@ class Greeting extends React.Component{
             
         )
 
-    return this.props.currentUser ? welcome() : signin();
+    return props.currentUser ? welcome() : signin();
     }
-};
+
 
 
 export default Greeting;

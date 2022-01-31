@@ -11,7 +11,6 @@ export default class NavBar extends React.Component{
         super(props)
     }
     render(){
-        
         let nav = ""
         if (this.props.location.pathname !== "/login" && this.props.location.pathname !== "/signup"){
             nav =  <nav className="nav">
@@ -32,8 +31,6 @@ export default class NavBar extends React.Component{
                 <CartIcon cartItems={this.props.cartItems}/>
             </nav>
         }
-
-
         return nav
     }
 }

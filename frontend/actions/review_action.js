@@ -14,7 +14,6 @@ export const receiveReview = (review) => ({
     review
 })
 export const removeReview = (reviewId) => {
-    
     return {
     type: REMOVE_REVIEW,
     reviewId
@@ -36,6 +35,5 @@ export const updateReview = (review) => dispatch => (
 )
 
 export const destroyReview = (id) => dispatch => {
-    
     return APIReview.destroyReview(id).then(id => dispatch(removeReview(id)))
 }

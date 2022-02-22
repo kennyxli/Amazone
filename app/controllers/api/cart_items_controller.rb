@@ -6,7 +6,7 @@ class Api::CartItemsController < ApplicationController
     def create 
         @cartitem = CartItem.new(cart_params)
         @cartitem.user_id = current_user.id
-        # @cartitem.product_id = :product_id
+
         if @cartitem.save!
             render :new
         else

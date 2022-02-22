@@ -12,11 +12,9 @@ class Product < ApplicationRecord
 
     def average_rating()
         avg_review = 0
-        
-             self.reviews.each do |review|
-             avg_review += review.stars
-            end
-        self.avg_rating = (self.reviews.length > 0 ? avg_review/(self.reviews.length * 1.0) : avg_review)
-        return avg_review
+        self.reviews.each do |review|
+            avg_review += review.stars
+        end
+        self.avg_rating = self.reviews.length > 0 ? avg_review/(self.reviews.length * 1.0) : avg_review
     end
 end

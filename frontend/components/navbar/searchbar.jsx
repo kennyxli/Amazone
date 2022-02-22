@@ -21,7 +21,6 @@ export default class SearchBar extends React.Component {
     handleSubmit(e){
         e.preventDefault()
         this.props.receiveSearch(this.state.input)
-        this.setState({ input: ''})
         this.props.history.push('/products')
     }
     
@@ -76,7 +75,7 @@ export default class SearchBar extends React.Component {
                 <form className='outerSearch'>
                 <input id='search' 
                     type="text" 
-                    value={this.state.input}
+                    
                     onChange={this.getInput}/>
                 
                 <button id='sbutton'

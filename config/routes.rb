@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "static_pages#root"
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show]
@@ -9,10 +8,8 @@ Rails.application.routes.draw do
       resources :reviews, only:[:index, :create]
     end
     resources :reviews, only:[:destroy, :update, :show]
-    
     post 'product/:product_id/cart_items', to: 'cartitem#create', as: 'create_cart'
     delete 'cart_items/destroy_items', to: 'cart_items#destroy_items', as: 'destroy_items'
-    # patch 'cart_items/:product_id', to: 'cartitem#update', as: 'update_cart'
     resources :cart_items, only:[:destroy, :create, :index, :update]
   end
 end

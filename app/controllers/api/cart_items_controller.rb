@@ -3,16 +3,17 @@ class Api::CartItemsController < ApplicationController
         @cartitems = current_user.cartitems
         render :index
     end
+
     def create 
         @cartitem = CartItem.new(cart_params)
         @cartitem.user_id = current_user.id
-
         if @cartitem.save!
             render :new
         else
             render json: @cartitem.errors.full_messages, status: 422
         end
     end
+
     def update
         @cartitem = current_user.cartitems.find_by(id: params[:id])
         if @cartitem && @cartitem.update(cart_params)
@@ -21,6 +22,7 @@ class Api::CartItemsController < ApplicationController
             render json: @review.errors.full_messages, status: 422
         end
     end
+
     def destroy
         @cartitem = current_user.cartitems.find_by(id: params[:id])
         if @cartitem 
@@ -30,6 +32,7 @@ class Api::CartItemsController < ApplicationController
             render json:["Can't delete cart"], status: 404
         end
     end
+    
     def destroy_items
         @cartitems = current_user.cartitems
         if @cartitems

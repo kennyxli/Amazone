@@ -1,5 +1,3 @@
-import { $CombinedState } from "redux"
-
 export const getCartItems = () => {
     return $.ajax({
         method: 'GET',

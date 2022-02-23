@@ -28,12 +28,10 @@ export default class ReviewForm extends React.Component {
     }
 
     handleStar(value){
-        
         this.setState({stars: value})
     }
 
     render(){
-        
         let product= ''
         if (this.props.product){
            product=
@@ -44,14 +42,13 @@ export default class ReviewForm extends React.Component {
             </div>
             <div>
                 <h6>Overall rating
-               
-                <ReactStars
+                    <ReactStars
                         count={5}
                         size={30}
                         isHalf={false}
                         color='lightgray'
                         onChange={value => this.handleStar(value)}
-                           activeColor="#f0c14b"
+                        activeColor="#f0c14b"
                     />
                 </h6>
             </div>
@@ -61,14 +58,11 @@ export default class ReviewForm extends React.Component {
                     <input value={this.state.title} placeholder="What's most important to know?" onChange={this.handleInput('title')}/>
                     <h6>Add a written review</h6>
                        <textarea onChange={this.handleInput('body')} placeholder="What did you like or dislike? What did you use this product for?" />
-
                     <button>Submit</button>
                 </form>
-
             </div>
             </ul>
         }
-
         return (
             <div id="outer-review-form">
                 <div id="inner-review-form">

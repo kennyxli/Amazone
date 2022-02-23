@@ -13,7 +13,6 @@ const mSTP = (state, ownProps) => {
     }
 }
 
-
 const mDTP = (dispatch) => {
     return{
         getProduct: id => dispatch(getProduct(id)),

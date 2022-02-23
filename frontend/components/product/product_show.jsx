@@ -9,17 +9,18 @@ class ProductShow extends React.Component{
         this.state={placeHolder: 0}
         this.handleAdd = this.handleAdd.bind(this)
     }
+
     componentDidMount(){
-        
         this.props.getProduct(this.props.productId)
-        // this.props.clearReview()
         this.props.requestReviews(this.props.productId)
         this.setState({placeHolder: 1})
        
     }
+
     handleClick(e, key){
         this.props.history.push(key)
     }
+
     handleAdd(e){
         let id = 0
         let value = document.getElementById("product-show-select").value
@@ -44,12 +45,9 @@ class ProductShow extends React.Component{
 
     }
 
-
     render(){  
-        
         let loc= ""
         if (this.props.currentUser){
-            
             loc = <li id="product-show-loc"><img style={{ 'width': '16px', 'height': '18px' }} src={window.wlocURL}></img><h4><Link to=""> Deliver to {this.props.currentUser.name} - New York 10002</Link></h4></li>
         }
         let button= ""
@@ -76,7 +74,6 @@ class ProductShow extends React.Component{
             <button className='product-sidebar-button lower-button' onClick={(e) => this.handleClick(e, '/login')}>Sign In</button>
             </li>
         }
-
         let product= ""  
         if (this.props.product){
             product=
@@ -124,7 +121,6 @@ class ProductShow extends React.Component{
             <ReviewContainer product={this.props.product} />
          </div >
         }
-                
         return (
             <div>
                 {product}

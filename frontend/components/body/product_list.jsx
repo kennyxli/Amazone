@@ -7,7 +7,6 @@ export default class ProductList extends React.Component{
     }
 
     handleClick(e, title) {
-        
         e.preventDefault()
         this.props.receiveSearch(title)
         this.props.history.push("/products")
@@ -46,7 +45,6 @@ export default class ProductList extends React.Component{
                     <img onClick={(e) => this.handleClick(e, "Theragun")} className='product-list-image' src={window.fitURL} ></img><br />
                     <a href="" onClick={(e) => this.handleClick(e, "Theragun")} className="product-link">Take a look</a>
                 </li>
-                
                 <li className="product-list-item"><p className='title'>Blenders</p>
                     <img onClick={(e) => this.handleClick(e, "Blender")} className='product-list-image' src={window.classicURL} ></img><br />
                     <a onClick={(e) => this.handleClick(e, "Blender")} href="" className="product-link">Shop classics</a>

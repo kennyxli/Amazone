@@ -9,7 +9,6 @@ export default class Body extends React.Component {
     }
 
     render() {
-
         return (
             <div className="body">
                 <img id='background' src={window.backgroundURL} ></img>

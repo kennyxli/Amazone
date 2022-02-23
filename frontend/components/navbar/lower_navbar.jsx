@@ -7,25 +7,20 @@ export default class LowerNavBar extends React.Component {
         super(props)
     }
     componentDidMount(){
-        
         if (this.props.currentUser.currentUser ){
             this.props.getCartItems()
         }
         if (this.props.products.length < 1){
             this.props.getProducts()
-            
         }
     }
 
     handleClick(e, title){
-        
-            e.preventDefault()
-            this.props.receiveSearch(title)
-            this.props.history.push("/products")
-        
+        e.preventDefault()
+        this.props.receiveSearch(title)
+        this.props.history.push("/products")
     }
     render() {
-
         return (
             <nav className="lowernavbar">
                 <a href="https://github.com/kennyxli" target="_blank" className="lowerlist"><img id="nav-github" src={window.githubURL} ></img></a>
@@ -43,7 +38,6 @@ export default class LowerNavBar extends React.Component {
                 <Link to="/product/10" className="lowerlist">Our Favorite</Link>
                 <Link to="/product/2" className="lowerlist">Highest Rated</Link>
                 <Link to="/product/15" className="lowerlist">A Classic</Link>
-                {/* <Link to="/product/7" className="lowerlist">Customer Loved</Link> */}
                 <Link to="/product/9" className="lowerlist">The Perfect Gift</Link>
             </nav>
         )

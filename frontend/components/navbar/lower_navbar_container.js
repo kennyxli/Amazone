@@ -5,7 +5,6 @@ import LowerNavbar from './lower_navbar';
 
 const mSTP = (state) => ({
     products: Object.values(state.entities.products),
-    // cartitems: Object.values(state.entities.cartitems),
     currentUser: state.session,
 });
 

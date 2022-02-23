@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const CartIcon = (props) => {
+function CartIcon(props){
     let quantity = 0
     props.cartItems.forEach((cartitem) => {
         quantity += cartitem.quantity
@@ -13,7 +13,6 @@ const CartIcon = (props) => {
             </Link>
         </div>
     )
-
 }
 
 export default CartIcon

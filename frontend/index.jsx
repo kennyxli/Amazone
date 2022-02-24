@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             },
             session: {
-                currentUser: window.currentUser.id}
-            
+                currentUser: window.currentUser.id
+            }
         }
     }
     let store = configureStore(preloadedState)

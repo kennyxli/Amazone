@@ -8,7 +8,6 @@ const mSTP = (state) => {
     };
 };
 
-
 const mDTP = (dispatch) => ({
     login: user => dispatch(login(user)),
     reset: () => dispatch(resetErrors())

@@ -1,20 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {login, signup, logout} from "./actions/session"
 import Root from './components/root'
 import configureStore from './store/store'
-import {getProduct, getProducts} from "./actions/product_action"
-import { requestReviews, createReview, updateReview, destroyReview} from "./actions/review_action"
 
-window.signup = signup
-window.login = login
-window.logout = logout
-window.getProduct = getProduct
-window.getProducts = getProducts
-window.requestReviews = requestReviews
-window.createReview = createReview
-window.updateReview = updateReview
-window.destroyReview = destroyReview
 
 
 

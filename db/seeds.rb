@@ -1,4 +1,5 @@
 require 'down'
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -32,7 +33,7 @@ image_url: "thera1.jpg",
 quantity: 24)
 
 thera_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera1.jpg')
-product1.photo.attach(io: thera_1, filename: "thera1.jpg")
+product1.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/thera1.jpg"), filename: "thera1.jpg")
 
 product2 = Product.create!(
 id: 2,
@@ -49,7 +50,7 @@ image_url: "thera2.jpg",
 quantity: 12)
 
 thera_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera2.jpg')
-product2.photo.attach(io: thera_2, filename: "thera2.jpg")
+product2.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/thera2.jpg"), filename: "thera2.jpg")
 
 product3 = Product.create!(
 id: 3,
@@ -65,7 +66,7 @@ image_url: "thera3.jpg",
 quantity: 36)
 
 thera_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera3.jpg')
-product3.photo.attach(io: thera_3, filename: "thera3.jpg")
+product3.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/thera3.jpg"), filename: "thera3.jpg")
 
 product4 = Product.create!(
 id: 4,
@@ -82,7 +83,7 @@ image_url: "thera4.jpg",
 quantity: 18)
 
 thera_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/thera4.jpg')
-product4.photo.attach(io: thera_4, filename: "thera4.jpg")
+product4.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/thera4.jpg"), filename: "thera4.jpg")
 
 product5 = Product.create!(
 id: 5,
@@ -99,7 +100,7 @@ image_url: "resist1.jpg",
 quantity: 29)
 
 resist_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist1.jpg')
-product5.photo.attach(io: resist_1, filename: "resist1.jpg")
+product5.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/resist1.jpg"), filename: "resist1.jpg")
 
 product6 = Product.create!(
 id: 6,
@@ -116,7 +117,7 @@ image_url: "resist2.jpg",
 quantity: 48)
 
 resist_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist2.jpg')
-product6.photo.attach(io: resist_2, filename: "resist2.jpg")
+product6.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/resist2.jpg"), filename: "resist2.jpg")
 
 product7 = Product.create!(
 id: 7,
@@ -133,7 +134,7 @@ image_url: "resist3.jpg",
 quantity: 33)
 
 resist_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist3.jpg')
-product7.photo.attach(io: resist_3, filename: "resist3.jpg")
+product7.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/resist3.jpg"), filename: "resist3.jpg")
 
 product8 = Product.create!(
 id: 8,
@@ -150,7 +151,7 @@ image_url: "resist4.jpg",
 quantity: 7)
 
 resist_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/resist4.jpg')
-product8.photo.attach(io: resist_4, filename: "resist4.jpg")
+product8.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/resist4.jpg"), filename: "resist4.jpg")
 
 
 product9 = Product.create!(
@@ -167,7 +168,7 @@ image_url: "blender1.jpg",
 quantity: 21)
 
 blender_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender1.jpg')
-product9.photo.attach(io: blender_1, filename: "blender1.jpg")
+product9.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/blender1.jpg"), filename: "blender1.jpg")
 
 
 product10 = Product.create!(
@@ -186,7 +187,7 @@ image_url: "blender2.jpg",
 quantity: 37)
 
 blender_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender2.jpg')
-product10.photo.attach(io: blender_2, filename: "blender2.jpg")
+product10.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/blender2.jpg"), filename: "blender2.jpg")
 
 product11 = Product.create!(
 id: 11,
@@ -203,7 +204,7 @@ image_url: "blender3.jpg",
 quantity: 51)
 
 blender_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender3.jpg')
-product11.photo.attach(io: blender_3, filename: "blender3.jpg")
+product11.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/blender3.jpg"), filename: "blender3.jpg")
 
 product12 = Product.create!(
 id: 12,
@@ -220,7 +221,7 @@ image_url: "blender4.jpg",
 quantity: 32)
 
 blender_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/blender4.jpg')
-product12.photo.attach(io: blender_4, filename: "blender4.jpg")
+product12.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/blender4.jpg"), filename: "blender4.jpg")
 
 product13 = Product.create!(
 id: 13,
@@ -237,7 +238,7 @@ image_url: "yoga1.jpg",
 quantity: 32)
 
 yoga_1 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga1.jpg')
-product13.photo.attach(io: yoga_1, filename: "yoga1.jpg")
+product13.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/yoga1.jpg"), filename: "yoga1.jpg")
 
 product14 = Product.create!(
 id: 14,
@@ -254,7 +255,7 @@ image_url: "yoga2.jpg",
 quantity: 32)
 
 yoga_2 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga2.jpg')
-product14.photo.attach(io: yoga_2, filename: "yoga2.jpg")
+product14.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/yoga2.jpg"), filename: "yoga2.jpg")
 
 product15 = Product.create!(
 id: 15,
@@ -271,7 +272,7 @@ image_url: "yoga3.jpg",
 quantity: 32)
 
 yoga_3 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga3.jpg')
-product15.photo.attach(io: yoga_3, filename: "yoga3.jpg")
+product15.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/yoga3.jpg"), filename: "yoga3.jpg")
 
 product16 = Product.create!(
 id: 16,
@@ -288,7 +289,7 @@ image_url: "yoga4.jpg",
 quantity: 32)
 
 yoga_4 = File.open('/Users/kennyli/Desktop/Final Project/Amazone/app/assets/images/product/yoga4.jpg')
-product16.photo.attach(io: yoga_4, filename: "yoga4.jpg")
+product16.photo.attach(io: URI.open("https://amazone-seeds.s3.amazonaws.com/yoga4.jpg"), filename: "yoga4.jpg")
 
 
 
